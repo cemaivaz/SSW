@@ -334,7 +334,7 @@ public class TopicsClient {
 		}
 		finally {
 			return concept;
-		}
+		} 
 	}
 
 	public static void main(String[] args) {
