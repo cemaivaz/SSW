@@ -242,35 +242,41 @@ public class TopicsClient {
 		return output;
 	} //printInfoRelation
 
-	public static String topic (String str) throws IOException, ParserConfigurationException, SAXException {
+	public static String topic (String str)/* throws IOException, ParserConfigurationException, SAXException */{
 		String api = "http://textalytics.com/core/topics-1.2";
 		String key = "1ddd456dd1389e2bd5c7ceb92bd488a1";
 		String txt = str;
 		String lang = "en"; // es/en/fr/it/pt/ca
 
-		Post post = new Post (api);
-		post.addParameter("key", key);
-		post.addParameter("txt", txt);
-		post.addParameter("lang", lang);
-		post.addParameter("tt", "a");
-		post.addParameter("of", "xml");
-		String response = post.getResponse();
-
-		// Show response
-		System.out.println("Response");
-		System.out.println("============");
-		System.out.println(response);
-
-		// Prints the specific fields in the response (topics)
-		DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-		Document doc = docBuilder.parse(new ByteArrayInputStream(response.getBytes()));
-		doc.getDocumentElement().normalize();
-		Element response_node = doc.getDocumentElement();
-		System.out.println("\nInformation:");
-		System.out.println("----------------\n");
 		String output = "";
+		
+		String concept = "";
+		
 		try {
+			Post post = new Post (api);
+			post.addParameter("key", key);
+			post.addParameter("txt", txt);
+			post.addParameter("lang", lang);
+			post.addParameter("tt", "a");
+			post.addParameter("of", "xml");
+			String response = post.getResponse();
+
+			// Show response
+			System.out.println("Response");
+			System.out.println("============");
+			System.out.println(response);
+
+			// Prints the specific fields in the response (topics)
+			DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+			Document doc = docBuilder.parse(new ByteArrayInputStream(response.getBytes()));
+			doc.getDocumentElement().normalize();
+			Element response_node = doc.getDocumentElement();
+			System.out.println("\nInformation:");
+			System.out.println("----------------\n");
+			
+			
+			
 			NodeList status_list = response_node.getElementsByTagName("status");
 			Node status = status_list.item(0);
 			NamedNodeMap attributes = status.getAttributes();
@@ -286,6 +292,9 @@ public class TopicsClient {
 				output += "Concepts:\n";
 				output += "============\n";
 				output += printInfoEntityConcept(response_node, "concept");
+				
+				concept = printInfoEntityConcept(response_node, "concept");
+				
 				output += "\n";
 				output += "Time expressions:\n";
 				output += "==========\n";
@@ -323,24 +332,15 @@ public class TopicsClient {
 		} catch (Exception e) {
 			System.out.println("Not found");
 		}
-		return output;
+		finally {
+			return concept;
+		}
 	}
 
 	public static void main(String[] args) {
 		// We define the variables needed to call the API
 
 		
-		try {
-			topic("cherry");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println(topic("cherry"));
 	}
 }

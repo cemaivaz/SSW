@@ -29,7 +29,9 @@ public class ParseTweets {
 				HashSet<String>();
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File("C:\\Users\\asus\\Documents\\training_set_tweets.txt")));
+//			BufferedReader br = new BufferedReader(new FileReader(new File("C:\\Users\\asus\\Documents\\training_set_tweets.txt")));
+			BufferedReader br = new BufferedReader(new FileReader(new File("lim_tra_set.txt")));
+			
 			String line = "";
 			int cnt = 0;
 			while ((line = br.readLine()) != null && cnt++ < 1800) {
