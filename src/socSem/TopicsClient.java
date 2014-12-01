@@ -249,9 +249,9 @@ public class TopicsClient {
 		String lang = "en"; // es/en/fr/it/pt/ca
 
 		String output = "";
-		
+
 		String concept = "";
-		
+
 		try {
 			Post post = new Post (api);
 			post.addParameter("key", key);
@@ -274,9 +274,9 @@ public class TopicsClient {
 			Element response_node = doc.getDocumentElement();
 			System.out.println("\nInformation:");
 			System.out.println("----------------\n");
-			
-			
-			
+
+
+
 			NodeList status_list = response_node.getElementsByTagName("status");
 			Node status = status_list.item(0);
 			NamedNodeMap attributes = status.getAttributes();
@@ -284,7 +284,7 @@ public class TopicsClient {
 			if(!code.getTextContent().equals("0")) {
 				System.out.println("Not found");
 			} else {
-				
+
 				output += "Entities:\n";
 				output += "=============\n";
 				output += printInfoEntityConcept(response_node, "entity");
@@ -292,9 +292,9 @@ public class TopicsClient {
 				output += "Concepts:\n";
 				output += "============\n";
 				output += printInfoEntityConcept(response_node, "concept");
-				
+
 				concept = printInfoEntityConcept(response_node, "concept");
-				
+
 				output += "\n";
 				output += "Time expressions:\n";
 				output += "==========\n";
@@ -339,8 +339,7 @@ public class TopicsClient {
 
 	public static void main(String[] args) {
 		// We define the variables needed to call the API
-
-		
-		System.out.println(topic("cherry"));
+		System.out.println(topic("germany"));
 	}
+
 }

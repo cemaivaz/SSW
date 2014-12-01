@@ -186,7 +186,7 @@ public class WordNet {
 
 			int val = levDif;
 
-			//			System.out.println("vv: " + val);
+			//			//System.out.println("vv: " + val);
 
 			double res = m.containsKey(word) ?
 					m.get(word) + 1 / (double) (1 + val)
@@ -210,13 +210,16 @@ public class WordNet {
 
 		});
 
-		System.out.print("Hierarchical SUM: ");
+		//System.out.print("Hierarchical SUM: ");
 		for (int i = 0; i < ls.size(); i++)
-			if (i < ls.size() - 1)
-				System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
+			if (i < ls.size() - 1) {
+				//System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
+			}
 			else
-				System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
-		System.out.println();
+			{
+				//System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
+			}
+		//System.out.println();
 		return "";
 	}
 	public static String simpleHypSum(List<String> l) {
@@ -251,7 +254,7 @@ public class WordNet {
 		for(Map.Entry<String, Integer> me: lst)
 			result += me.getKey() + " " + me.getValue() + ", ";
 		result = result.substring(0, result.length() - 2);
-		System.out.println("Simple SUM: " + result);
+//		System.out.println("Simple SUM: " + result);
 		return result;
 	}
 
@@ -284,46 +287,49 @@ public class WordNet {
 
 		WordNet wn = new WordNet();
 
-		//		System.out.println(hypernym("cat"));
-		//		System.out.println(hypernym("dog"));
-		//		System.out.println(hypernym("earth"));
-		//		System.out.println(hypernym("country"));
+		//		//System.out.println(hypernym("cat"));
+		//		//System.out.println(hypernym("dog"));
+		//		//System.out.println(hypernym("earth"));
+		//		//System.out.println(hypernym("country"));
 		//		
 		String w1 = "europe";
 		String w2 = "asia";
 
 		List<Integer> l = new ArrayList<>(hypernymMultiLevel(w1, lev).keySet());
-		for (int i = l.size() - 1; i >= 0; i--)
-			System.out.println(l.get(i) + " " + hypernymMultiLevel(w1, lev).get(l.get(i)));
+		for (int i = l.size() - 1; i >= 0; i--);
+		//System.out.println(l.get(i) + " " + hypernymMultiLevel(w1, lev).get(l.get(i)));
 		List<Integer> l2 = new ArrayList<>(hypernymMultiLevel(w2, lev).keySet());
-		System.out.println("____");
-		for (int i = l2.size() - 1; i >= 0; i--)
-			System.out.println(l2.get(i) + " " + hypernymMultiLevel(w2, lev).get(l2.get(i)));
+		//System.out.println("____");
+		for (int i = l2.size() - 1; i >= 0; i--);
+		//System.out.println(l2.get(i) + " " + hypernymMultiLevel(w2, lev).get(l2.get(i)));
 
 		commHyperAll(Arrays.asList("painter", "portrait", "drawing", "sculpture", "music", "singer",
 				"ballet", "dancing", "theater"
 				));
 
-		System.out.println("||||||");
+		//System.out.println("||||||");
 		simpleHypSum(Arrays.asList("europe", "asia", "brazil", "japan", "turkey", "germany", "world"));
 		commHyperAll(Arrays.asList("europe", "asia", "brazil", "japan", "turkey", "germany", "world"));
 
-		System.out.println("|||||");
+		//System.out.println("|||||");
 		simpleHypSum(Arrays.asList("electricity", "lamp", "light", "photon"));
 		commHyperAll(Arrays.asList("electricity", "lamp", "light", "photon"));
 
-		System.out.println("***");
-		simpleHypSum(Arrays.asList("europe"));
+		//System.out.println("***");
+		
 		commHyperAll(Arrays.asList("europe"));
 
 
-		System.out.println("||||");
-		System.out.println(hypernym("europe"));
+		System.out.println("///");
+//		simpleHypSum(Arrays.asList("europe"));
+//		simpleHypSum(Arrays.asList("europe", "asia", "france", "brazil"));
+		//System.out.println("||||");
+		//System.out.println(hypernym("europe"));
 
-		System.out.println("*******");
-		System.out.println(simpleHypSum(Arrays.asList("back", "music")));
-		System.out.println(hypernym("back") + " _ " + "back");
-		System.out.println(hypernym("music") + " _ " + "music");
+		//System.out.println("*******");
+		//System.out.println(simpleHypSum(Arrays.asList("back", "music")));
+		//System.out.println(hypernym("back") + " _ " + "back");
+		//System.out.println(hypernym("music") + " _ " + "music");
 	}
 
 

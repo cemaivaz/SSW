@@ -1,5 +1,6 @@
 package socSem;
 
+import weka.clusterers.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -39,6 +40,9 @@ public class ParseTweets {
 				HashMap<String, ArrayList<String>>();
 
 		Map<String, String> hashHyp = new HashMap<String, String>();
+		
+		
+		Map<String, String> hashMostCm = new HashMap<String, String>();
 
 		try {
 			//			BufferedReader br = new BufferedReader(new FileReader(new File("C:\\Users\\asus\\Documents\\training_set_tweets.txt")));
@@ -85,7 +89,7 @@ public class ParseTweets {
 				if (tmp.size() > 0)
 					tweets.add(tmp);
 
-				if (hashes.size() > 1 && nonHashes.size() > 1) {
+				if (hashes.size() > 0 && nonHashes.size() > 0) {
 					for (int i = 0; i < hashes.size(); i++) {
 						for (int j = 0; j < nonHashes.size(); j++) {
 							ArrayList<String> tmpHsh = (allHashes.containsKey(hashes.get(i))) ? 
@@ -113,40 +117,49 @@ public class ParseTweets {
 
 				hashHyp.put(hashKeys.get(i), wn.simpleHypSum(tmp).split(", ")[0]);
 
-				//				Map<String, Integer> m = new LinkedHashMap<String, Integer>();
-				//				for (int j = 0; j < tmp.size(); j++) {
-				//					int cntHm = (m.containsKey(tmp.get(j))) ?
-				//							m.get(tmp.get(j)) + 1: 1;
-				//					m.put(tmp.get(j), cntHm);
-				//					
-				//				}
-				//				
-				//				List<Map.Entry<String, Integer>> lst =
-				//						new LinkedList<Map.Entry<String, Integer>>(m.entrySet());
-				//				Collections.sort(lst, new Comparator<Map.Entry<String, Integer>>() {
-				//					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
-				//						if (m1.getValue() < m2.getValue())
-				//							return 1;
-				//						else if (m1.getValue() > m2.getValue())
-				//							return -1;
-				//						return 0;
-				//					}
-				//				});
-				////				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();
-				//				
-				//				
-				//				ArrayList<String> alNew = new ArrayList<String>();
-				//				for (Entry e: lst) {
-				//					System.out.print("words: " + hashKeys.get(i) + ", key: " + e.getKey() + ", val: "
-				//							+ e.getValue());
-				//					alNew.add((String) e.getKey());
-				////					newHm.put((String) e.getKey(), (Integer) e.getValue());
-				//				}
-				//				System.out.println();
-				//				allHashes.put(hashKeys.get(i), alNew);
+				Map<String, Integer> m = new LinkedHashMap<String, Integer>();
+				for (int j = 0; j < tmp.size(); j++) {
+					int cntHm = (m.containsKey(tmp.get(j))) ?
+							m.get(tmp.get(j)) + 1: 1;
+					m.put(tmp.get(j), cntHm);
+
+				}
+
+				List<Map.Entry<String, Integer>> lst =
+						new LinkedList<Map.Entry<String, Integer>>(m.entrySet());
+				Collections.sort(lst, new Comparator<Map.Entry<String, Integer>>() {
+					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
+						if (m1.getValue() < m2.getValue())
+							return 1;
+						else if (m1.getValue() > m2.getValue())
+							return -1;
+						return 0;
+					}
+				});
+				//				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();
+
+
+//				ArrayList<String> alNew = new ArrayList<String>();
+				
+//				for (Entry e: lst) {
+//					System.out.print("words: " + hashKeys.get(i) + ", key: " + e.getKey() + ", val: "
+//							+ e.getValue());
+//					alNew.add((String) e.getKey());
+//					//					newHm.put((String) e.getKey(), (Integer) e.getValue());
+//				}
+//				System.out.println();
+//				allHashes.put(hashKeys.get(i), alNew);
+
+
+				hashMostCm.put(hashKeys.get(i), lst.get(0).getKey());
+
+
+				hashHyp.put(hashKeys.get(i), wn.simpleHypSum(tmp).split(", ")[0]);
 
 
 			}
+			
+			System.out.println("FACE: " + hashMostCm.get("#fb"));
 
 			FileWriter fw = 
 					new FileWriter("twitterWords.txt");
@@ -158,39 +171,59 @@ public class ParseTweets {
 
 			for (int i = 0; i < tweets.size(); i++) {
 				ArrayList<String> twAl = tweets.get(i);
-				String res = "";
+				String resHyp = "";
 
 
 				int cntHasht = 0;
+
+				ArrayList<String> hashAft = new ArrayList<String>();
+				ArrayList<String> nonHashAft = new ArrayList<String>();
 				for (int j = 0; j < twAl.size(); j++) {
 					if (twAl.get(j).charAt(0) == '#') {
+						hashAft.add(hashMostCm.get(twAl.get(j)));
 						cntHasht++;
 					}
+					else
+						nonHashAft.add(twAl.get(j));
 				}
-				String[] last = {",", ""};
+
+				String line2 = "";
+
+
+
+
+
+				if (cntHasht == twAl.size()) {
+					if (hashAft.size() == 0)
+						continue;
+					else if (hashAft.get(0) == null)
+						continue;
+//					System.out.println(hashAft + " size: " + hashAft.get(0));
+					resHyp = wn.simpleHypSum(hashAft);
+				}
+				else if (cntHasht == 0)
+					resHyp = wn.simpleHypSum(twAl);
+				else {
+					
+					nonHashAft.addAll(hashAft);
+//					System.out.println(nonHashAft);
+					resHyp = wn.simpleHypSum(nonHashAft);
+				}
+
 				for (int j = 0; j < twAl.size(); j++) {
-					if (cntHasht == 0) {
-						System.out.println();
-						
-					}
 					if ( j == twAl.size() - 1)
 						fw.write(twAl.get(j));
 					else
 						fw.write(twAl.get(j) + ",");
 				}
 
-				if (cntHasht == twAl.size())
-					System.out.println();
-				else if (cntHasht == 0)
-					res = wn.simpleHypSum(twAl);
-				else
-					System.out.println();
+
 
 
 				//				System.out.println(twAl.toString() + "//////" + res);
 
 
-				fw.write(" | hypernyms: ");
+				fw.write(" | hypernyms: " + resHyp);
 
 
 
@@ -205,6 +238,8 @@ public class ParseTweets {
 
 
 
+			
+			
 			fw.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
