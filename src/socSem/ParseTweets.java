@@ -38,6 +38,8 @@ public class ParseTweets {
 		Map<String, ArrayList<String>> allHashes = new
 				HashMap<String, ArrayList<String>>();
 
+		Map<String, String> hashHyp = new HashMap<String, String>();
+
 		try {
 			//			BufferedReader br = new BufferedReader(new FileReader(new File("C:\\Users\\asus\\Documents\\training_set_tweets.txt")));
 			BufferedReader br = new BufferedReader(new FileReader(new File("lim_tra_set.txt")));
@@ -88,8 +90,8 @@ public class ParseTweets {
 						for (int j = 0; j < nonHashes.size(); j++) {
 							ArrayList<String> tmpHsh = (allHashes.containsKey(hashes.get(i))) ? 
 									allHashes.get(hashes.get(i)): new ArrayList<String>();
-							tmpHsh.add(nonHashes.get(j));
-							allHashes.put(hashes.get(i), tmpHsh);
+									tmpHsh.add(nonHashes.get(j));
+									allHashes.put(hashes.get(i), tmpHsh);
 						}
 
 					}
@@ -103,36 +105,48 @@ public class ParseTweets {
 			System.out.println(twWords.size());
 			br.close();
 
-			
+
 			ArrayList<String> hashKeys = new ArrayList<String>(allHashes.keySet());
 			for (int i = 0; i < hashKeys.size(); i++) {
 				ArrayList<String> tmp = allHashes.get(hashKeys.get(i));
-				Map<String, Integer> m = new LinkedHashMap<String, Integer>();
-				for (int j = 0; j < tmp.size(); j++) {
-					int cntHm = (m.containsKey(tmp.get(j))) ?
-							m.get(tmp.get(j)) + 1: 0;
-					m.put(tmp.get(j), cntHm);
-					
-				}
-				
-				List<Map.Entry<String, Integer>> lst =
-						new LinkedList<Map.Entry<String, Integer>>(m.entrySet());
-				Collections.sort(lst, new Comparator<Map.Entry<String, Integer>>() {
-					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
-						if (m1.getValue() < m2.getValue())
-							return 1;
-						else if (m1.getValue() > m2.getValue())
-							return -1;
-						return 0;
-					}
-				});
-				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();
-				for (Entry e: lst) {
-					newHm.put((String) e.getKey(), (Integer) e.getValue());
-				}
-			}
 
-			
+
+				hashHyp.put(hashKeys.get(i), wn.simpleHypSum(tmp).split(", ")[0]);
+
+				//				Map<String, Integer> m = new LinkedHashMap<String, Integer>();
+				//				for (int j = 0; j < tmp.size(); j++) {
+				//					int cntHm = (m.containsKey(tmp.get(j))) ?
+				//							m.get(tmp.get(j)) + 1: 1;
+				//					m.put(tmp.get(j), cntHm);
+				//					
+				//				}
+				//				
+				//				List<Map.Entry<String, Integer>> lst =
+				//						new LinkedList<Map.Entry<String, Integer>>(m.entrySet());
+				//				Collections.sort(lst, new Comparator<Map.Entry<String, Integer>>() {
+				//					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
+				//						if (m1.getValue() < m2.getValue())
+				//							return 1;
+				//						else if (m1.getValue() > m2.getValue())
+				//							return -1;
+				//						return 0;
+				//					}
+				//				});
+				////				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();
+				//				
+				//				
+				//				ArrayList<String> alNew = new ArrayList<String>();
+				//				for (Entry e: lst) {
+				//					System.out.print("words: " + hashKeys.get(i) + ", key: " + e.getKey() + ", val: "
+				//							+ e.getValue());
+				//					alNew.add((String) e.getKey());
+				////					newHm.put((String) e.getKey(), (Integer) e.getValue());
+				//				}
+				//				System.out.println();
+				//				allHashes.put(hashKeys.get(i), alNew);
+
+
+			}
 
 			FileWriter fw = 
 					new FileWriter("twitterWords.txt");
@@ -149,8 +163,16 @@ public class ParseTweets {
 
 				int cntHasht = 0;
 				for (int j = 0; j < twAl.size(); j++) {
-					if (twAl.get(j).charAt(0) == '#')
+					if (twAl.get(j).charAt(0) == '#') {
 						cntHasht++;
+					}
+				}
+				String[] last = {",", ""};
+				for (int j = 0; j < twAl.size(); j++) {
+					if (cntHasht == 0) {
+						System.out.println();
+						
+					}
 					if ( j == twAl.size() - 1)
 						fw.write(twAl.get(j));
 					else
@@ -165,7 +187,7 @@ public class ParseTweets {
 					System.out.println();
 
 
-				System.out.println(twAl.toString() + "//////" + res);
+				//				System.out.println(twAl.toString() + "//////" + res);
 
 
 				fw.write(" | hypernyms: ");
