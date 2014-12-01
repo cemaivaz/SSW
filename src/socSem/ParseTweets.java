@@ -7,10 +7,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class ParseTweets {
@@ -100,10 +105,34 @@ public class ParseTweets {
 
 			
 			ArrayList<String> hashKeys = new ArrayList<String>(allHashes.keySet());
-			for (int i = 0; i < allHashes.size(); i++) {
+			for (int i = 0; i < hashKeys.size(); i++) {
+				ArrayList<String> tmp = allHashes.get(hashKeys.get(i));
+				Map<String, Integer> m = new LinkedHashMap<String, Integer>();
+				for (int j = 0; j < tmp.size(); j++) {
+					int cntHm = (m.containsKey(tmp.get(j))) ?
+							m.get(tmp.get(j)) + 1: 0;
+					m.put(tmp.get(j), cntHm);
+					
+				}
 				
+				List<Map.Entry<String, Integer>> lst =
+						new LinkedList<Map.Entry<String, Integer>>(m.entrySet());
+				Collections.sort(lst, new Comparator<Map.Entry<String, Integer>>() {
+					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
+						if (m1.getValue() < m2.getValue())
+							return 1;
+						else if (m1.getValue() > m2.getValue())
+							return -1;
+						return 0;
+					}
+				});
+				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();
+				for (Entry e: lst) {
+					newHm.put((String) e.getKey(), (Integer) e.getValue());
+				}
 			}
 
+			
 
 			FileWriter fw = 
 					new FileWriter("twitterWords.txt");
