@@ -50,8 +50,16 @@ public class ParseTweets {
 			String line = "";
 			int cnt = 0;
 
+			
+			
+			Map<Integer, String> twRowNo = new LinkedHashMap<Integer, String>();
+			
+			String wholeTw = "";
+			int rowNo = 0;
+			
 			while ((line = br.readLine()) != null && cnt++ < 1800) {
 
+				wholeTw = line;
 				//				System.out.println(line);
 				line = line.toLowerCase();
 				//				Pattern p = Pattern.compile("([0-9]*[ ]*[0-9]*[ ]*)()([ ]*[0-9\\-]*)[ ]*[0-9:]*)( )?");
@@ -71,23 +79,30 @@ public class ParseTweets {
 						ArrayList<String>();
 
 
+				boolean twNorm = false;
 				for (int i = 0; i < strArr.length; i++) {
 					if (strArr[i].length() > 1) {
 						if (wn.nouns.contains(strArr[i])) {
 							tmp.add(strArr[i]);
 							twWords.add(strArr[i]);
 
+							twNorm = true;
 							if (!nonHashes.contains(strArr[i]))
 								nonHashes.add(strArr[i]);
 						}
 						else if (strArr[i].charAt(0) == '#') {
 							tmp.add(strArr[i]);
+//							twRowNo.put(rowNo++, wholeTw);
 							hashes.add(strArr[i]);
-
+							twNorm = true;
 						}
 					}
 
 				}
+				
+				if (twNorm == true)
+					twRowNo.put(rowNo++, wholeTw);
+				
 				if (tmp.size() > 0)
 					tweets.add(tmp);
 
@@ -216,10 +231,11 @@ public class ParseTweets {
 
 
 				if (cntHasht == twAl.size()) {
-					if (hashAft.size() == 0)
+					if (hashAft.size() == 0 || hashAft.get(0) == null){
+						twRowNo.remove(i);
 						continue;
-					else if (hashAft.get(0) == null)
-						continue;
+						
+					}
 					//					System.out.println(hashAft + " size: " + hashAft.get(0));
 					resHyp = wn.simpleHypSum(hashAft);
 				}
