@@ -247,13 +247,6 @@ public class ParseTweets {
 
 
 
-			//			System.out.println("|||||____");
-			//			System.out.println(wn.hypernym("france"));
-			//			System.out.println("***");
-			//			System.out.println(wn.hypernymy.get("france"));
-
-
-
 
 
 			fw.close();
