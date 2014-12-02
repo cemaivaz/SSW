@@ -1,6 +1,5 @@
 package socSem;
 
-import weka.clusterers.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -16,7 +16,6 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 public class ParseTweets {
@@ -40,8 +39,8 @@ public class ParseTweets {
 				HashMap<String, ArrayList<String>>();
 
 		Map<String, String> hashHyp = new HashMap<String, String>();
-		
-		
+
+
 		Map<String, String> hashMostCm = new HashMap<String, String>();
 
 		try {
@@ -139,16 +138,16 @@ public class ParseTweets {
 				//				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();
 
 
-//				ArrayList<String> alNew = new ArrayList<String>();
-				
-//				for (Entry e: lst) {
-//					System.out.print("words: " + hashKeys.get(i) + ", key: " + e.getKey() + ", val: "
-//							+ e.getValue());
-//					alNew.add((String) e.getKey());
-//					//					newHm.put((String) e.getKey(), (Integer) e.getValue());
-//				}
-//				System.out.println();
-//				allHashes.put(hashKeys.get(i), alNew);
+				//				ArrayList<String> alNew = new ArrayList<String>();
+
+				//				for (Entry e: lst) {
+				//					System.out.print("words: " + hashKeys.get(i) + ", key: " + e.getKey() + ", val: "
+				//							+ e.getValue());
+				//					alNew.add((String) e.getKey());
+				//					//					newHm.put((String) e.getKey(), (Integer) e.getValue());
+				//				}
+				//				System.out.println();
+				//				allHashes.put(hashKeys.get(i), alNew);
 
 
 				hashMostCm.put(hashKeys.get(i), lst.get(0).getKey());
@@ -158,7 +157,7 @@ public class ParseTweets {
 
 
 			}
-			
+
 			System.out.println("FACE: " + hashMostCm.get("#fb"));
 
 			FileWriter fw = 
@@ -169,10 +168,18 @@ public class ParseTweets {
 			//			for (int i = 0; i < twWordsArr.length; i++)
 			//				fw.write(twWordsArr[i] + "\n");
 
+
+			List<List<String>> hypTw = new ArrayList<List<String>>();
+
+			List<String> hypAll = new ArrayList<String>();
+
+
 			for (int i = 0; i < tweets.size(); i++) {
 				ArrayList<String> twAl = tweets.get(i);
 				String resHyp = "";
 
+
+				List<String> hypTwSub = new ArrayList<String>();
 
 				int cntHasht = 0;
 
@@ -198,16 +205,24 @@ public class ParseTweets {
 						continue;
 					else if (hashAft.get(0) == null)
 						continue;
-//					System.out.println(hashAft + " size: " + hashAft.get(0));
+					//					System.out.println(hashAft + " size: " + hashAft.get(0));
 					resHyp = wn.simpleHypSum(hashAft);
 				}
 				else if (cntHasht == 0)
 					resHyp = wn.simpleHypSum(twAl);
 				else {
-					
+
 					nonHashAft.addAll(hashAft);
-//					System.out.println(nonHashAft);
+					//					System.out.println(nonHashAft);
 					resHyp = wn.simpleHypSum(nonHashAft);
+				}
+
+				hypTwSub = Arrays.asList(resHyp.split(", "));
+				hypTw.add(hypTwSub);
+
+				for (int k = 0; k < hypTwSub.size(); k++) {
+					if (!hypAll.contains(hypTwSub.get(k).split(" ")[0]))
+						hypAll.add(hypTwSub.get(k).split(" ")[0]);
 				}
 
 				for (int j = 0; j < twAl.size(); j++) {
@@ -231,6 +246,7 @@ public class ParseTweets {
 			}
 
 
+
 			//			System.out.println("|||||____");
 			//			System.out.println(wn.hypernym("france"));
 			//			System.out.println("***");
@@ -238,9 +254,42 @@ public class ParseTweets {
 
 
 
-			
-			
+
+
 			fw.close();
+
+
+			System.out.println("hypAll: " + hypAll.size());
+			//			System.out.println();
+
+			FileWriter fw2 = new FileWriter(new File("matr.txt"));
+			for (int y = 0; y < hypTw.size(); y++) {
+				List<String> sub = hypTw.get(y);
+				fw2.write("tw " + y +":");
+				String line2 = "";
+
+//				List<String> subSpl = new ArrayList<String>();
+				Map<String, String> hm = new HashMap<String, String>();
+				for (int w = 0; w < sub.size(); w++) {
+//					subSpl.add(sub.get(w).split(" ")[0]);
+					hm.put(sub.get(w).split(" ")[0], sub.get(w).split(" ")[1]);
+				}
+
+				for (int u = 0; u < hypAll.size(); u++) {
+					if (hm.containsKey(hypAll.get(u)))
+						line2 += hm.get(hypAll.get(u)) + ",";
+					else
+						line2 += "0,";
+				}
+
+				fw2.write(line2.substring(0, line2.length() - 1));
+				fw2.write("\n");
+			}
+
+			fw2.close();
+
+
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
