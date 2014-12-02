@@ -337,9 +337,20 @@ public class ParseTweets {
 
 			fw2.close();
 
+			ArrayList<String> al = new ArrayList<String>(twRowNo.values());
+			Map<Integer, String> twRowNoUpd = new LinkedHashMap<Integer, String>();
+			for (int i = 0; i < al.size(); i++) {
+				twRowNoUpd.put(i, al.get(i));
+			}
+			twRowNo = twRowNoUpd;
+			
+
+			System.out.println("tweet rows no: " + twRowNo.size());
 
 
-
+			System.out.println("1: " + twRowNo.get(1611));
+			System.out.println("2: " + twRowNo.get(1612));
+			
 
 			//			BufferedReader br3 = new BufferedReader(new FileReader(new File("")));
 			//
