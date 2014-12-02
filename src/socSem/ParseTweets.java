@@ -50,13 +50,13 @@ public class ParseTweets {
 			String line = "";
 			int cnt = 0;
 
-			
-			
+
+
 			Map<Integer, String> twRowNo = new LinkedHashMap<Integer, String>();
-			
+
 			String wholeTw = "";
 			int rowNo = 0;
-			
+
 			while ((line = br.readLine()) != null && cnt++ < 1800) {
 
 				wholeTw = line;
@@ -92,17 +92,17 @@ public class ParseTweets {
 						}
 						else if (strArr[i].charAt(0) == '#') {
 							tmp.add(strArr[i]);
-//							twRowNo.put(rowNo++, wholeTw);
+							//							twRowNo.put(rowNo++, wholeTw);
 							hashes.add(strArr[i]);
 							twNorm = true;
 						}
 					}
 
 				}
-				
+
 				if (twNorm == true)
 					twRowNo.put(rowNo++, wholeTw);
-				
+
 				if (tmp.size() > 0)
 					tweets.add(tmp);
 
@@ -200,6 +200,10 @@ public class ParseTweets {
 
 			int twNo = 0;
 
+
+			//tweet - hypernyms (w/ # of occur.)
+			Map<String, String> twHypNo = new HashMap<String, String>();
+
 			for (int i = 0; i < tweets.size(); i++) {
 				ArrayList<String> twAl = tweets.get(i);
 				String resHyp = "";
@@ -234,7 +238,7 @@ public class ParseTweets {
 					if (hashAft.size() == 0 || hashAft.get(0) == null){
 						twRowNo.remove(i);
 						continue;
-						
+
 					}
 					//					System.out.println(hashAft + " size: " + hashAft.get(0));
 					resHyp = wn.simpleHypSum(hashAft);
@@ -267,7 +271,7 @@ public class ParseTweets {
 				}
 
 
-
+				twHypNo.put("tw" + String.valueOf(i), resHyp);
 
 				//				System.out.println(twAl.toString() + "//////" + res);
 
@@ -343,15 +347,19 @@ public class ParseTweets {
 				twRowNoUpd.put(i, al.get(i));
 			}
 			twRowNo = twRowNoUpd;
-			
+
 
 			System.out.println("tweet rows no: " + twRowNo.size());
 
 
-			System.out.println("1: " + twRowNo.get(1611));
-			System.out.println("2: " + twRowNo.get(1612));
-			
+			System.out.println("1: " + twRowNo.get(570));
+			System.out.println("2: " + twRowNo.get(571));
+			System.out.println("3: " + twRowNo.get(572));
 
+
+			
+			//Below is clustering operation being performed(input produced by MATLAB)
+			Map<Integer, ArrayList<String>> clusters = new HashMap<Integer, ArrayList<String>>();
 			//			BufferedReader br3 = new BufferedReader(new FileReader(new File("")));
 			//
 			//			br.close();
