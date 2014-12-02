@@ -49,7 +49,9 @@ public class ParseTweets {
 
 			String line = "";
 			int cnt = 0;
+
 			while ((line = br.readLine()) != null && cnt++ < 1800) {
+
 				//				System.out.println(line);
 				line = line.toLowerCase();
 				//				Pattern p = Pattern.compile("([0-9]*[ ]*[0-9]*[ ]*)()([ ]*[0-9\\-]*)[ ]*[0-9:]*)( )?");
@@ -81,6 +83,7 @@ public class ParseTweets {
 						else if (strArr[i].charAt(0) == '#') {
 							tmp.add(strArr[i]);
 							hashes.add(strArr[i]);
+
 						}
 					}
 
@@ -107,6 +110,8 @@ public class ParseTweets {
 			}
 			System.out.println(twWords.size());
 			br.close();
+
+
 
 
 			ArrayList<String> hashKeys = new ArrayList<String>(allHashes.keySet());
@@ -174,9 +179,19 @@ public class ParseTweets {
 			List<String> hypAll = new ArrayList<String>();
 
 
+			System.out.println("TWEETS SIZE: " + tweets.size());
+
+
+
+			int twNo = 0;
+
 			for (int i = 0; i < tweets.size(); i++) {
 				ArrayList<String> twAl = tweets.get(i);
 				String resHyp = "";
+
+				if(twAl.size() == 0) {
+					System.out.println("NOPE!!: " + twAl);
+				}
 
 
 				List<String> hypTwSub = new ArrayList<String>();
@@ -217,6 +232,9 @@ public class ParseTweets {
 					resHyp = wn.simpleHypSum(nonHashAft);
 				}
 
+				twNo++;
+
+
 				hypTwSub = Arrays.asList(resHyp.split(", "));
 				hypTw.add(hypTwSub);
 
@@ -252,6 +270,28 @@ public class ParseTweets {
 			fw.close();
 
 
+
+
+			FileWriter fwTw = new FileWriter(new File("tweetsNo.txt"));
+
+
+
+			for (int i = 0; i < twNo; i++) {
+				if (i != twNo - 1)
+					fwTw.write("tw" + String.valueOf(i) + ",");
+				else
+					fwTw.write("tw" + String.valueOf(i));
+			}
+
+			fwTw.close();
+
+
+
+
+
+
+
+
 			System.out.println("hypAll: " + hypAll.size());
 			//			System.out.println();
 
@@ -261,10 +301,10 @@ public class ParseTweets {
 				fw2.write("tw " + y +":");
 				String line2 = "";
 
-//				List<String> subSpl = new ArrayList<String>();
+				//				List<String> subSpl = new ArrayList<String>();
 				Map<String, String> hm = new HashMap<String, String>();
 				for (int w = 0; w < sub.size(); w++) {
-//					subSpl.add(sub.get(w).split(" ")[0]);
+					//					subSpl.add(sub.get(w).split(" ")[0]);
 					hm.put(sub.get(w).split(" ")[0], sub.get(w).split(" ")[1]);
 				}
 
@@ -282,6 +322,12 @@ public class ParseTweets {
 			fw2.close();
 
 
+
+
+
+			//			BufferedReader br3 = new BufferedReader(new FileReader(new File("")));
+			//
+			//			br.close();
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
