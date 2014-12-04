@@ -202,7 +202,7 @@ public class ParseTweets {
 
 
 			//tweet - hypernyms (w/ # of occur.)
-			Map<String, String> twHypNo = new HashMap<String, String>();
+			Map<String, String> twHypNo = new LinkedHashMap<String, String>();
 
 			for (int i = 0; i < tweets.size(); i++) {
 				ArrayList<String> twAl = tweets.get(i);
@@ -286,9 +286,18 @@ public class ParseTweets {
 
 
 
-
 			fw.close();
 
+
+			//Some of the line numbers for the strings including the hypernyms are 
+			//removed, if these return NULL
+			Map<String, String> tmpTwHypNo = new HashMap<String, String>();
+			List<String> tmpList = new ArrayList<String>(twHypNo.values());
+			for (int i = 0; i < twHypNo.size(); i++) {
+				tmpTwHypNo.put("tw" + new Integer(i).toString(), tmpList.get(i));
+			}
+			
+			twHypNo = tmpTwHypNo;
 
 
 
@@ -357,12 +366,78 @@ public class ParseTweets {
 			System.out.println("3: " + twRowNo.get(572));
 
 
-			
+			System.out.println("ssiizzzeee: " + twHypNo.size());
+
 			//Below is clustering operation being performed(input produced by MATLAB)
-			Map<Integer, ArrayList<String>> clusters = new HashMap<Integer, ArrayList<String>>();
-			//			BufferedReader br3 = new BufferedReader(new FileReader(new File("")));
-			//
-			//			br.close();
+			Map<Integer, List<Map.Entry<String, Integer>>> clusters = new HashMap<Integer, List<Map.Entry<String, Integer>>>();
+			BufferedReader br3 = new BufferedReader(new FileReader(new File("clusterNos.txt")));
+
+			String lineCl = "";
+			
+			
+			
+			System.out.println("tw74: " + twHypNo.get("tw74"));
+			
+			while ((lineCl = br3.readLine()) != null) {
+				
+				//All the tweet numbers contained in clusters
+				List<String> clList = Arrays.asList(lineCl.substring(lineCl.indexOf(']') + 1).split(","));
+				
+				
+				//Below is the map containing the hypernyms of tweets that are in a
+				//specific cluster
+				Map<String, Integer> subHypCl = new HashMap<String, Integer>();
+				
+				for (int i = 0; i < clList.size(); i++) {
+					
+					
+					System.out.println("clList: " + clList.get(i));
+					//The hypernyms representing a tweet
+					String[] hyps = twHypNo.get(clList.get(i)).split(", ");
+					//All cluster hypernyms are getting collected, and get assigned to
+					//the hashMap
+					for (int j = 0; j < hyps.length; j++) {
+						String hypWord = hyps[j].split(" ")[0];
+						int valSm = Integer.parseInt(hyps[j].split(" ")[1]);
+						int valNew = subHypCl.containsKey(hypWord) ?
+								subHypCl.get(hypWord) + valSm: valSm;
+						subHypCl.put(hypWord, valNew);
+					}
+					
+				}
+				
+				//Clusters are represented through numbers, starting from 0
+				List<Map.Entry<String, Integer>> ls =
+						new LinkedList<Map.Entry<String, Integer>>(subHypCl.entrySet());
+				Collections.sort(ls, new Comparator<Map.Entry<String, Integer>>() {
+					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
+						if (m1.getValue() < m2.getValue())
+							return 1;
+						else if (m1.getValue() > m2.getValue())
+							return -1;
+						return 0;
+					}
+
+				});
+				
+				//System.out.print("Hierarchical SUM: ");
+//				for (int i = 0; i < ls.size(); i++)
+//					if (i < ls.size() - 1) {
+//						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
+//					}
+//					else
+//					{
+//						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
+//					}
+				//System.out.println();
+
+				
+				
+				clusters.put(Integer.parseInt(lineCl.substring(1, lineCl.indexOf(']'))), ls);
+			}
+			br3.close();
+
+
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
