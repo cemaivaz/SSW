@@ -32,6 +32,10 @@ public class Main {
 		System.out.println(mp.size());
 		mp.remove("ee");
 		System.out.println(mp.size());
+		
+		String tmp2 = "hh	    jk         j";
+		String tmp3 = tmp2;
+		System.out.println("     h     ".trim());
 	}
 
 }
