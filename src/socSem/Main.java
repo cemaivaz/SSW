@@ -3,6 +3,12 @@
  */
 package socSem;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,7 +41,51 @@ public class Main {
 		
 		String tmp2 = "hh	    jk         j";
 		String tmp3 = tmp2;
-		System.out.println("     h     ".trim());
+		System.out.println("".length());
+		
+		try {
+			BufferedReader br2 = new BufferedReader(new FileReader(new File("training_set_users.txt")));
+			String line = "";
+
+			List<String> li = new ArrayList<String>();
+			while ((line = br2.readLine()) != null) {
+				
+				line = line.toLowerCase();
+				li.add(line);
+			}
+			br2.close();
+			
+			FileWriter fw = new FileWriter(new File("training_set_users.txt"));
+			for (int i = 0; i < li.size(); i++)
+				fw.write(li.get(i) + "\n");
+			fw.close();
+			
+			String tmpFile = "lim_tra_set.txt";
+			
+			br2 = new BufferedReader(new FileReader(new File(tmpFile)));
+			line = "";
+
+			li = new ArrayList<String>();
+			while ((line = br2.readLine()) != null) {
+				
+				line = line.toLowerCase();
+				li.add(line);
+			}
+			br2.close();
+			
+			fw = new FileWriter(new File(tmpFile));
+			for (int i = 0; i < li.size(); i++)
+				fw.write(li.get(i) + "\n");
+			fw.close();
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
