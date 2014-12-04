@@ -327,7 +327,7 @@ public class ParseTweets {
 			FileWriter fw2 = new FileWriter(new File("matr.txt"));
 			for (int y = 0; y < hypTw.size(); y++) {
 				List<String> sub = hypTw.get(y);
-				fw2.write("tw " + y +":");
+				fw2.write("tw" + y +":");
 				String line2 = "";
 
 				//				List<String> subSpl = new ArrayList<String>();
@@ -358,18 +358,9 @@ public class ParseTweets {
 			twRowNo = twRowNoUpd;
 
 
-			System.out.println("tweet rows no: " + twRowNo.size());
-
-
-			System.out.println("1: " + twRowNo.get(570));
-			System.out.println("2: " + twRowNo.get(571));
-			System.out.println("3: " + twRowNo.get(572));
-
-
-			System.out.println("ssiizzzeee: " + twHypNo.size());
 
 			//Below is clustering operation being performed(input produced by MATLAB)
-			Map<Integer, List<Map.Entry<String, Integer>>> clusters = new HashMap<Integer, List<Map.Entry<String, Integer>>>();
+			Map<Integer, List<Map.Entry<String, Integer>>> clusters = new LinkedHashMap<Integer, List<Map.Entry<String, Integer>>>();
 			BufferedReader br3 = new BufferedReader(new FileReader(new File("clusterNos.txt")));
 
 			String lineCl = "";
@@ -391,7 +382,7 @@ public class ParseTweets {
 				for (int i = 0; i < clList.size(); i++) {
 					
 					
-					System.out.println("clList: " + clList.get(i));
+//					System.out.println("clList: " + clList.get(i));
 					//The hypernyms representing a tweet
 					String[] hyps = twHypNo.get(clList.get(i)).split(", ");
 					//All cluster hypernyms are getting collected, and get assigned to
@@ -437,6 +428,35 @@ public class ParseTweets {
 			}
 			br3.close();
 
+			
+			//Below do we write the hypernyms, through which clusters are represented,
+			//to a file
+			FileWriter fw3 = new FileWriter(new File("clusterHypsFreq.txt"));
+			
+//			List<Integer> l = new ArrayList<Integer>(clusters.keySet());
+			for (int i = 0; i < clusters.size(); i++) {
+				List<Map.Entry<String, Integer>> lSub = clusters.get(i);
+				
+				Map<String, Integer> hm = new LinkedHashMap<String, Integer>();
+				
+				for (Map.Entry<String, Integer> me: lSub) {
+					hm.put(me.getKey(), me.getValue());
+				}
+
+				String line2 = "";
+				for (int u = 0; u < hypAll.size(); u++) {
+					if (hm.containsKey(hypAll.get(u)))
+						line2 += hm.get(hypAll.get(u)) + ",";
+					else
+						line2 += "0,";
+				}
+
+				fw3.write(line2.substring(0, line2.length() - 1));
+				fw3.write("\n");
+			}
+			fw3.close();
+			
+			
 
 
 		} catch (FileNotFoundException e) {
