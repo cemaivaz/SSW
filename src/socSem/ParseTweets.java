@@ -74,11 +74,11 @@ public class ParseTweets {
 				//				Pattern p = Pattern.compile("([0-9]*[ ]*[0-9]*[ ]*)()([ ]*[0-9\\-]*)[ ]*[0-9:]*)( )?");
 				line = line.replaceAll("([0-9]*\\s*[0-9]*\\s*)(.*)(\\s*[0-9\\-]*\\s*[0-9:]*)( )?", "$2");
 				line = line.replaceAll("([0-9:\\-\\s]*)$", "");
-				
+
 				rawTweet = line;
 				String userId = wholeTw.split("\\s+")[0];
-				
-				
+
+
 				line = line.replaceAll(" http(s)?:([^ ])+", " ");
 				line = line.replaceAll("([\\.\\,\\!\\?:;\\-\\_]{1,})", " $1 ");
 				String[] strArr = line.split(" ");
@@ -408,23 +408,50 @@ public class ParseTweets {
 				aftMatr.add(line2.substring(0, line2.length() - 1));
 			}
 
+			List<Map.Entry<String, Double>> ls_ =
+					new LinkedList<Map.Entry<String, Double>>(preTfidf.entrySet());
+			Collections.sort(ls_, new Comparator<Map.Entry<String, Double>>() {
+				public int compare(Map.Entry<String, Double> m1, Map.Entry<String, Double> m2) {
+					if (m1.getValue() < m2.getValue())
+						return 1;
+					else if (m1.getValue() > m2.getValue())
+						return -1;
+					return 0;
+				}
+
+			});
+
+			
+			int elimMaxCnt = 0;
+			for (Map.Entry ent: ls_) {
+				
+				if (elimMaxCnt++ < ls_.size() / 100 * 3)
+					preTfidf.put((String) ent.getKey(), 0.);
+				
+			}
+
+
+
+
 			fw2.close();
 
 
-//			System.out.println("time_period: " + preTfidf.get("time_period"));
+			//			System.out.println("time_period: " + preTfidf.get("time_period"));
 
 			FileWriter fwN = new FileWriter(new File("matr.txt"));
 
 			Map<String, Double> postTfidf = new HashMap<String, Double>();
 
-//			System.out.println("hypAll: " + hypAll.size());
+			//			System.out.println("hypAll: " + hypAll.size());
 
 
 			for (int i = 0; i < aftMatr.size(); i++) {
 				String[] strSpl = aftMatr.get(i).split(",");
 				StringBuilder val = new StringBuilder("");
 				for (int j = 0; j < strSpl.length; j++) {
-					double newV = /*Double.valueOf(strSpl[j]) * */Math.log10(twWHL.size() / preTfidf.get(hypAll.get(j)));
+					double newV = 0.;
+					if (preTfidf.get(hypAll.get(j)) != 0)
+						newV = /*Double.valueOf(strSpl[j]) * */Math.log10(twWHL.size() / preTfidf.get(hypAll.get(j)));
 
 					//					System.out.println("++++: " + (Double.valueOf(strSpl[j]) * Math.log(twWHL.size() / preTfidf.get(hypAll.get(j)))));
 
@@ -439,7 +466,7 @@ public class ParseTweets {
 			fwN.close();
 
 
-//			System.out.println("For loop started..");
+			//			System.out.println("For loop started..");
 			for (int i = 0; i < twWHL.size(); i++) {
 				String[] strSpl = twWHL.get(i).split("hypernyms: ")[1].split("__")[0].split(", ");
 				String newVals = twWHL.get(i).split("nyms: ")[0] + "nyms: ";
@@ -455,8 +482,7 @@ public class ParseTweets {
 				newVals += last;
 				twWHL.set(i, newVals);
 			}
-			System.out.println("First loop finished..");
-
+			
 
 			ArrayList<String> al = new ArrayList<String>(twRowNo.values());
 			Map<Integer, String> twRowNoUpd = new LinkedHashMap<Integer, String>();
@@ -685,13 +711,14 @@ public class ParseTweets {
 				System.out.print(lox.get(j) + " --> \n");
 				System.out.print("\tTOPICS: ");
 				for (int i = 0; i < ls.size() && i < 10; i++)
-					if (i < ls.size() - 1 && i < 9) {
-						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
-					}
-					else
-					{
-						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
-					}
+					if (ls.get(i).getValue() != 0.)
+						if (i < ls.size() - 1 && i < 9) {
+							System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
+						}
+						else
+						{
+							System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
+						}
 				System.out.println();
 
 				ArrayList<String> locUsers = new ArrayList<String>(locUIdRev.get(lox.get(j)));
@@ -702,16 +729,16 @@ public class ParseTweets {
 						System.out.println("\t\t\t\tId: " + locUsers.get(q) + ", tweet: " + twits.get(c));
 					}
 				}
-				
+
 				System.out.println("");
 			}
 
-//			System.out.println("_____");
-//			System.out.println("t.p.: " + postTfidf.get("time_period"));
-//			System.out.println("corn: " + postTfidf.get("corn"));
+			//			System.out.println("_____");
+			//			System.out.println("t.p.: " + postTfidf.get("time_period"));
+			//			System.out.println("corn: " + postTfidf.get("corn"));
 
 
-//			System.out.println("======== -> " + twRowNo.size());
+			//			System.out.println("======== -> " + twRowNo.size());
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
