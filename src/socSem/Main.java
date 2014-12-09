@@ -89,6 +89,9 @@ public class Main {
 //			System.out.println("cntaaa: " + cntt);
 //			br3.close();
 			
+			String ss = "hh xx cc";
+			System.out.println(ss.split("\\s")[0]);
+			System.out.println(ss.split("\\s")[0]);
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

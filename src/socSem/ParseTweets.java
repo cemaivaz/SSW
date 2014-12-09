@@ -68,11 +68,17 @@ public class ParseTweets {
 			while ((line = br.readLine()) != null && cnt++ < 1800) {
 
 				wholeTw = line;
+				String rawTweet = "";
 				//				System.out.println(line);
 				line = line.toLowerCase();
 				//				Pattern p = Pattern.compile("([0-9]*[ ]*[0-9]*[ ]*)()([ ]*[0-9\\-]*)[ ]*[0-9:]*)( )?");
 				line = line.replaceAll("([0-9]*\\s*[0-9]*\\s*)(.*)(\\s*[0-9\\-]*\\s*[0-9:]*)( )?", "$2");
 				line = line.replaceAll("([0-9:\\-\\s]*)$", "");
+				
+				rawTweet = line;
+				String userId = wholeTw.split("\\s+")[0];
+				
+				
 				line = line.replaceAll(" http(s)?:([^ ])+", " ");
 				line = line.replaceAll("([\\.\\,\\!\\?:;\\-\\_]{1,})", " $1 ");
 				String[] strArr = line.split(" ");
@@ -81,16 +87,9 @@ public class ParseTweets {
 						new ArrayList<String>();
 
 				//				System.out.println(wholeTw);
-				String userId = wholeTw.split("\\s+")[0];
 				tmp.add(userId);
 
-				ArrayList<String> userIdLine = (userIdTw.containsKey(userId)) ? userIdTw.get(userId):
-					new ArrayList<String>();
-				
-				userIdLine.add(wholeTw.split("\\s+")[1]);
 
-
-				userIdTw.put(userId, userIdLine);
 
 				ArrayList<String> nonHashes = new
 						ArrayList<String>();
@@ -109,6 +108,9 @@ public class ParseTweets {
 							twNorm = true;
 							if (!nonHashes.contains(strArr[i]))
 								nonHashes.add(strArr[i]);
+
+
+
 						}
 						else if (strArr[i].charAt(0) == '#') {
 							tmp.add(strArr[i]);
@@ -120,9 +122,17 @@ public class ParseTweets {
 
 				}
 
-				if (twNorm == true)
+				if (twNorm == true) {
 					twRowNo.put(rowNo++, wholeTw);
 
+					ArrayList<String> userIdLine = (userIdTw.containsKey(userId)) ? userIdTw.get(userId):
+						new ArrayList<String>();
+
+					userIdLine.add(rawTweet);
+
+
+					userIdTw.put(userId, userIdLine);
+				}
 				if (tmp.size() > 1) //degisti: if (tmp.size() > 0)
 					tweets.add(tmp);
 
@@ -401,13 +411,13 @@ public class ParseTweets {
 			fw2.close();
 
 
-			System.out.println("time_period: " + preTfidf.get("time_period"));
+//			System.out.println("time_period: " + preTfidf.get("time_period"));
 
 			FileWriter fwN = new FileWriter(new File("matr.txt"));
 
 			Map<String, Double> postTfidf = new HashMap<String, Double>();
 
-			System.out.println("hypAll: " + hypAll.size());
+//			System.out.println("hypAll: " + hypAll.size());
 
 
 			for (int i = 0; i < aftMatr.size(); i++) {
@@ -429,7 +439,7 @@ public class ParseTweets {
 			fwN.close();
 
 
-			System.out.println("For loop started..");
+//			System.out.println("For loop started..");
 			for (int i = 0; i < twWHL.size(); i++) {
 				String[] strSpl = twWHL.get(i).split("hypernyms: ")[1].split("__")[0].split(", ");
 				String newVals = twWHL.get(i).split("nyms: ")[0] + "nyms: ";
@@ -552,7 +562,7 @@ public class ParseTweets {
 
 			System.out.println("UserId - Location mapping is being performed..");
 
-			Map<String, ArrayList<String>> locTweets = new HashMap<String, ArrayList<String>>();
+			Map<String, HashSet<String>> locUIdRev = new HashMap<String, HashSet<String>>();
 
 			int cnta = 0;
 			while ((line = br2.readLine()) != null) {
@@ -564,6 +574,8 @@ public class ParseTweets {
 					conc.append(" ").append(arrSpl[q]);
 				}
 				conc = new StringBuilder(new String(conc).trim());
+
+				String concStr = conc.toString();
 
 				//				List<String> li = new ArrayList<String>(locUId.keySet());
 				//				
@@ -579,11 +591,24 @@ public class ParseTweets {
 				//				if (tmpLoc.length() > 0)
 				//					locUId.put(arrSpl[0], tmpLoc);
 				//				else
-				locUId.put(arrSpl[0], conc);
+
+				String uId = arrSpl[0];
+
+				if (userIdTw.containsKey(uId)) {
+					HashSet<String> tmpHs = locUIdRev.containsKey(concStr) ? locUIdRev.get(concStr): 
+						new HashSet<String>();
+					tmpHs.add(uId);
+					locUIdRev.put(concStr, tmpHs);	
+				}
+
+
+				locUId.put(arrSpl[0], concStr.toString());
 
 			}
 
 			br2.close();
+
+
 
 			Map<String, Map<String, Double>> locHyp = new 
 					HashMap<String, Map<String, Double>>();
@@ -657,7 +682,8 @@ public class ParseTweets {
 
 				});
 
-				System.out.print(lox.get(j) + " :: ");
+				System.out.print(lox.get(j) + " --> \n");
+				System.out.print("\tTOPICS: ");
 				for (int i = 0; i < ls.size() && i < 10; i++)
 					if (i < ls.size() - 1 && i < 9) {
 						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
@@ -666,15 +692,25 @@ public class ParseTweets {
 					{
 						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
 					}
+
+				ArrayList<String> locUsers = new ArrayList<String>(locUIdRev.get(lox.get(j)));
+				for (int q = 0; q < locUsers.size(); q++) {
+					List<String> twits = userIdTw.get(locUsers.get(q));
+
+					for (int c = 0; c < twits.size(); c++) {
+						System.out.println("\t\t\t\tId: " + locUsers.get(q) + ", tweet: " + twits.get(c));
+					}
+				}
+				
 				System.out.println("");
 			}
 
-			System.out.println("_____");
-			System.out.println("t.p.: " + postTfidf.get("time_period"));
-			System.out.println("corn: " + postTfidf.get("corn"));
+//			System.out.println("_____");
+//			System.out.println("t.p.: " + postTfidf.get("time_period"));
+//			System.out.println("corn: " + postTfidf.get("corn"));
 
 
-			System.out.println("======== -> " + twRowNo.size());
+//			System.out.println("======== -> " + twRowNo.size());
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
