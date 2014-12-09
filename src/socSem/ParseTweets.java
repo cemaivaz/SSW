@@ -23,12 +23,59 @@ public class ParseTweets {
 	/**
 	 * @param args
 	 */
+	
+	public static void txtForm() {
+		try {
+			BufferedReader br2 = new BufferedReader(new FileReader(new File("training_set_users.txt")));
+			String line = "";
+
+			List<String> li = new ArrayList<String>();
+			while ((line = br2.readLine()) != null) {
+				
+				line = line.toLowerCase().replaceAll("ı", "i");
+				li.add(line);
+			}
+			br2.close();
+			
+			FileWriter fw = new FileWriter(new File("training_set_users.txt"));
+			for (int i = 0; i < li.size(); i++)
+				fw.write(li.get(i) + "\n");
+			fw.close();
+			
+			String tmpFile = "lim_tra_set.txt";
+			
+			br2 = new BufferedReader(new FileReader(new File(tmpFile)));
+			line = "";
+
+			li = new ArrayList<String>();
+			while ((line = br2.readLine()) != null) {
+				
+				line = line.toLowerCase().replaceAll("ı", "i");;
+				li.add(line);
+			}
+			br2.close();
+			
+			fw = new FileWriter(new File(tmpFile));
+			for (int i = 0; i < li.size(); i++)
+				fw.write(li.get(i) + "\n");
+			fw.close();
+		
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		WordNet wn = new WordNet();
 
-
+		txtForm();
 
 
 		List<ArrayList<String>> tweets = new
@@ -492,6 +539,7 @@ public class ParseTweets {
 			twRowNo = twRowNoUpd;
 
 
+			/* CLUSTERING PART TO BE UNCOMMENTED IF TO BE PERFORMED
 
 			//Below is clustering operation being performed(input produced by MATLAB)
 			Map<Integer, List<Map.Entry<String, Integer>>> clusters = new LinkedHashMap<Integer, List<Map.Entry<String, Integer>>>();
@@ -578,6 +626,8 @@ public class ParseTweets {
 				fw3.write("\n");
 			}
 			fw3.close();
+			
+			*/
 
 
 			//Loc - UserId mapping
