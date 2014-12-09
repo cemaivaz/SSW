@@ -692,6 +692,7 @@ public class ParseTweets {
 					{
 						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
 					}
+				System.out.println();
 
 				ArrayList<String> locUsers = new ArrayList<String>(locUIdRev.get(lox.get(j)));
 				for (int q = 0; q < locUsers.size(); q++) {
@@ -721,7 +722,8 @@ public class ParseTweets {
 		}
 	}
 
-}
+}//sheffield'i goster
+//en frequent 10'unu ele
 
 
 //4.1 times
