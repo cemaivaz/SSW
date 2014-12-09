@@ -339,7 +339,7 @@ public class TopicsClient {
 
 	public static void main(String[] args) {
 		// We define the variables needed to call the API
-		System.out.println(topic("germany"));
+		System.out.println(topic("container"));
 	}
 
 }

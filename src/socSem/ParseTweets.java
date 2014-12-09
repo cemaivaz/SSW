@@ -48,6 +48,8 @@ public class ParseTweets {
 
 		List<String> twWHL = new ArrayList<String>();
 
+		Map<String, ArrayList<String>> userIdTw = new HashMap<String, ArrayList<String>>();
+
 		try {
 			//			BufferedReader br = new BufferedReader(new FileReader(new File("C:\\Users\\asus\\Documents\\training_set_tweets.txt")));
 			BufferedReader br = new BufferedReader(new FileReader(new File("lim_tra_set.txt")));
@@ -57,6 +59,7 @@ public class ParseTweets {
 
 
 
+			//Tweet No + the whole tweet
 			Map<Integer, String> twRowNo = new LinkedHashMap<Integer, String>();
 
 			String wholeTw = "";
@@ -78,7 +81,16 @@ public class ParseTweets {
 						new ArrayList<String>();
 
 				//				System.out.println(wholeTw);
-				tmp.add(wholeTw.split("\\s+")[0]);
+				String userId = wholeTw.split("\\s+")[0];
+				tmp.add(userId);
+
+				ArrayList<String> userIdLine = (userIdTw.containsKey(userId)) ? userIdTw.get(userId):
+					new ArrayList<String>();
+				
+				userIdLine.add(wholeTw.split("\\s+")[1]);
+
+
+				userIdTw.put(userId, userIdLine);
 
 				ArrayList<String> nonHashes = new
 						ArrayList<String>();
@@ -273,15 +285,17 @@ public class ParseTweets {
 						hypAll.add(hypTwSub.get(k).split(" ")[0]);
 				}
 
-				String allLine = "";
+				StringBuilder allLine = new StringBuilder("");
 				for (int j = 0; j < twAl.size(); j++) {
 					if ( j == twAl.size() - 1) {
 						fw.write(twAl.get(j));
-						allLine += twAl.get(j);
+						allLine.append(twAl.get(j));
+
 					}
 					else {
 						fw.write(twAl.get(j) + ",");
-						allLine += twAl.get(j) + ",";
+						allLine.append(twAl.get(j));
+						allLine.append(",");
 					}
 				}
 
@@ -293,9 +307,9 @@ public class ParseTweets {
 
 				fw.write(" | hypernyms: " + resHyp + "__" + userId);
 
-				allLine += " | hypernyms: " + resHyp + "__" + userId;
 
-				twWHL.add(allLine);
+				allLine.append(" | hypernyms: ").append(resHyp).append("__").append(userId);
+				twWHL.add(allLine.toString());
 				fw.write("\n");
 			}
 
@@ -339,11 +353,11 @@ public class ParseTweets {
 
 			//			System.out.println("hypAll: " + hypAll.size());
 			//			System.out.println();
-			
+
 			FileWriter fwHyp = new FileWriter(new File("hypernames.txt"));
 
 			Map<String, Double> preTfidf = new HashMap<String, Double>();
-			
+
 			line = "";
 			for (int i = 0; i < hypAll.size(); i++) {
 				preTfidf.put(hypAll.get(i), 0.);
@@ -351,19 +365,19 @@ public class ParseTweets {
 				line = line.substring(0, line.length() - 1);
 				fwHyp.write(line);
 			}
-			
+
 			fwHyp.close();
-			
+
 			List<String> aftMatr = new ArrayList<String>();
-			
+
 			FileWriter fw2 = new FileWriter(new File("matr.txt"));
 			for (int y = 0; y < hypTw.size(); y++) {
 				List<String> sub = hypTw.get(y);
 				fw2.write("tw" + y +":");
-				String line2 = "";
+				StringBuilder line2 = new StringBuilder("");
 
 				//				List<String> subSpl = new ArrayList<String>();
-				Map<String, String> hm = new HashMap<String, String>();
+				Map<String, String> hm = new HashMap<String, String>(); 
 				for (int w = 0; w < sub.size(); w++) {
 					//					subSpl.add(sub.get(w).split(" ")[0]);
 					hm.put(sub.get(w).split(" ")[0], sub.get(w).split(" ")[1]);
@@ -372,10 +386,11 @@ public class ParseTweets {
 				for (int u = 0; u < hypAll.size(); u++) {
 					if (hm.containsKey(hypAll.get(u))) {
 						preTfidf.put(hypAll.get(u), (preTfidf.get(hypAll.get(u)) + 1));
-						line2 += hm.get(hypAll.get(u)) + ",";
+						line2.append(hm.get(hypAll.get(u)));
+						line2.append(",");
 					}
 					else
-						line2 += "0,";
+						line2.append("0,");
 				}
 
 				fw2.write(line2.substring(0, line2.length() - 1));
@@ -384,25 +399,54 @@ public class ParseTweets {
 			}
 
 			fw2.close();
-			
+
+
+			System.out.println("time_period: " + preTfidf.get("time_period"));
 
 			FileWriter fwN = new FileWriter(new File("matr.txt"));
-			
-			
-			
+
+			Map<String, Double> postTfidf = new HashMap<String, Double>();
+
+			System.out.println("hypAll: " + hypAll.size());
+
+
 			for (int i = 0; i < aftMatr.size(); i++) {
 				String[] strSpl = aftMatr.get(i).split(",");
-				String val = "";
+				StringBuilder val = new StringBuilder("");
 				for (int j = 0; j < strSpl.length; j++) {
-					double newV = Double.valueOf(strSpl[j]) * Math.log(twWHL.size() / preTfidf.get(hypAll.get(j)));
-					val += String.valueOf(newV) + ",";
+					double newV = /*Double.valueOf(strSpl[j]) * */Math.log10(twWHL.size() / preTfidf.get(hypAll.get(j)));
+
+					//					System.out.println("++++: " + (Double.valueOf(strSpl[j]) * Math.log(twWHL.size() / preTfidf.get(hypAll.get(j)))));
+
+					val.append(String.valueOf(newV));
+					val.append(",");
+					postTfidf.put(hypAll.get(j), newV);
+					//					System.out.println("log: " +Math.log(twWHL.size() / preTfidf.get(hypAll.get(j))));
 				}
-				val = val.substring(0, val.length() - 1);
+				val = val.deleteCharAt(val.length() - 1);
 				fwN.write(val + "\n");
 			}
 			fwN.close();
-			
-			
+
+
+			System.out.println("For loop started..");
+			for (int i = 0; i < twWHL.size(); i++) {
+				String[] strSpl = twWHL.get(i).split("hypernyms: ")[1].split("__")[0].split(", ");
+				String newVals = twWHL.get(i).split("nyms: ")[0] + "nyms: ";
+				String last = twWHL.get(i).split("__")[1];
+				last = "__" + last;
+				for (int j = 0; j < strSpl.length; j++) {
+					String word = strSpl[j].split(" ")[0];
+					//					String freq = strSpl[j].split(" ")[1];
+					double freq = Double.valueOf(strSpl[j].split(" ")[1]) * postTfidf.get(word);
+					newVals += word + " " + freq + ", ";
+				}
+				newVals = newVals.substring(0, newVals.length());
+				newVals += last;
+				twWHL.set(i, newVals);
+			}
+			System.out.println("First loop finished..");
+
 
 			ArrayList<String> al = new ArrayList<String>(twRowNo.values());
 			Map<Integer, String> twRowNoUpd = new LinkedHashMap<Integer, String>();
@@ -508,19 +552,18 @@ public class ParseTweets {
 
 			System.out.println("UserId - Location mapping is being performed..");
 
+			Map<String, ArrayList<String>> locTweets = new HashMap<String, ArrayList<String>>();
 
 			int cnta = 0;
 			while ((line = br2.readLine()) != null) {
 
-				System.out.println("cnta: " + (cnta++));
-
 				//				line = line.toLowerCase();
 				String[] arrSpl = line.split("[\\s]+");
-				String conc = "";
+				StringBuilder conc = new StringBuilder("");
 				for (int q = 1; q < arrSpl.length; q++) {
-					conc += " " + arrSpl[q];
+					conc.append(" ").append(arrSpl[q]);
 				}
-				conc = conc.trim();
+				conc = new StringBuilder(new String(conc).trim());
 
 				//				List<String> li = new ArrayList<String>(locUId.keySet());
 				//				
@@ -542,49 +585,57 @@ public class ParseTweets {
 
 			br2.close();
 
-			Map<String, Map<String, Integer>> locHyp = new 
-					HashMap<String, Map<String, Integer>>();
+			Map<String, Map<String, Double>> locHyp = new 
+					HashMap<String, Map<String, Double>>();
 
 
 			for (int i = 0; i < twWHL.size(); i++) {
 				String id = twWHL.get(i).split("__")[1];
 				String loc = locUId.get(id);
 
-				Map<String, Integer> hm2 = (locHyp.containsKey(loc)) ? 
-						locHyp.get(loc): 
-							new HashMap<String, Integer>();
-						List<String> hm2L = new ArrayList<String>(hm2.keySet());
+				//				System.out.println("id: " + id + ", loc: " + loc);
+
+				Map<String, Double> hm2 = (locHyp.containsKey(loc)) ? locHyp.get(loc): 
+					new HashMap<String, Double>();
+				List<String> hm2L = new ArrayList<String>(hm2.keySet());
 
 
-						Map<String, Integer> hmNew = new HashMap<String, Integer>();
+				Map<String, Double> hmNew = new HashMap<String, Double>();
 
-						for (int r = 0; r < hm2.size(); r++) {
-							String hypWord = hm2L.get(r);
-							int valSm = hm2.get(hm2L.get(r));
-							int valNew = hmNew.containsKey(hypWord) ?
-									hmNew.get(hypWord) + valSm: valSm;
-							hmNew.put(hypWord, valNew);
-						}
-
-						String spl[] = twWHL.get(i).split("hypernyms: ")[1].trim().split("__")[0].split(", ");
-
-						List<String> lHm = new ArrayList<String>(hmNew.keySet());
-
-						for (int u = 0; u < spl.length; u++) {
-							String word = spl[u].split(" ")[0];
-							String freq = spl[u].split(" ")[1];
-
-							if (lHm.contains(word)) {
-								hm2.put(word, (hm2.get(word) +
-										Integer.parseInt(freq)));
-							}
-							else {
-								hm2.put(word, Integer.parseInt(freq));
-							}
+				for (int r = 0; r < hm2.size(); r++) {
+					String hypWord = hm2L.get(r);
+					double valSm = hm2.get(hm2L.get(r));
 
 
-						}
-						locHyp.put(loc, hm2);
+					double valNew = hmNew.containsKey(hypWord) ?
+							hmNew.get(hypWord) + valSm: valSm;
+
+
+					hmNew.put(hypWord, valNew);
+				}
+
+				String spl[] = twWHL.get(i).split("hypernyms: ")[1].trim().split("__")[0].split(", ");
+
+				List<String> lHm = new ArrayList<String>(hmNew.keySet());
+
+				for (int u = 0; u < spl.length; u++) {
+					String word = spl[u].split(" ")[0];
+					String freq = spl[u].split(" ")[1];
+
+
+					//					System.out.println("line: " + twWHL.get(i));
+					if (lHm.contains(word)) {
+						hm2.put(word, (hm2.get(word) +
+								Double.parseDouble(freq)));
+					}
+					else {
+						hm2.put(word, Double.parseDouble(freq));
+					}
+
+					//					System.out.println("freq: " + freq);
+
+				}
+				locHyp.put(loc, hm2);
 
 
 			}
@@ -593,10 +644,10 @@ public class ParseTweets {
 
 			for (int j = 0; j < locHyp.size(); j++) {
 
-				List<Map.Entry<String, Integer>> ls =
-						new LinkedList<Map.Entry<String, Integer>>(locHyp.get(lox.get(j)).entrySet());
-				Collections.sort(ls, new Comparator<Map.Entry<String, Integer>>() {
-					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
+				List<Map.Entry<String, Double>> ls =
+						new LinkedList<Map.Entry<String, Double>>(locHyp.get(lox.get(j)).entrySet());
+				Collections.sort(ls, new Comparator<Map.Entry<String, Double>>() {
+					public int compare(Map.Entry<String, Double> m1, Map.Entry<String, Double> m2) {
 						if (m1.getValue() < m2.getValue())
 							return 1;
 						else if (m1.getValue() > m2.getValue())
@@ -608,7 +659,7 @@ public class ParseTweets {
 
 				System.out.print(lox.get(j) + " :: ");
 				for (int i = 0; i < ls.size() && i < 10; i++)
-					if (i < ls.size() - 1) {
+					if (i < ls.size() - 1 && i < 9) {
 						System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
 					}
 					else
@@ -618,8 +669,12 @@ public class ParseTweets {
 				System.out.println("");
 			}
 
+			System.out.println("_____");
+			System.out.println("t.p.: " + postTfidf.get("time_period"));
+			System.out.println("corn: " + postTfidf.get("corn"));
 
 
+			System.out.println("======== -> " + twRowNo.size());
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -631,3 +686,9 @@ public class ParseTweets {
 	}
 
 }
+
+
+//4.1 times
+//t.p.: 1.817672338223656
+//corn: 7.427144133408616
+//======== -> 1681

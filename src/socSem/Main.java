@@ -78,6 +78,17 @@ public class Main {
 				fw.write(li.get(i) + "\n");
 			fw.close();
 			
+//			
+//			BufferedReader br3 = new BufferedReader(new FileReader(new File("twitterWords.txt")));
+//			
+//			int cntt = 0;
+//			while ((line = br3.readLine()) != null) {
+//				if (line.contains("time_period"))
+//					cntt++;
+//			}
+//			System.out.println("cntaaa: " + cntt);
+//			br3.close();
+			
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
