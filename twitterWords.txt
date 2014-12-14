@@ -8,7 +8,7 @@ little,technical,deal,right,now,going,bit,pizza,couch,#fb | hypernyms: small_ind
 post,privacy,still,saying,problem | hypernyms: delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, reclusiveness 1, isolation 1, apparatus 1, photograph 1, speech 1, question 1, difficulty 1__15724930
 still,wall,following,privacy,fix | hypernyms: difficulty 2, apparatus 1, photograph 1, partition 1, fence 1, layer 1, stratum 1, object 1, geological_formation 1, multitude 1, reclusiveness 1, isolation 1, exemption 1, intravenous_injection 1__15724930
 pro,jumping,bottom,start,last,read,tweet,say | hypernyms: turn 2, argument 1, track_and_field 1, cargo_ship 1, side 1, region 1, advantage 1, beginning 1, line 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1, publication 1, chirp 1, opportunity 1__15724930
-speed,back,morning,go,baby,go | hypernyms: position 2, board_game 2, shift 2, motion 1, pace 1, rate 1, support 1, cloth_covering 1, body_part 1, football_player 1, time_period 1, undertaking 1, young_mammal 1, offspring 1, child 1, fetus 1__15724930
+internet,speed,back,morning,go,baby,go | hypernyms: position 2, board_game 2, shift 2, computer_network 1, motion 1, pace 1, rate 1, support 1, cloth_covering 1, body_part 1, football_player 1, time_period 1, undertaking 1, young_mammal 1, offspring 1, child 1, fetus 1__15724930
 phone,yesterday,guess | hypernyms: language_unit 1, day 1, past 1, estimate 1, opinion 1__15724930
 keep,keep | hypernyms: stronghold 2__10230312
 world,more,hearts | hypernyms: homo 1, experience 1, class 1, part 1, statesman 1, whist 1__10230312
@@ -50,17 +50,17 @@ friday,afternoon,song,special,low,swell,season,repeat,let,settle | hypernyms: ti
 favorite,moment,checkup,phrase,appearance | hypernyms: choice 1, statistic 1, force 1, point 1, time 1, examination 1, dancing 1, construction 1, passage 1, arrival 1, pretense 1, attendance 1, quality 1, representation 1, happening 1__13627832
 hand,over,state,think,are,going,win,today,way | hypernyms: side 2, aid 1, forepaw 1, pointer 1, extremity 1, ability 1, applause 1, collection 1, sailor 1, handbreadth 1, part 1, attribute 1, political_unit 1, government 1, administrative_district 1, emotional_state 1, deliberation 1, area_unit 1, accomplishment 1, victory 1, day 1, present 1, journey 1, course 1, artifact 1, distance 1, choice 1, category 1, share 1, condition 1__13627832
 government,job,computer,entry,standard,data,group,#jobs | hypernyms: work 2, duty 2, social_control 1, system 1, polity 1, workplace 1, product 1, book 1, application 1, unfortunate 1, hero 1, machine 1, written_record 1, accounting 1, flag 1, post 1, system_of_measurement 1, value 1, volume_unit 1, collection 1, abstraction 1, set 1, unit 1, list 1__70250938
-entry,level,customer,marketing,firm,#jobs | hypernyms: written_record 1, accounting 1, indicator 1, altitude 1, place 1, consumer 1, shopping 1, commerce 1, business 1, list 1__70250938
+entry,level,customer,service,marketing,firm,image,#jobs | hypernyms: written_record 1, accounting 1, indicator 1, altitude 1, place 1, consumer 1, accommodation 1, delivery 1, work 1, activity 1, employment 1, religious_ceremony 1, aid 1, tableware 1, company 1, writer 1, shopping 1, commerce 1, business 1, impression 1, representation 1, set 1, list 1__70250938
 work,home,working,home,#jobs | hypernyms: institution 2, location 2, residence 2, beginning 2, environment 2, activity 1, product 1, energy 1, excavation 1, list 1__70250938
 receptionist,#jobs | hypernyms: secretary 1, list 1__70250938
 office,coordinator,#jobs | hypernyms: rite 1, place_of_business 1, staff 1, state 1, organizer 1, list 1__70250938
 quality,#jobs | hypernyms: attribute 1, degree 1, property 1, social_station 1, list 1__70250938
 group,#jobs | hypernyms: abstraction 1, set 1, unit 1, list 1__70250938
 processing,sharp,healthcare,#jobs | hypernyms: process 1, sewing_needle 1, musical_notation 1, care 1, list 1__70250938
-retail,general,ranch,#jobs | hypernyms: selling 1, fact 1, general_officer 1, head 1, farm 1, list 1__70250938
-general,#jobs | hypernyms: fact 1, general_officer 1, head 1, list 1__70250938
-retail,general,visa,#jobs | hypernyms: selling 1, fact 1, general_officer 1, head 1, sanction 1, list 1__70250938
-peace,city,#jobs | hypernyms: municipality 2, treaty 1, tranquillity 1, harmony 1, order 1, security 1, administrative_district 1, list 1__70250938
+retail,general,inquiry,ranch,#jobs | hypernyms: selling 1, fact 1, general_officer 1, head 1, investigation 1, problem_solving 1, farm 1, list 1__70250938
+general,inquiry,#jobs | hypernyms: fact 1, general_officer 1, head 1, investigation 1, problem_solving 1, list 1__70250938
+retail,general,inquiry,visa,#jobs | hypernyms: selling 1, fact 1, general_officer 1, head 1, investigation 1, problem_solving 1, sanction 1, list 1__70250938
+peace,officer,city,#jobs | hypernyms: municipality 2, treaty 1, tranquillity 1, harmony 1, order 1, security 1, mariner 1, administrative_district 1, list 1__70250938
 looking,now,time,part,time,#jobs | hypernyms: time_period 4, attribute 2, experience 2, case 2, moment 2, search 1, present 1, object 1, line 1, concern 1, concept 1, tune 1, thing 1, relation 1, list 1__70250938
 outside,now,part,time,job,#jobs | hypernyms: time_period 2, work 2, duty 2, surface 1, region 1, present 1, object 1, line 1, concern 1, concept 1, tune 1, thing 1, relation 1, attribute 1, experience 1, case 1, moment 1, workplace 1, product 1, book 1, application 1, unfortunate 1, hero 1, list 1__70250938
 logistics,coordinator,quest,#jobs | hypernyms: provision 1, organizer 1, search 1, list 1__70250938
@@ -79,7 +79,7 @@ cause,shit,possibility,then,go,back,down | hypernyms: position 2, justification 
 true,damn,tape,tho,boy,inch,shit,down,like,days | hypernyms: kind 2, alignment 1, worthlessness 1, strip 1, recording 1, measuring_instrument 1, finishing_line 1, tai 1, man 1, linear_unit 1, defecation 1, turn 1, feather 1, hair 1, highland 1, doctor 1, life 1__18870740
 love,martin | hypernyms: object 1, sexual_desire 1, emotion 1, score 1, swallow 1, singer 1, actress 1, actor 1, bishop 1__18870740
 need,move,baltimore,watch,hate,#eww | hypernyms: necessity 2, condition 2, decision 1, turn 1, change 1, city 1, surveillance 1, timepiece 1, shift 1, time_period 1, emotion 1__18870740
-cuban,original,purple,tape,like,brand,#collectorsitem,get | hypernyms: kind 3, west_ýndian 2, model 1, ecclesiastical_attire 1, chromatic_color 1, nobility 1, strip 1, recording 1, measuring_instrument 1, finishing_line 1, marker 1, firewood 1, return 1__18870740
+cuban,original,purple,tape,like,brand,#collectorsitem,get | hypernyms: kind 3, west_Ä±ndian 2, model 1, ecclesiastical_attire 1, chromatic_color 1, nobility 1, strip 1, recording 1, measuring_instrument 1, finishing_line 1, marker 1, firewood 1, return 1__18870740
 well,still,dough,stupid,studio,purple,tape,being,may,well,save,shit | hypernyms: excavation 2, compartment 2, shaft 2, vessel 2, source 2, workplace 2, apparatus 1, photograph 1, concoction 1, simpleton 1, ecclesiastical_attire 1, chromatic_color 1, nobility 1, strip 1, recording 1, measuring_instrument 1, finishing_line 1, state 1, gregorian_calendar_month 1, prevention 1, defecation 1__18870740
 sent,message,silly,duck | hypernyms: communication 2, estonian_monetary_unit 1, child 1, anseriform_bird 1, fabric 1, poultry 1, score 1__18870740
 think,shit,gas,looking,short,bus,status | hypernyms: deliberation 1, defecation 1, state_of_matter 1, fluid 1, search 1, tract 1, public_transport 1, car 1, state 1__18870740
@@ -94,7 +94,7 @@ catch,hell,whale | hypernyms: imaginary_place 2, touch 1, game 1, fastener 1, re
 know,account,name | hypernyms: knowing 1, profit 1, importance 1, statement 1, relationship 1, sanction 1, language_unit 1, defamation 1, family 1, important_person 1, repute 1__75493854
 good,god | hypernyms: morality 1, quality 1, advantage 1, spiritual_being 1, superior 1__75493854
 post,mural | hypernyms: delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, painting 1__20967908
-post,hike,habitat,fun,at,fox | hypernyms: algonquian 2, delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, walk 1, environment 1, diversion 1, activity 1, wit 1, laotian_monetary_unit 1, canine 1, religious_person 1, statesman 1, fur 1__20967908
+post,hike,habitat,fun,at,fox,island | hypernyms: algonquian 2, delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, walk 1, environment 1, diversion 1, activity 1, wit 1, laotian_monetary_unit 1, canine 1, religious_person 1, statesman 1, fur 1, zone 1, land 1__20967908
 post,hotel,progress | hypernyms: delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, building 1, motion 1, change_of_location 1__20967908
 post,parking,garage,free,celebration | hypernyms: delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, maneuver 1, room 1, outbuilding 1, repair_shop 1, people 1, diversion 1, ritual 1, affair 1__20967908
 post,allen,county,blood,drive,one | hypernyms: delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, soldier 1, film_maker 1, comedienne 1, region 1, administrative_district 1, disposition 1, liquid_body_substance 1, people 1, propulsion 1, journey 1, transportation 1, return 1, golf_stroke 1, road 1, mechanism 1, device 1, trait 1, physical_condition 1, unit 1, digit 1__20967908
@@ -139,7 +139,7 @@ girl | hypernyms: woman 2__35647992
 listening,cool,watch | hypernyms: sensing 1, coldness 1, surveillance 1, timepiece 1, shift 1, time_period 1__35647992
 cool,dresden,wrong | hypernyms: coldness 1, city 1, injury 1, injustice 1__35647992
 get,bed,need,sleep,are,worst,days,cause,cool | hypernyms: physical_condition 2, return 1, bedroom_furniture 1, plot 1, foundation 1, surface 1, natural_depression 1, stratum 1, necessity 1, condition 1, time_period 1, area_unit 1, attempt 1, evil 1, result 1, life 1, justification 1, origin 1, coldness 1__35647992
-man,do,know,shit | hypernyms: male 3, game_equipment 1, island 1, person 1, subordinate 1, solfa_syllable 1, knowing 1, defecation 1__35647992
+man,pantie,do,know,shit | hypernyms: male 3, game_equipment 1, island 1, person 1, subordinate 1, underpants 1, solfa_syllable 1, knowing 1, defecation 1__35647992
 take,picture,see | hypernyms: filming 1, representation 1, typification 1, illustration 1, situation 1, seat 1__35647992
 are,sick,person | hypernyms: area_unit 1, people 1, organism 1, human_body 1, grammatical_category 1__35647992
 are,going,homecoming | hypernyms: area_unit 1, accomplishment 1, reunion 1__35647992
@@ -161,7 +161,7 @@ bottom,zone,why,muscle | hypernyms: region 2, cargo_ship 1, side 1, turn 1, stru
 red,fan | hypernyms: chromatic_color 1, river 1, device 1, follower 1__66445338
 six,then,bed,then,thursday | hypernyms: point 2, digit 1, bedroom_furniture 1, plot 1, foundation 1, surface 1, natural_depression 1, stratum 1, weekday 1__66445338
 #community,tonight,while,#fringe,internet,then,community | hypernyms: present 3, time 1, computer_network 1, point 1, group 1, people 1, gathering 1, world_organization 1, ownership 1, agreement 1__66445338
-jay,cuban | hypernyms: corvine_bird 1, diplomat 1, west_ýndian 1__66445338
+jay,cuban | hypernyms: corvine_bird 1, diplomat 1, west_Ä±ndian 1__66445338
 do,thing,do,now,why,there,kirk,show | hypernyms: solfa_syllable 2, physical_entity 1, action 1, artifact 1, null 1, attribute 1, abstraction 1, aim 1, statement 1, happening 1, feeling 1, situation 1, present 1, reason 1, location 1, church 1, entertainment 1, social_event 1__66445338
 audio,chisel,reading,are,much,love,ted,leo | hypernyms: component 1, frequency 1, auditory_communication 1, edge_tool 1, measurement 1, linguistic_process 1, datum 1, written_communication 1, interpretation 1, city 1, area_unit 1, large_indefinite_quantity 1, object 1, sexual_desire 1, emotion 1, score 1, tough_guy 1, sign_of_the_zodiac 1, constellation 1, person 1__66445338
 song,day,link,take,care | hypernyms: time_period 2, vocal_music 1, musical_composition 1, sound 1, bargain 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, fastener 1, circuit 1, instruction 1, linear_unit 1, linkage 1, filming 1, repair 1, work 1, protection 1, predicament 1__66445338
@@ -238,7 +238,7 @@ car,production,focus,drive,train | hypernyms: point 3, compartment 2, motor_vehi
 cooling,breakthrough,car,electronics | hypernyms: compartment 2, temperature_change 1, discovery 1, penetration 1, motor_vehicle 1, wheeled_vehicle 1, physics 1__24113761
 gore,road,copenhagen,senate | hypernyms: piece_of_cloth 1, blood 1, vice_president_of_the_united_states 1, means 1, way 1, national_capital 1, legislature 1__24113761
 miss,smart,grid | hypernyms: title 1, failure 1, pain 1, cooking_utensil 1, electrode 1, plate 1, form 1__24113761
-above,range,share | hypernyms: section 1, facility 1, assortment 1, limit 1, tract 1, geological_formation 1, assets 1, stock_certificate 1__24113761
+above,range,share,issue | hypernyms: section 1, facility 1, assortment 1, limit 1, tract 1, geological_formation 1, assets 1, stock_certificate 1, provision 1, printing 1, content 1, periodical 1, store 1__24113761
 mainstream,electric,vehicle,ambition,seat | hypernyms: thought 1, car 1, conveyance 1, medium 1, substance 1, drive 1, desire 1, support 1, furniture 1, cloth_covering 1, part 1, legal_right 1, location 1, space 1, center 1__24113761
 business | hypernyms: acting 1, business_activity 1, concern 1, aim 1, sector 1, enterprise 1__24113761
 smart,grid | hypernyms: pain 1, cooking_utensil 1, electrode 1, plate 1, form 1__24113761
@@ -292,7 +292,7 @@ do,sweet,see | hypernyms: solfa_syllable 1, taste 1, dainty 1, phonetician 1, se
 gold,old,back | hypernyms: position 2, invaluableness 1, wealth 1, precious_metal 1, noble_metal 1, past 1, support 1, cloth_covering 1, body_part 1, football_player 1__14676654
 look,like,sesame,street,then,then,cold,water,real,fast | hypernyms: kind 2, thoroughfare 2, point 2, sensing 1, appearance 1, herb 1, neighborhood 1, opportunity 1, environment 1, temperature 1, respiratory_disease 1, liquid 1, binary_compound 1, element 1, coin 1, brazilian_monetary_unit 1, abstinence 1__14676654
 dakota | hypernyms: siouan 1, geographical_area 1, sioux 1__14676654
-think,health,care,liberty,pursuit,ring,bell | hypernyms: sound 3, freedom 2, deliberation 1, condition 1, wellbeing 1, repair 1, work 1, protection 1, predicament 1, motion 1, search 1, jewelry 1, platform 1, toroid 1, acoustic_device 1, opening 1, inventor 1, painter 1, phonetician 1, curve 1, time_unit 1__14676654
+think,health,care,right,liberty,pursuit,ring,bell | hypernyms: sound 3, freedom 2, deliberation 1, condition 1, wellbeing 1, repair 1, work 1, protection 1, predicament 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, motion 1, search 1, jewelry 1, platform 1, toroid 1, acoustic_device 1, opening 1, inventor 1, painter 1, phonetician 1, curve 1, time_unit 1__14676654
 chase,bank,fee,like | hypernyms: slope 2, kind 2, frame 1, politician 1, flight_maneuver 1, depository 1, array 1, ridge 1, funds 1, reserve 1, interest 1, fixed_charge 1__14676654
 at,burger,out,pizza,burger | hypernyms: chief_justice 2, laotian_monetary_unit 1, failure 1, dish 1__14676654
 burger,pizza,burger,best,burger | hypernyms: chief_justice 3, dish 1, attempt 1, person 1, physiologist 1__14676654
@@ -310,7 +310,7 @@ bristol,tribute,man,approach,eating,out,bristol | hypernyms: male 3, city 2, pay
 bristol,still,inspiration,announcement,wave,council,house,building | hypernyms: statement 2, movement 2, city 1, apparatus 1, photograph 1, arousal 1, product 1, intuition 1, idea 1, motion 1, hairdo 1, gesture 1, rise 1, reservist 1, weather 1, curve 1, meeting 1, administrative_unit 1, assembly 1, play 1, dwelling 1, building 1, family 1, legislature 1, audience 1, community 1, management 1, structure 1, gathering 1__22016701
 man,bristol,city,centre,man,bristol,city,centre,row,attack | hypernyms: male 6, municipality 4, game_equipment 2, island 2, person 2, subordinate 2, city 2, administrative_district 2, french_region 2, sequence 1, line 1, array 1, strip 1, beginning 1, turn 1, crime 1, operation 1, criticism 1, degeneration 1, affliction 1__22016701
 things,are,looking,get,sign,go | hypernyms: property 1, area_unit 1, search 1, return 1, clue 1, communication 1, mathematical_notation 1, gesture 1, language_unit 1, evidence 1, board_game 1, shift 1__22016701
-owner,bristol,airport,canadian,pension,fund,owner,bristol,ýnternational | hypernyms: businessman 2, person 2, city 2, airfield 1, river 1, north_american 1, regular_payment 1, money 1, socialism 1__22016701
+owner,bristol,airport,canadian,pension,fund,owner,bristol | hypernyms: businessman 2, person 2, city 2, airfield 1, river 1, north_american 1, regular_payment 1, money 1__22016701
 living,fear,bristol,bristol,cover,band | hypernyms: strip 3, emotion 2, city 2, concealment 2, people 1, fire 1, recording 1, adornment 1, restraint 1, belt 1, stripe 1, range 1, musical_organization 1__22016701
 martin,watch,last,week,at,station,one,regular | hypernyms: time_period 3, swallow 1, singer 1, actress 1, actor 1, bishop 1, surveillance 1, timepiece 1, shift 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1, laotian_monetary_unit 1, facility 1, radio_frequency 1, position 1, unit 1, digit 1, size 1, patron 1, follower 1, soldier 1__22016701
 ford,bristol,evening,post,article,ford | hypernyms: industrialist 6, writer 3, crossing 2, body_of_water 2, president_of_the_united_states 2, film_maker 2, time_period 2, city 1, day 1, delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, aviator 1, artifact 1, nonfiction 1, determiner 1, section 1__22016701
@@ -456,7 +456,7 @@ fuck,love,tour | hypernyms: sexual_intercourse 1, object 1, sexual_desire 1, emo
 cool,game | hypernyms: coldness 1, diversion 1, activity 1, contest 1, play 1, occupation 1, animal 1, game_equipment 1, meat 1, score 1, part 1__30405521
 bobby,arlington,national,cemetery | hypernyms: policeman 1, city 1, person 1, site 1__41939875
 rep,rush,federal,cemetery,regulation,law | hypernyms: control 2, concept 2, fabric 1, congressman 1, run 1, outburst 1, flow 1, doctor 1, marsh_plant 1, agent 1, yankee 1, site 1, rule 1, organic_process 1, dominance 1, learned_profession 1, legal_document 1, collection 1__41939875
-cemetery,time,ýran,press,watch | hypernyms: time_period 3, machine 2, site 1, attribute 1, experience 1, case 1, moment 1, asian_country 1, push 1, weightlift 1, clamp 1, print_media 1, surveillance 1, timepiece 1, shift 1__41939875
+cemetery,time,press,watch | hypernyms: time_period 3, machine 2, site 1, attribute 1, experience 1, case 1, moment 1, push 1, weightlift 1, clamp 1, print_media 1, surveillance 1, timepiece 1, shift 1__41939875
 cemetery,deer,hunt | hypernyms: site 1, ruminant 1, outdoor_sport 1, labor 1, search 1, club 1, writer 1, architect 1, pre-raphaelite 1__41939875
 virginia,million,third,cemetery | hypernyms: town 1, american_state 1, colony 1, large_integer 1, large_indefinite_quantity 1, interval 1, rank 1, site 1__41939875
 cemetery,land,deal,million,mark | hypernyms: object 2, site 1, inventor 1, real_property 1, allotment 1, distribution 1, transaction 1, result 1, board 1, large_integer 1, large_indefinite_quantity 1, impression 1, evaluation 1, gospel 1, symbol 1, indication 1, written_symbol 1, apostle 1, german_monetary_unit 1__41939875
@@ -465,7 +465,7 @@ ping | hypernyms: sound 1, river 1__41939875
 fan,out,city | hypernyms: municipality 2, device 1, follower 1, failure 1, administrative_district 1__41939875
 man,slain,cemetery | hypernyms: male 3, game_equipment 1, island 1, person 1, subordinate 1, dead 1, site 1__41939875
 county,cemetery,board,law | hypernyms: concept 2, region 1, administrative_district 1, site 1, sheet 1, surface 1, fare 1, committee 1, lumber 1, learned_profession 1, legal_document 1, collection 1__41939875
-christian,ýstanbul,cemetery | hypernyms: religious_person 1, city 1, site 1__41939875
+christian,cemetery | hypernyms: religious_person 1, site 1__41939875
 mount,cemetery,michigan | hypernyms: mounting 1, site 1, card_game 1, american_state 1__41939875
 suspect,cemetery,beating,death,police | hypernyms: end 2, person 1, site 1, corporal_punishment 1, fight 1, killing 1, change 1, imaginary_being 1, organic_phenomenon 1, state 1, force 1__41939875
 transfer,roswell,cemetery | hypernyms: change_of_state 1, transaction 1, learning 1, ticket 1, person 1, town 1, site 1__41939875
@@ -476,26 +476,26 @@ census,worker,found,cemetery,possible,homicide | hypernyms: count 1, insect 1, p
 search,cemetery,pin | hypernyms: investigation 1, examination 1, activity 1, higher_cognitive_process 1, operation 1, site 1, fastener 1, jewelry 1, golf_equipment 1, tumbler 1, leg 1__41939875
 here | hypernyms: location 1__15902877
 left,work,bar,times,cable,coverage,local,down,main,tower | hypernyms: turn 2, hand 1, faction 1, position 1, activity 1, product 1, energy 1, implement 1, obstruction 1, counter 1, railing 1, heating_element 1, support 1, ridge 1, pressure_unit 1, time_period 1, rope 1, television 1, conductor 1, telegram 1, linear_unit 1, extent 1, news 1, sum 1, public_transport 1, feather 1, hair 1, highland 1, doctor 1, pipe 1, body_of_water 1, structure 1__15902877
-net,neutrality,paranoia,#netneutrality,#freepress | hypernyms: fabric 3, trap 3, game_equipment 3, goal 3, non-engagement 1, ph 1, psychosis 1__15902877
+net,neutrality,paranoia,insult,#netneutrality,#freepress | hypernyms: fabric 3, trap 3, game_equipment 3, goal 3, non-engagement 1, ph 1, psychosis 1, discourtesy 1__15902877
 tell,sign,#actly,#rejectbeck | hypernyms: archer 3, clue 1, communication 1, mathematical_notation 1, gesture 1, language_unit 1, evidence 1__15902877
 self,spiral,wilson,will,raise,million,#censurewilson | hypernyms: writer 4, mountain_peak 2, president_of_the_united_states 2, literary_critic 2, nuclear_physicist 2, entomologist 2, american_revolutionary_leader 2, geophysicist 2, physicist 2, ornithologist 2, consciousness 1, person 1, rotation 1, decoration 1, economic_process 1, curve 1, purpose 1, legal_document 1, gamble 1, increase 1, large_integer 1, large_indefinite_quantity 1__15902877
 rep,wilson,outburst,will,one,million,dollar,mistake,#censurewilson | hypernyms: writer 4, mountain_peak 2, president_of_the_united_states 2, literary_critic 2, nuclear_physicist 2, entomologist 2, american_revolutionary_leader 2, geophysicist 2, physicist 2, ornithologist 2, fabric 1, congressman 1, disturbance 1, happening 1, purpose 1, legal_document 1, unit 1, digit 1, large_integer 1, large_indefinite_quantity 1, symbol 1, coin 1, bill 1, monetary_unit 1, nonaccomplishment 1, misconception 1__15902877
 tea,bag,protest,front,page,while,war,thanks,liberal | hypernyms: container 2, objection 2, side 2, attendant 2, adult 2, meal 1, herb 1, beverage 1, reception 1, shrub 1, baggage 1, unpleasant_woman 1, indefinite_quantity 1, containerful 1, resistance 1, appearance 1, position 1, atmospheric_phenomenon 1, sphere 1, leaf 1, messenger_boy 1, writer 1, industrialist 1, time 1, campaign 1, military_action 1, conflict 1, hostility 1, aid 1, acknowledgment 1__15902877
 perspective,speech,tea,march | hypernyms: appearance 1, auditory_communication 1, speaking 1, utterance 1, meal 1, herb 1, beverage 1, reception 1, shrub 1, progress 1, walk 1, procession 1, gregorian_calendar_month 1__15902877
-obama,inauguration,million,tea,march | hypernyms: president_of_the_united_states 1, beginning 1, initiation 1, large_integer 1, large_indefinite_quantity 1, meal 1, herb 1, beverage 1, reception 1, shrub 1, progress 1, walk 1, procession 1, gregorian_calendar_month 1__15902877
-march,washington,tea,march | hypernyms: progress 2, walk 2, procession 2, gregorian_calendar_month 2, national_capital 1, american_state 1, general 1, educator 1, meal 1, herb 1, beverage 1, reception 1, shrub 1__15902877
-march,gun,control,tea,march | hypernyms: progress 2, walk 2, procession 2, gregorian_calendar_month 2, discharge 1, weapon 1, activity 1, bodily_process 1, mechanism 1, power 1, economic_policy 1, spirit 1, relation 1, meal 1, herb 1, beverage 1, reception 1, shrub 1__15902877
-pro,choice,tea,march | hypernyms: argument 1, action 1, decision_making 1, meal 1, herb 1, beverage 1, reception 1, shrub 1, progress 1, walk 1, procession 1, gregorian_calendar_month 1__15902877
+perspective,obama,inauguration,million,tea,march | hypernyms: appearance 1, president_of_the_united_states 1, beginning 1, initiation 1, large_integer 1, large_indefinite_quantity 1, meal 1, herb 1, beverage 1, reception 1, shrub 1, progress 1, walk 1, procession 1, gregorian_calendar_month 1__15902877
+perspective,march,washington,tea,march | hypernyms: progress 2, walk 2, procession 2, gregorian_calendar_month 2, appearance 1, national_capital 1, american_state 1, general 1, educator 1, meal 1, herb 1, beverage 1, reception 1, shrub 1__15902877
+perspective,march,gun,control,tea,march | hypernyms: progress 2, walk 2, procession 2, gregorian_calendar_month 2, appearance 1, discharge 1, weapon 1, activity 1, bodily_process 1, mechanism 1, power 1, economic_policy 1, spirit 1, relation 1, meal 1, herb 1, beverage 1, reception 1, shrub 1__15902877
+perspective,pro,choice,tea,march | hypernyms: appearance 1, argument 1, action 1, decision_making 1, meal 1, herb 1, beverage 1, reception 1, shrub 1, progress 1, walk 1, procession 1, gregorian_calendar_month 1__15902877
 pro,choice,gun,control,while,making,beck,headliner,#whatliberalmedia | hypernyms: argument 2, action 1, decision_making 1, discharge 1, weapon 1, activity 1, bodily_process 1, mechanism 1, power 1, economic_policy 1, spirit 1, relation 1, time 1, component 1, gesture 1, performer 1__15902877
-bush,era,pro,choice,gun,control,one,front,page,#mediafaýl | hypernyms: president_of_the_united_states 4, wilderness 2, electrical_engineer 2, side 2, attendant 2, geological_time 1, time_period 1, argument 1, action 1, decision_making 1, discharge 1, weapon 1, activity 1, bodily_process 1, mechanism 1, power 1, economic_policy 1, spirit 1, relation 1, unit 1, digit 1, appearance 1, position 1, atmospheric_phenomenon 1, sphere 1, leaf 1, messenger_boy 1, writer 1, industrialist 1__15902877
-do,think,mainstream,are,right,paranoia,fact | hypernyms: information 2, solfa_syllable 1, deliberation 1, thought 1, area_unit 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, psychosis 1, concept 1, reality 1__15902877
+bush,era,pro,choice,gun,control,one,front,page,#mediafail | hypernyms: president_of_the_united_states 4, wilderness 2, electrical_engineer 2, side 2, attendant 2, geological_time 1, time_period 1, argument 1, action 1, decision_making 1, discharge 1, weapon 1, activity 1, bodily_process 1, mechanism 1, power 1, economic_policy 1, spirit 1, relation 1, unit 1, digit 1, appearance 1, position 1, atmospheric_phenomenon 1, sphere 1, leaf 1, messenger_boy 1, writer 1, industrialist 1__15902877
+question,do,think,mainstream,are,right,paranoia,fact | hypernyms: information 2, subject 1, marriage_proposal 1, questioning 1, sentence 1, solfa_syllable 1, deliberation 1, thought 1, area_unit 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, psychosis 1, concept 1, reality 1__15902877
 extremist,death,threat,journalist | hypernyms: end 2, radical 1, killing 1, change 1, imaginary_being 1, organic_phenomenon 1, state 1, declaration 1, warning 1, writer 1__15902877
 google,people,wilson,opposition,stupid,#p | hypernyms: search_engine 2, writer 2, group 1, family 1, mountain_peak 1, president_of_the_united_states 1, literary_critic 1, nuclear_physicist 1, entomologist 1, american_revolutionary_leader 1, geophysicist 1, physicist 1, ornithologist 1, body 1, party 1, contestant 1, direction 1, relation 1, simpleton 1__15902877
-rush,are,#mediafaýl | hypernyms: president_of_the_united_states 2, run 1, outburst 1, flow 1, doctor 1, marsh_plant 1, area_unit 1, wilderness 1, electrical_engineer 1__15902877
-view,whole,thing,pain,few,look,ways,better,community,#mediafaýl | hypernyms: appearance 2, feeling 2, good 2, president_of_the_united_states 2, look 1, visual_percept 1, purpose 1, range 1, object 1, concept 1, physical_entity 1, action 1, artifact 1, null 1, attribute 1, abstraction 1, aim 1, statement 1, happening 1, situation 1, somesthesia 1, unpleasant_person 1, symptom 1, elite 1, sensing 1, structure 1, superior 1, group 1, people 1, gathering 1, world_organization 1, ownership 1, agreement 1, wilderness 1, electrical_engineer 1__15902877
-roman | hypernyms: proportional_font 1, ýtalian 1, european 1__20968385
+rush,are,#mediafail | hypernyms: president_of_the_united_states 2, run 1, outburst 1, flow 1, doctor 1, marsh_plant 1, area_unit 1, wilderness 1, electrical_engineer 1__15902877
+view,whole,thing,pain,few,look,ways,better,community,#mediafail | hypernyms: appearance 2, feeling 2, good 2, president_of_the_united_states 2, look 1, visual_percept 1, purpose 1, range 1, object 1, concept 1, physical_entity 1, action 1, artifact 1, null 1, attribute 1, abstraction 1, aim 1, statement 1, happening 1, situation 1, somesthesia 1, unpleasant_person 1, symptom 1, elite 1, sensing 1, structure 1, superior 1, group 1, people 1, gathering 1, world_organization 1, ownership 1, agreement 1, wilderness 1, electrical_engineer 1__15902877
+roman | hypernyms: proportional_font 1, Ä±talian 1, european 1__20968385
 minder | hypernyms: escort 1__20968385
-test,centrum,test | hypernyms: attempt 4, mental_measurement 2, covering 2, bone 1__20968385
+test,influenza,centrum,test | hypernyms: attempt 4, mental_measurement 2, covering 2, contagious_disease 1, bone 1__20968385
 tot,nu,toe,nog | hypernyms: small_indefinite_quantity 1, letter 1, covering 1, part 1, digit 1, body_part 1, block 1__20968385
 water,minder,water,en | hypernyms: liquid 2, binary_compound 2, element 2, escort 1, linear_unit 1__20968385
 minister,horst | hypernyms: public_service 1, diplomat 1, executive 1, crust 1__20968385
@@ -507,22 +507,22 @@ die,door | hypernyms: cube 1, shaping_tool 1, cutter 1, movable_barrier 1, room 
 van | hypernyms: truck 1, camper 1, car 1__20968385
 brown,kant | hypernyms: chromatic_color 1, abolitionist 1, botanist 1, philosopher 1__20968385
 britten,crisis | hypernyms: conductor 1, juncture 1, situation 1__20968385
-ýran,test | hypernyms: attempt 2, asian_country 1, mental_measurement 1, covering 1__20968385
+test | hypernyms: attempt 2, mental_measurement 1, covering 1__20968385
 man,man,tot | hypernyms: male 6, game_equipment 2, island 2, person 2, subordinate 2, small_indefinite_quantity 1__20968385
 bus,maar,nu | hypernyms: public_transport 1, car 1, volcanic_crater 1, letter 1__20968385
 rosemary,rue,design,little | hypernyms: herb 4, street 1, creating_by_mental_acts 1, decoration 1, sketch 1, arrangement 1, small_indefinite_quantity 1__32502727
 yes,peter,still,editor | hypernyms: affirmative 1, apostle 1, apparatus 1, photograph 1, skilled_worker 1__32502727
-triple,talent,at,click,lore,morality | hypernyms: base_hit 1, multiple 1, expert 1, laotian_monetary_unit 1, depression 1, content 1, quality 1__32502727
+triple,talent,interview,at,click,lore,morality | hypernyms: base_hit 1, multiple 1, expert 1, interrogation 1, laotian_monetary_unit 1, depression 1, content 1, quality 1__32502727
 diana,star,review,shore,are,fantasy,series | hypernyms: celestial_body 2, periodical 2, roman_deity 1, female_aristocrat 1, actor 1, plane_figure 1, exercise 1, proceeding 1, criticism 1, accounting 1, beam 1, geological_formation 1, area_unit 1, imagination 1, fiction 1, polynomial 1, contest 1, ordering 1, group 1, connection 1__32502727
 bunch,rosemary,rue,at | hypernyms: herb 4, collection 1, agglomeration 1, street 1, laotian_monetary_unit 1__32502727
 design,matter,personal,may,will | hypernyms: creating_by_mental_acts 1, decoration 1, sketch 1, arrangement 1, physical_entity 1, consequence 1, concern 1, trouble 1, writing 1, news_article 1, gregorian_calendar_month 1, purpose 1, legal_document 1__32502727
 penguin,week,first,post,three,fantasy,horror | hypernyms: time_period 2, sphenisciform_seabird 1, honours 1, ordinal_number 1, rank 1, delivery 1, upright 1, visual_signal 1, position 1, food_manufacturer 1, writer 1, aviator 1, digit 1, imagination 1, fiction 1, thing 1, fear 1__32502727
 use,grammar,check,more,#gaimanfacts | hypernyms: activity 2, utility 2, legal_right 2, descriptive_linguistics 1, inspection 1, chess_move 1, obstruction 1, weave 1, blemish 1, bill 1, draft 1, statesman 1__32502727
 thanks,welcome,cat | hypernyms: aid 1, acknowledgment 1, greeting 1, acceptance 1, feline 1, gossip 1__32502727
-convention,circuit,#pgiblog | hypernyms: assembly 2, practice 2, treaty 2, meeting 2, electrical_device 1, group 1, path 1__32502727
+science,fiction,princess,convention,circuit,#pgiblog | hypernyms: discipline 2, literary_composition 1, aristocrat 1, assembly 1, practice 1, treaty 1, meeting 1, electrical_device 1, group 1, path 1__32502727
 penguin,#podcast,series,singing,song | hypernyms: sphenisciform_seabird 2, vocal_music 2, polynomial 1, periodical 1, contest 1, ordering 1, group 1, connection 1, musical_composition 1, sound 1, bargain 1__32502727
-are,#pgiblog | hypernyms: area_unit 1, assembly 1, practice 1, treaty 1, meeting 1__32502727
-bay,area,#pgiblog | hypernyms: compartment 2, horse 1, cry 1, body_of_water 1, structure 1, extent 1, body_part 1, topic 1, region 1, assembly 1, practice 1, treaty 1, meeting 1__32502727
+are,#pgiblog | hypernyms: area_unit 1, discipline 1__32502727
+kelpie,bay,area,#pgiblog | hypernyms: compartment 2, shepherd_dog 1, horse 1, cry 1, body_of_water 1, structure 1, extent 1, body_part 1, topic 1, region 1, discipline 1__32502727
 trial,fourth,military,#1,locus,issue | hypernyms: proceeding 2, experiment 2, affliction 2, contest 2, interval 1, rank 1, force 1, set 1, site 1, provision 1, printing 1, content 1, periodical 1, store 1__32502727
 special,lady,read,free,at | hypernyms: television_program 1, offer 1, dish 1, female_aristocrat 1, woman 1, publication 1, people 1, laotian_monetary_unit 1__32502727
 check,out,giveaway,madness,month | hypernyms: inspection 1, chess_move 1, obstruction 1, weave 1, blemish 1, bill 1, draft 1, failure 1, disclosure 1, gift 1, exuberance 1, time_unit 1__32502727
@@ -562,7 +562,7 @@ look,are,picture,real,life,miss | hypernyms: time_period 3, being 2, sensing 1, 
 today,will,win,master,days | hypernyms: day 1, present 1, purpose 1, legal_document 1, victory 1, creation 1, authority 1, employer 1, scholar 1, officer 1, life 1__18854625
 good | hypernyms: morality 1, quality 1, advantage 1__18854625
 do,think,are,tennessee,can,hug,love,kindness | hypernyms: solfa_syllable 1, deliberation 1, area_unit 1, american_state 1, river 1, container 1, buoy 1, containerful 1, embrace 1, object 1, sexual_desire 1, emotion 1, score 1, action 1, good 1__18854625
-go,call,need,skinny,cardigan,two | hypernyms: visit 2, demand 2, board_game 1, shift 1, decision 1, inclination 1, telephone 1, instruction 1, request 1, necessity 1, condition 1, information 1, corgi 1, sweater 1, digit 1__18854625
+go,call,need,skinny,tie,cardigan,two | hypernyms: visit 2, demand 2, board_game 1, shift 1, decision 1, inclination 1, telephone 1, instruction 1, request 1, necessity 1, condition 1, information 1, cord 1, beam 1, brace 1, slur 1, equality 1, corgi 1, sweater 1, digit 1__18854625
 well,are,welcome | hypernyms: excavation 1, compartment 1, shaft 1, vessel 1, source 1, area_unit 1, greeting 1, acceptance 1__18854625
 looking,forward,now,song,play,out,person | hypernyms: action 2, diversion 2, search 1, position 1, basketball_player 1, present 1, vocal_music 1, musical_composition 1, sound 1, bargain 1, plan_of_action 1, use 1, dramatic_composition 1, show 1, failure 1, organism 1, human_body 1, grammatical_category 1__18854625
 today,demand | hypernyms: day 1, present 1, activity 1, request 1, economic_process 1__18854625
@@ -598,7 +598,7 @@ don,at,forum,he,addition,woman | hypernyms: female 2, title 1, river 1, celtic_d
 importance,audience | hypernyms: value 1, standing 1, gathering 1, multitude 1__54522964
 first,say,covering,society | hypernyms: honours 1, ordinal_number 1, rank 1, opportunity 1, protection 1, artifact 1, natural_object 1, social_group 1, elite 1__54522964
 don | hypernyms: title 1, river 1, celtic_deity 1, gentleman 1, head 1__54522964
-don,at,extra,he | hypernyms: title 1, river 1, celtic_deity 1, gentleman 1, head 1, laotian_monetary_unit 1, artifact 1, edition 1, letter 1__54522964
+don,tea,at,extra,he | hypernyms: title 1, river 1, celtic_deity 1, gentleman 1, head 1, meal 1, herb 1, beverage 1, reception 1, shrub 1, laotian_monetary_unit 1, artifact 1, edition 1, letter 1__54522964
 communication,strategy,brown,bag,at,public,library,free,lunch | hypernyms: container 2, collection 2, abstraction 1, act 1, connection 1, military_science 1, chromatic_color 1, abolitionist 1, botanist 1, baggage 1, unpleasant_woman 1, indefinite_quantity 1, containerful 1, laotian_monetary_unit 1, body 1, depository 1, room 1, building 1, people 1, meal 1__54522964
 former,will,tomorrow,night,good,crowd,seat,still | hypernyms: time_period 4, gathering 2, first 1, purpose 1, legal_document 1, day 1, future 1, dark 1, time_unit 1, twilight 1, morality 1, quality 1, advantage 1, support 1, furniture 1, cloth_covering 1, part 1, legal_right 1, location 1, space 1, center 1, apparatus 1, photograph 1__54522964
 city,home,couple,crash,can | hypernyms: municipality 2, administrative_district 1, institution 1, location 1, residence 1, beginning 1, environment 1, pair 1, family 1, unit 1, two 1, small_indefinite_quantity 1, hit 1, accident 1, happening 1, mishap 1, container 1, buoy 1, containerful 1__54522964
@@ -612,7 +612,7 @@ reminder,free,genealogy,fall,workshop,at | hypernyms: experience 1, message 1, p
 thought,handle,thought | hypernyms: belief 2, appendage 1__35126803
 sitting,at,cheerleader,good,news,permit | hypernyms: information 3, motion 2, session 1, laotian_monetary_unit 1, leader 1, supporter 1, morality 1, quality 1, advantage 1, pompano 1__35126803
 #iwish,people | hypernyms: group 2, family 2__35126803
-tonight | hypernyms: present 1__35126803
+movie,tonight | hypernyms: show 1, present 1__35126803
 good,morning,one,saying,then,go,tell,waste,money | hypernyms: morality 1, quality 1, advantage 1, time_period 1, unit 1, digit 1, speech 1, point 1, board_game 1, shift 1, archer 1, activity 1, act 1, material 1, wealth 1, medium_of_exchange 1, currency 1__35126803
 #musicmonday,finger,chaos,good,shit | hypernyms: covering 2, digit 2, linear_unit 2, dynamical_system 1, greek_deity 1, physical_phenomenon 1, confusion 1, morality 1, quality 1, advantage 1, defecation 1__35126803
 kid,know,music,fur | hypernyms: sound 2, goat 1, leather 1, knowing 1, activity 1, punishment 1, auditory_communication 1, coat 1, garment 1, animal_skin 1__35126803
@@ -670,10 +670,10 @@ get,going,car,driver,here,take,party,talk,tomorrow,get | hypernyms: return 2, co
 going,dance,ass,out,inch,going,time,tonight | hypernyms: accomplishment 2, party 2, time_period 2, art 1, equine 1, fool 1, failure 1, linear_unit 1, attribute 1, experience 1, case 1, moment 1, present 1__38794567
 now,evening | hypernyms: time_period 2, present 1, day 1__38794567
 party,great,few | hypernyms: affair 1, social_gathering 1, organization 1, set 1, person 1, achiever 1, elite 1__38794567
-tell,why,there,way,guy,can,way,waste,cost | hypernyms: journey 2, course 2, artifact 2, distance 2, choice 2, category 2, share 2, condition 2, archer 1, reason 1, location 1, brace 1, effigy 1, man 1, container 1, buoy 1, containerful 1, activity 1, act 1, material 1, outgo 1__38794567
+tell,why,there,way,guy,can,fine,way,waste,drink,time,going,cost | hypernyms: journey 2, course 2, artifact 2, distance 2, choice 2, category 2, share 2, condition 2, time_period 2, archer 1, reason 1, location 1, brace 1, effigy 1, man 1, container 1, buoy 1, containerful 1, penalty 1, activity 1, act 1, material 1, intemperance 1, helping 1, body_of_water 1, attribute 1, experience 1, case 1, moment 1, accomplishment 1, outgo 1__38794567
 drink,waste,shoe | hypernyms: intemperance 1, helping 1, body_of_water 1, activity 1, act 1, material 1, footwear 1, case 1__38794567
 why,day,bad | hypernyms: time_period 2, reason 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, quality 1__38794567
-being,do,day,watch | hypernyms: time_period 3, state 1, solfa_syllable 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, surveillance 1, timepiece 1, shift 1__38794567
+being,do,day,watch,movie | hypernyms: time_period 3, state 1, solfa_syllable 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, surveillance 1, timepiece 1, shift 1, show 1__38794567
 day,kind,sound,like,last,night,great,few | hypernyms: time_period 6, time_unit 2, kind 2, writer 1, opportunity 1, time 1, work_time 1, calendar_day 1, era 1, category 1, sound_property 1, sensation 1, happening 1, body_of_water 1, mechanical_phenomenon 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1, dark 1, twilight 1, achiever 1, elite 1__38794567
 no,feeling | hypernyms: negative 1, state 1, intuition 1, somesthesia 1__38794567
 saying,bad,at,party,drink,shoe,guy,bump | hypernyms: speech 1, quality 1, laotian_monetary_unit 1, affair 1, social_gathering 1, organization 1, set 1, person 1, intemperance 1, helping 1, body_of_water 1, footwear 1, case 1, brace 1, effigy 1, man 1, injury 1__38794567
@@ -758,7 +758,7 @@ treasury,study,threat,independence | hypernyms: depository 1, government_departm
 independence | hypernyms: victory 1, freedom 1__69203333
 out,money | hypernyms: failure 1, wealth 1, medium_of_exchange 1, currency 1__69203333
 daily,dollar,bounce,distraction,watch,oil | hypernyms: newspaper 1, symbol 1, coin 1, bill 1, monetary_unit 1, elasticity 1, recoil 1, revision 1, confusion 1, inattention 1, surveillance 1, timepiece 1, shift 1, time_period 1, oil_paint 1, lipid 1__69203333
-activity,rates,stay,low,due,conditions | hypernyms: act 2, context 2, capability 1, tax 1, brace 1, strip 1, decree 1, degree 1, cartoonist 1, air_mass 1, right 1, fixed_charge 1__69203333
+activity,rates,stay,low,due,conditions,inflation | hypernyms: act 2, context 2, capability 1, tax 1, brace 1, strip 1, decree 1, degree 1, cartoonist 1, air_mass 1, right 1, fixed_charge 1, expansion 1, explosion 1, economic_process 1__69203333
 luxury,recession,proof,investment | hypernyms: indulgence 1, wealth 1, cession 1, procession 1, economic_condition 1, photographic_print 1, evidence 1, impression 1, argument 1, measure 1, promotion 1, dressing 1, skin 1, committedness 1, assets 1__69203333
 west,thanks,know | hypernyms: location 1, region 1, geographical_area 1, painter 1, actress 1, writer 1, cardinal_compass_point 1, direction 1, aid 1, acknowledgment 1, knowing 1__17823112
 masterpiece,more,like,little,thing,now,class | hypernyms: kind 2, gathering 2, accomplishment 1, work 1, statesman 1, small_indefinite_quantity 1, physical_entity 1, action 1, artifact 1, null 1, attribute 1, abstraction 1, aim 1, statement 1, happening 1, feeling 1, situation 1, present 1, elegance 1, people 1, collection 1, taxonomic_group 1, league 1__17823112
@@ -789,7 +789,7 @@ today,role,helping,deal,conflict | hypernyms: day 1, present 1, activity 1, smal
 morning,two,one,chat,phone,call | hypernyms: digit 2, visit 2, demand 2, time_period 1, unit 1, conversation 1, language_unit 1, decision 1, inclination 1, telephone 1, instruction 1, request 1__31454615
 blessing,are,oswald,chambers | hypernyms: prayer 1, support 1, good_fortune 1, area_unit 1, assassin 1, architect 1__31454615
 breakfast,pastor,today,missionary,church,church | hypernyms: place_of_worship 2, religion 2, body 2, meal 1, bird_genus 1, day 1, present 1, teacher 1, religious_person 1__31454615
-walk,evening,home,moon,tree,urge,howl | hypernyms: time_period 2, satellite 2, locomotion 1, travel 1, gait 1, path 1, carriage 1, day 1, institution 1, location 1, residence 1, beginning 1, environment 1, object 1, religious_leader 1, actor 1, woody_plant 1, plane_figure 1, desire 1, motivation 1, utterance 1, noise 1, cry 1__31454615
+walk,evening,home,moon,tree,bran,urge,howl | hypernyms: time_period 2, satellite 2, locomotion 1, travel 1, gait 1, path 1, carriage 1, day 1, institution 1, location 1, residence 1, beginning 1, environment 1, object 1, religious_leader 1, actor 1, woody_plant 1, plane_figure 1, roughage 1, chaff 1, desire 1, motivation 1, utterance 1, noise 1, cry 1__31454615
 local,public,library,today,saw,reading,room,no,electronics,novel,no,sight | hypernyms: collection 2, position 2, negative 2, public_transport 1, body 1, depository 1, room 1, building 1, day 1, present 1, hand_tool 1, measurement 1, linguistic_process 1, datum 1, written_communication 1, interpretation 1, city 1, area 1, gathering 1, opportunity 1, physics 1, book 1, fiction 1, compass 1, modality 1, visual_percept 1, display 1__31454615
 working,talk,giving,at,breakfast,saturday,know,happening,days | hypernyms: excavation 1, lecture 1, conversation 1, discussion 1, gossip 1, disposal 1, sharing 1, conveyance 1, laotian_monetary_unit 1, meal 1, weekday 1, knowing 1, event 1, life 1__31454615
 saw,bumper,yesterday,are,proof,god,wonder | hypernyms: hand_tool 1, mechanical_device 1, glass 1, day 1, past 1, area_unit 1, photographic_print 1, evidence 1, impression 1, argument 1, measure 1, spiritual_being 1, superior 1, happening 1, astonishment 1__31454615
@@ -799,6 +799,7 @@ love | hypernyms: object 1, sexual_desire 1, emotion 1, score 1__45086137
 dolor,solo | hypernyms: grief 1, flight 1, activity 1, musical_composition 1__45086137
 fuck | hypernyms: sexual_intercourse 1__45086137
 start | hypernyms: turn 1, advantage 1, beginning 1, line 1__45086137
+mexico | hypernyms: north_american_country 1__45086137
 mexico | hypernyms: north_american_country 1__45086137
 no,no,hay | hypernyms: negative 2, fodder 1__45086137
 son | hypernyms: hypostasis 1, male_offspring 1__45086137
@@ -812,7 +813,7 @@ do,dancing | hypernyms: solfa_syllable 1, diversion 1__14677480
 free,tuesday,today,museum,man,art,free,act,mil | hypernyms: male 3, people 2, creation 2, weekday 1, day 1, present 1, depository 1, game_equipment 1, island 1, person 1, subordinate 1, superior_skill 1, event 1, legal_document 1, performance 1, dramatic_composition 1, expression 1, angular_unit 1, linear_unit 1, cypriot_monetary_unit 1__14677480
 heart,damn,bad,get,free,playing,free | hypernyms: people 2, playing_card 1, disposition 1, courage 1, internal_organ 1, intuition 1, variety_meat 1, plane_figure 1, worthlessness 1, quality 1, return 1, action 1, musical_performance 1__14677480
 wee,hours,morning,sky,clear,crescent,moon,planet,wish,camera | hypernyms: time_period 2, satellite 2, celestial_body 2, time 1, work_time 1, atmosphere 1, innocence 1, curve 1, object 1, religious_leader 1, preference 1, request 1, desire 1, photographic_equipment 1__14677480
-pavement,real | hypernyms: paved_surface 1, coin 1, brazilian_monetary_unit 1__14677480
+shit,pavement,reunion,real | hypernyms: defecation 1, paved_surface 1, union 1, party 1, coin 1, brazilian_monetary_unit 1__14677480
 like,get | hypernyms: kind 2, return 1__14677480
 good,day,saw,venus,crescent,moon,morning,damn,lot,today | hypernyms: time_period 3, satellite 2, morality 1, quality 1, advantage 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, hand_tool 1, mollusk_genus 1, terrestrial_planet 1, roman_deity 1, curve 1, object 1, religious_leader 1, worthlessness 1, tract 1, jew 1, day 1, present 1__14677480
 bistro,half,last,weekend,down,see,go,damned,economy | hypernyms: restaurant 1, part 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1, time_period 1, turn 1, feather 1, hair 1, highland 1, doctor 1, seat 1, board_game 1, shift 1, people 1, action 1, frugality 1, efficiency 1, system 1__14677480
@@ -828,14 +829,14 @@ bouquet,equinox,fall,good,change | hypernyms: cash 2, flower_arrangement 1, olfa
 fondness,going,evening,anthony,rosa,january | hypernyms: time_period 2, liking 1, accomplishment 1, day 1, suffragist 1, rosid_dicot_genus 1, gregorian_calendar_month 1__14677480
 looking,forward,folk,at,going,portland,days | hypernyms: city 2, search 1, position 1, basketball_player 1, people 1, laotian_monetary_unit 1, accomplishment 1, life 1__14677480
 being,camera,man,while,breakfast,at,pancake,house,shame,eating,sausage | hypernyms: male 3, state 1, photographic_equipment 1, game_equipment 1, island 1, person 1, subordinate 1, time 1, meal 1, laotian_monetary_unit 1, cake 1, play 1, dwelling 1, building 1, family 1, legislature 1, audience 1, community 1, management 1, feeling 1, dishonor 1, consumption 1, meat 1__14677480
-patrick,love,movie | hypernyms: apostle 1, object 1, sexual_desire 1, emotion 1, score 1, show 1__25163276
+rip,patrick,love,movie | hypernyms: turbulence 1, opening 1, apostle 1, object 1, sexual_desire 1, emotion 1, score 1, show 1__25163276
 cold,medicine,ready,fall | hypernyms: temperature 1, respiratory_disease 1, learned_profession 1, drug 1, medical_science 1, readiness 1, sin 1, change_of_location 1, weakening 1, victory 1, event 1, season 1__25163276
 love,yesterday,son,out,olive,garden | hypernyms: object 1, sexual_desire 1, emotion 1, score 1, day 1, past 1, hypostasis 1, male_offspring 1, failure 1, chromatic_color 1, relish 1, wood 1, olive_tree 1, fruit 1, plot 1, yard 1, vegetation 1__25163276
-halloween,year,at | hypernyms: time_period 3, day 1, laotian_monetary_unit 1__25163276
+thinking,halloween,making,year,at | hypernyms: time_period 3, higher_cognitive_process 1, day 1, component 1, laotian_monetary_unit 1__25163276
 princess,at,night,gown,day,wait,halloween,costume,now | hypernyms: time_period 6, attire 4, time_unit 2, aristocrat 1, laotian_monetary_unit 1, dark 1, twilight 1, dress 1, outerwear 1, garment 1, university 1, writer 1, opportunity 1, time 1, work_time 1, calendar_day 1, era 1, inactivity 1, day 1, present 1__25163276
 disney,princess,going,take,well | hypernyms: film_maker 1, aristocrat 1, accomplishment 1, filming 1, excavation 1, compartment 1, shaft 1, vessel 1, source 1__25163276
 cool,let,know | hypernyms: coldness 1, serve 1, knowing 1__25163276
-ready,go,yay,get,see,district | hypernyms: readiness 1, board_game 1, shift 1, tai 1, return 1, seat 1, region 1__25163276
+ready,go,movie,yay,get,see,district | hypernyms: readiness 1, board_game 1, shift 1, show 1, tai 1, return 1, seat 1, region 1__25163276
 lucy,love | hypernyms: australopithecus_afarensis 1, object 1, sexual_desire 1, emotion 1, score 1__25163276
 #youknowyourfriendslove,take,over,place,drunk | hypernyms: filming 2, part 1, cognition 1, passage 1, item 1, geographical_area 1, vicinity 1, situation 1, social_station 1, condition 1, drinker 1__25163276
 going,wit,phone,ass | hypernyms: accomplishment 1, message 1, language_unit 1, equine 1, fool 1__25163276
@@ -850,26 +851,26 @@ phone,go,week | hypernyms: time_period 2, language_unit 1, board_game 1, shift 1
 class,damn,lab,left,bout | hypernyms: gathering 2, elegance 1, people 1, collection 1, taxonomic_group 1, league 1, worthlessness 1, workplace 1, turn 1, hand 1, faction 1, position 1, contest 1, time_period 1__31454743
 class,at | hypernyms: gathering 2, elegance 1, people 1, collection 1, taxonomic_group 1, league 1, laotian_monetary_unit 1__31454743
 lie | hypernyms: falsehood 1, position 1, diplomat 1__31454743
-call,start,monday,at | hypernyms: visit 2, demand 2, decision 1, inclination 1, telephone 1, instruction 1, request 1, turn 1, advantage 1, beginning 1, line 1, weekday 1, laotian_monetary_unit 1__31454743
+call,given,start,monday,at | hypernyms: visit 2, demand 2, decision 1, inclination 1, telephone 1, instruction 1, request 1, assumption 1, turn 1, advantage 1, beginning 1, line 1, weekday 1, laotian_monetary_unit 1__31454743
 thanks,sir | hypernyms: aid 1, acknowledgment 1, man 1, male_aristocrat 1__31454743
 good,now | hypernyms: morality 1, quality 1, advantage 1, present 1__31454743
-love,dark,chocolate,body,effort,perfume | hypernyms: natural_object 3, object 1, sexual_desire 1, emotion 1, score 1, unenlightenment 1, illumination 1, brown 1, food 1, structure 1, mass 1, message 1, social_group 1, system 1, labor 1, toiletry 1__31454743
-at,use,white,people,guess | hypernyms: writer 2, laotian_monetary_unit 1, activity 1, utility 1, legal_right 1, man 1, achromatic_color 1, river 1, person 1, educator 1, architect 1, journalist 1, chief_justice 1, group 1, family 1, estimate 1, opinion 1__31454743
+love,dark,girl,chocolate,skin,hair,body,effort,hint,perfume | hypernyms: natural_object 3, woman 2, object 1, sexual_desire 1, emotion 1, score 1, unenlightenment 1, illumination 1, brown 1, food 1, surface 1, bag 1, connective_tissue 1, animation 1, process 1, filament 1, body_covering 1, plant_process 1, structure 1, mass 1, message 1, social_group 1, system 1, labor 1, indication 1, suggestion 1, toiletry 1__31454743
+at,private,use,white,people,guess | hypernyms: writer 2, laotian_monetary_unit 1, enlisted_man 1, activity 1, utility 1, legal_right 1, man 1, achromatic_color 1, river 1, person 1, educator 1, architect 1, journalist 1, chief_justice 1, group 1, family 1, estimate 1, opinion 1__31454743
 jeans,skinny,go | hypernyms: trousers 1, information 1, board_game 1, shift 1__31454743
-#rememberwhen,shit,cartoon,network | hypernyms: system 3, defecation 2, short_subject 1, wit 1, communication_system 1__31454743
+#rememberwhen,shit,cartoon,network,sailor | hypernyms: system 3, defecation 2, short_subject 1, wit 1, communication_system 1, skilled_worker 1__31454743
 dick,club,club | hypernyms: stick 2, playing_card 2, association 2, detective 1__31454743
-shook,right,now,body,think,saw | hypernyms: natural_object 3, barrel 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1, structure 1, mass 1, message 1, social_group 1, system 1, deliberation 1, hand_tool 1__31454743
+shook,right,now,body,think,saw,like | hypernyms: natural_object 3, kind 2, barrel 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1, structure 1, mass 1, message 1, social_group 1, system 1, deliberation 1, hand_tool 1__31454743
 god,cause | hypernyms: spiritual_being 1, superior 1, justification 1, origin 1__31454743
 here,bout,boo | hypernyms: location 1, contest 1, time_period 1, cry 1__31454743
 well | hypernyms: excavation 1, compartment 1, shaft 1, vessel 1, source 1__31454743
 ur,old,ass,still | hypernyms: city 1, past 1, equine 1, fool 1, apparatus 1, photograph 1__31454743
-one,fuck,bar,check,out,cypress,spring | hypernyms: obstruction 2, unit 1, digit 1, sexual_intercourse 1, implement 1, counter 1, railing 1, heating_element 1, support 1, ridge 1, pressure_unit 1, inspection 1, chess_move 1, weave 1, blemish 1, bill 1, draft 1, failure 1, conifer 1, wood 1, elastic_device 1, beginning 1, geological_formation 1, season 1__31454743
+one,bitch,fuck,bar,check,out,cypress,spring | hypernyms: obstruction 2, unit 1, digit 1, canine 1, difficulty 1, sexual_intercourse 1, implement 1, counter 1, railing 1, heating_element 1, support 1, ridge 1, pressure_unit 1, inspection 1, chess_move 1, weave 1, blemish 1, bill 1, draft 1, failure 1, conifer 1, wood 1, elastic_device 1, beginning 1, geological_formation 1, season 1__31454743
 still,home,state,sir | hypernyms: apparatus 1, photograph 1, institution 1, location 1, residence 1, beginning 1, environment 1, attribute 1, political_unit 1, government 1, administrative_district 1, emotional_state 1, man 1, male_aristocrat 1__31454743
 low,no,need,out | hypernyms: degree 1, cartoonist 1, air_mass 1, negative 1, necessity 1, condition 1, failure 1__31454743
 yes,like,great,right,contrary | hypernyms: kind 2, affirmative 1, achiever 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, logical_relation 1, opposition 1__49280560
 use,last | hypernyms: activity 2, utility 1, legal_right 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1__49280560
 type,creature,are,vampire | hypernyms: block 1, kind 1, symbol 1, character 1, taxonomic_group 1, person 1, slave 1, area_unit 1, evil_spirit 1__49280560
-are | hypernyms: area_unit 1__49280560
+are,addict | hypernyms: area_unit 1, drug_user 1, enthusiast 1__49280560
 favorite,letter | hypernyms: choice 1, text 1, award 1, character 1, literal_interpretation 1, owner 1__49280560
 like,favorite,letter | hypernyms: kind 2, choice 1, text 1, award 1, character 1, literal_interpretation 1, owner 1__49280560
 see,tomorrow | hypernyms: seat 1, day 1, future 1__49280560
@@ -897,7 +898,7 @@ emission,still,means,earth | hypernyms: egress 1, flow 1, release 1, apparatus 1
 butterfly,key,migration | hypernyms: list 2, swimming_stroke 1, lepidopterous_insect 1, device 1, lever 1, pitch 1, explanation 1, positive_identification 1, musical_notation 1, space 1, coral_reef 1, lawyer 1, kilogram 1, motion 1, periodic_event 1, event 1, people 1__22506795
 spacecraft,water,martian | hypernyms: craft 1, liquid 1, binary_compound 1, element 1, imaginary_being 1__22506795
 ice,north,pole,equator,mars | hypernyms: direction 2, frozen_dessert 1, object 1, diamond 1, crystal 1, location 1, geographical_area 1, statesman 1, cardinal_compass_point 1, rod 1, end 1, sports_implement 1, opinion 1, geographic_point 1, celestial_point 1, european 1, great_circle 1, circle 1, terrestrial_planet 1, roman_deity 1__22506795
-report,success,vaccine,aýds | hypernyms: news 1, informing 1, document 1, noise 1, attainment 1, happening 1, prosperity 1, immunogen 1, immunodeficiency 1__22506795
+report,success,vaccine | hypernyms: news 1, informing 1, document 1, noise 1, attainment 1, happening 1, prosperity 1, immunogen 1__22506795
 british,farm,saxon | hypernyms: nation 1, workplace 1, european 1__22506795
 palau,first,shark,sanctuary | hypernyms: archipelago 1, country 1, honours 1, ordinal_number 1, rank 1, elasmobranch 1, expert 1, wrongdoer 1, place 1__22506795
 frog,species,found,mekong | hypernyms: amphibian 1, adornment 1, frenchman 1, kind 1, taxonomic_group 1, wage 1, river 1__22506795
@@ -910,7 +911,7 @@ anti,trust | hypernyms: person 1, trait 1, consortium 1, property 1__22017602
 back,weekend,ready,tweet,like,crazy | hypernyms: position 2, kind 2, support 1, cloth_covering 1, body_part 1, football_player 1, time_period 1, readiness 1, chirp 1, lunatic 1__22017602
 apple,palm,spat,things | hypernyms: edible_fruit 1, apple_tree 1, area 1, tree 1, linear_unit 1, young 1, legging 1, property 1__22017602
 watch,piece,campaign,like,leave | hypernyms: kind 2, surveillance 1, timepiece 1, shift 1, time_period 1, part 1, item 1, distance 1, creation 1, case 1, helping 1, expedition 1, venture 1, operation 1, permission 1, time_off 1__22017602
-carol,yahoo,google,leave,watch,piece,here | hypernyms: search_engine 2, song 1, religious_song 1, fictional_character 1, permission 1, time_off 1, surveillance 1, timepiece 1, shift 1, time_period 1, part 1, item 1, distance 1, creation 1, case 1, helping 1, location 1__22017602
+carol,yahoo,google,leave,like,watch,piece,here | hypernyms: search_engine 2, kind 2, song 1, religious_song 1, fictional_character 1, permission 1, time_off 1, surveillance 1, timepiece 1, shift 1, time_period 1, part 1, item 1, distance 1, creation 1, case 1, helping 1, location 1__22017602
 first | hypernyms: honours 1, ordinal_number 1, rank 1__22017602
 brother | hypernyms: male_sibling 1, monk 1, member 1, friend 1__22017602
 there,may,at,current,pace | hypernyms: location 1, gregorian_calendar_month 1, laotian_monetary_unit 1, flow 1, electrical_phenomenon 1, step 1, temporal_property 1, rate 1__22017602
@@ -931,7 +932,7 @@ hanger,back,hope,still,hang,pair | hypernyms: support 2, position 2, worker 1, c
 people,are | hypernyms: group 1, family 1, area_unit 1__7337542
 day,class,apple,class,class,fencing,sleep,week | hypernyms: gathering 6, time_period 5, elegance 3, people 3, collection 3, taxonomic_group 3, league 3, physical_condition 2, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, edible_fruit 1, apple_tree 1, fight 1__7337542
 saturday | hypernyms: weekday 1__7337542
-watch,weekend,feel,fitting,patrick | hypernyms: time_period 2, surveillance 1, timepiece 1, shift 1, foreplay 1, awareness 1, test 1, accessory 1, apostle 1__7337542
+watch,weekend,feel,fitting,rip,patrick | hypernyms: time_period 2, surveillance 1, timepiece 1, shift 1, foreplay 1, awareness 1, test 1, accessory 1, turbulence 1, opening 1, apostle 1__7337542
 out,today,thursday | hypernyms: failure 1, day 1, present 1, weekday 1__7337542
 puppy,chow,tonight,hope,love | hypernyms: pup 1, young_person 1, spitz 1, fare 1, present 1, theological_virtue 1, anticipation 1, feeling 1, person 1, comedian 1, object 1, sexual_desire 1, emotion 1, score 1__7337542
 shot,lot,people,here | hypernyms: attempt 2, blow 1, projectile 1, charge 1, sports_equipment 1, remark 1, expert 1, opportunity 1, tract 1, jew 1, group 1, family 1, location 1__7337542
@@ -942,7 +943,7 @@ attendance,registration,over,debate,tomorrow,night,now,first,first,serve,seating
 guy,laptop,union | hypernyms: brace 1, effigy 1, man 1, portable_computer 1, combination 1, device 1, happening 1, set 1, organization 1, political_unit 1, united_states 1, healing 1, state 1__7337542
 capture,flag,friday,at | hypernyms: natural_process 2, acquiring 1, chess_move 1, felony 1, tail 1, emblem 1, paving_stone 1, visual_signal 1, weekday 1, laotian_monetary_unit 1__7337542
 update | hypernyms: activity 1, information 1__7337542
-line,outside,arena,debate,out | hypernyms: mark 2, formation 2, conformity 1, artifact 1, road 1, carrier 1, merchandise 1, differentiation 1, text 1, persuasion 1, location 1, military_position 1, electromagnetic_radiation 1, shape 1, surface 1, region 1, playing_field 1, area 1, public_speaking 1, failure 1__7337542
+line,outside,arena,debate,invite,out | hypernyms: mark 2, formation 2, conformity 1, artifact 1, road 1, carrier 1, merchandise 1, differentiation 1, text 1, persuasion 1, location 1, military_position 1, electromagnetic_radiation 1, shape 1, surface 1, region 1, playing_field 1, area 1, public_speaking 1, invitation 1, failure 1__7337542
 time,get,guess | hypernyms: time_period 2, attribute 1, experience 1, case 1, moment 1, return 1, estimate 1, opinion 1__20969045
 go | hypernyms: board_game 1, shift 1__20969045
 imagination,right,words,page,are,font,weight | hypernyms: attendant 2, creativity 1, representational_process 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, language 1, speech 1, leaf 1, messenger_boy 1, writer 1, industrialist 1, area_unit 1, type 1, artifact 1, sports_equipment 1, physical_property 1, importance 1, oppression 1, coefficient 1__20969045
@@ -954,7 +955,8 @@ no,one,day | hypernyms: time_period 2, negative 1, unit 1, digit 1, writer 1, op
 cool,see,top | hypernyms: coldness 1, seat 1, woman's_clothing 1, covering 1, plaything 1, platform 1, intensity 1, side 1, region 1, turn 1__20969045
 save,money,dutch | hypernyms: prevention 1, wealth 1, medium_of_exchange 1, currency 1, west_germanic 1, nation 1__20969045
 take,order,stay,work,here,dutch,society,bit,dutch,language | hypernyms: west_germanic 2, nation 2, filming 1, organization 1, artistic_style 1, magnitude 1, commercial_document 1, rule 1, command 1, request 1, taxonomic_group 1, sect 1, state 1, act 1, brace 1, strip 1, decree 1, activity 1, product 1, energy 1, location 1, social_group 1, elite 1, cutting_implement 1, stable_gear 1, part 1, fragment 1, unit_of_measurement 1, faculty 1, communication 1__20969045
-display | hypernyms: show 1, representation 1, electronic_device 1, demonstration 1, communication 1, disclosure 1__20969045
+birdie | hypernyms: score 1__20969045
+display,birdie | hypernyms: show 1, representation 1, electronic_device 1, demonstration 1, communication 1, disclosure 1, score 1__20969045
 keep,thinking,why,tweet,more,can,read,more,then,keep,page,tweet | hypernyms: stronghold 2, chirp 2, statesman 2, attendant 2, higher_cognitive_process 1, reason 1, container 1, buoy 1, containerful 1, publication 1, point 1, leaf 1, messenger_boy 1, writer 1, industrialist 1__20969045
 tea,router,good,way,sabotage | hypernyms: meal 1, herb 1, beverage 1, reception 1, shrub 1, power_tool 1, device 1, skilled_worker 1, morality 1, quality 1, advantage 1, journey 1, course 1, artifact 1, distance 1, choice 1, category 1, share 1, condition 1, destruction 1__20969045
 neck,wait,neck,massage | hypernyms: opening 2, part 2, external_body_part 2, cut 2, land 2, inactivity 1, treatment 1__20969045
@@ -1019,8 +1021,8 @@ gluck,tie,tiebreaker,then,#nascar | hypernyms: composer 1, cord 1, beam 1, brace
 #nascar,rain,at,image | hypernyms: laotian_monetary_unit 2, sequence 1, precipitation 1, fresh_water 1, impression 1, representation 1, set 1__18871948
 owen,centennial,commons,at,university,wednesday,free,show,there | hypernyms: paleontologist 1, industrialist 1, anniversary 1, pasture 1, laotian_monetary_unit 1, establishment 1, body 1, educational_institution 1, weekday 1, people 1, entertainment 1, social_event 1, location 1__17823407
 nice,block,keep,company,confederacy | hypernyms: city 1, artifact 1, housing 1, inability 1, collection 1, area 1, computer_memory_unit 1, solid 1, stronghold 1, institution 1, unit 1, social_gathering 1, organization 1, army_unit 1, friendship 1, geographical_area 1__17823407
-owen,centennial,commons,at,university,tomorrow,free,show | hypernyms: paleontologist 1, industrialist 1, anniversary 1, pasture 1, laotian_monetary_unit 1, establishment 1, body 1, educational_institution 1, day 1, future 1, people 1, entertainment 1, social_event 1__17823407
-owen,centennial,commons,at,university,free,show,see,there | hypernyms: paleontologist 1, industrialist 1, anniversary 1, pasture 1, laotian_monetary_unit 1, establishment 1, body 1, educational_institution 1, people 1, entertainment 1, social_event 1, seat 1, location 1__17823407
+owen,centennial,commons,at,university,tomorrow,free,public,show | hypernyms: body 2, paleontologist 1, industrialist 1, anniversary 1, pasture 1, laotian_monetary_unit 1, establishment 1, educational_institution 1, day 1, future 1, people 1, entertainment 1, social_event 1__17823407
+owen,centennial,commons,at,university,free,public,show,see,there | hypernyms: body 2, paleontologist 1, industrialist 1, anniversary 1, pasture 1, laotian_monetary_unit 1, establishment 1, educational_institution 1, people 1, entertainment 1, social_event 1, seat 1, location 1__17823407
 motivation,24/7,bed,leave,telling | hypernyms: psychological_feature 1, act 1, condition 1, uptime 1, bedroom_furniture 1, plot 1, foundation 1, surface 1, natural_depression 1, stratum 1, permission 1, time_off 1, informing 1__17823407
 agony,know,cause,rush,out,now | hypernyms: suffering 1, pain 1, knowing 1, justification 1, origin 1, run 1, outburst 1, flow 1, doctor 1, marsh_plant 1, failure 1, present 1__17823407
 yogurt,are,things,keeping,at,work,day | hypernyms: time_period 2, dairy_product 1, area_unit 1, property 1, conformity 1, laotian_monetary_unit 1, activity 1, product 1, energy 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1__17823407
@@ -1061,7 +1063,7 @@ answer,main,event,race,last,two,days | hypernyms: contest 2, reaction 1, pleadin
 question,day,number,stay,begin,hatch | hypernyms: time_period 2, subject 1, marriage_proposal 1, questioning 1, sentence 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, merchandise 1, size 1, amount 1, grammatical_category 1, positive_identification 1, item 1, company 1, definite_quantity 1, act 1, brace 1, strip 1, decree 1, statesman 1, movable_barrier 1, shading 1, parturition 1__52426434
 can,personal,character,at | hypernyms: container 1, buoy 1, containerful 1, news_article 1, attribute 1, trait 1, portrayal 1, recommendation 1, written_symbol 1, adult 1, repute 1, laotian_monetary_unit 1__52426434
 answer,three,stay,hatch | hypernyms: reaction 1, pleading 1, statement 1, reply 1, digit 1, act 1, brace 1, strip 1, decree 1, movable_barrier 1, shading 1, parturition 1__52426434
-question,day,number,chocolate,chip | hypernyms: time_period 2, subject 1, marriage_proposal 1, questioning 1, sentence 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, merchandise 1, size 1, amount 1, grammatical_category 1, positive_identification 1, item 1, company 1, definite_quantity 1, brown 1, food 1, breakage 1, approach 1, semiconductor_device 1, counter 1, float 1, snack_food 1, droppings 1__52426434
+question,day,number,chocolate,chip,cookie | hypernyms: time_period 2, subject 1, marriage_proposal 1, questioning 1, sentence 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, merchandise 1, size 1, amount 1, grammatical_category 1, positive_identification 1, item 1, company 1, definite_quantity 1, brown 1, food 1, breakage 1, approach 1, semiconductor_device 1, counter 1, float 1, snack_food 1, droppings 1, text 1, cake 1, cook 1__52426434
 answer,chocolate,chip,cookie,at,toll,house,restaurant,ruth,graves | hypernyms: building 2, reaction 1, pleading 1, statement 1, reply 1, brown 1, food 1, breakage 1, approach 1, semiconductor_device 1, counter 1, float 1, snack_food 1, droppings 1, text 1, cake 1, cook 1, laotian_monetary_unit 1, fee 1, play 1, dwelling 1, family 1, legislature 1, audience 1, community 1, management 1, book 1, wife 1, ballplayer 1, writer 1__52426434
 question,day,number,blood,flow,minute | hypernyms: time_unit 2, time_period 2, subject 1, marriage_proposal 1, questioning 1, sentence 1, writer 1, opportunity 1, time 1, work_time 1, calendar_day 1, era 1, merchandise 1, size 1, amount 1, grammatical_category 1, positive_identification 1, item 1, company 1, definite_quantity 1, disposition 1, liquid_body_substance 1, people 1, motion 1, change_of_location 1, natural_process 1, rate 1, note 1, angular_unit 1__52426434
 answer,question,three,blood,minute,flow | hypernyms: reaction 1, pleading 1, statement 1, reply 1, subject 1, marriage_proposal 1, questioning 1, sentence 1, digit 1, disposition 1, liquid_body_substance 1, people 1, note 1, angular_unit 1, time_unit 1, motion 1, change_of_location 1, natural_process 1, rate 1__52426434
@@ -1079,7 +1081,7 @@ why,people,call,over,bathroom,shower,must,bad,timing | hypernyms: visit 2, deman
 upholstery | hypernyms: trade 1, covering 1__18400740
 crow,think | hypernyms: corvine_bird 1, siouan 1, cry 1, sioux 1, deliberation 1__18400740
 sunset,middle,nowhere | hypernyms: periodic_event 1, atmospheric_phenomenon 1, hour 1, area 1, part 1, point 1, obscurity 1__18400740
-fun,night,ýndian,crow,attack,star,party,out,sol,night,at,acorn | hypernyms: time_period 8, dark 2, time_unit 2, twilight 2, celestial_body 2, diversion 1, activity 1, wit 1, asian 1, corvine_bird 1, siouan 1, cry 1, sioux 1, beginning 1, turn 1, crime 1, operation 1, criticism 1, degeneration 1, affliction 1, actor 1, plane_figure 1, affair 1, social_gathering 1, organization 1, set 1, person 1, failure 1, solfa_syllable 1, roman_deity 1, colloid 1, laotian_monetary_unit 1, fruit 1__18400740
+fun,night,crow,attack,star,party,out,sol,night,at,acorn | hypernyms: time_period 8, dark 2, time_unit 2, twilight 2, celestial_body 2, diversion 1, activity 1, wit 1, corvine_bird 1, siouan 1, cry 1, sioux 1, beginning 1, turn 1, crime 1, operation 1, criticism 1, degeneration 1, affliction 1, actor 1, plane_figure 1, affair 1, social_gathering 1, organization 1, set 1, person 1, failure 1, solfa_syllable 1, roman_deity 1, colloid 1, laotian_monetary_unit 1, fruit 1__18400740
 think,best,song,year,get,enough | hypernyms: time_period 3, deliberation 1, attempt 1, person 1, physiologist 1, vocal_music 1, musical_composition 1, sound 1, bargain 1, return 1, relative_quantity 1__18400740
 video,out,music | hypernyms: visual_communication 2, sound 2, failure 1, activity 1, punishment 1, auditory_communication 1__18400740
 why,do,people,mexican,whistle,at,call,over,are,dog,will | hypernyms: visit 2, demand 2, reason 1, solfa_syllable 1, group 1, family 1, central_american 1, acoustic_device 1, wind_instrument 1, signal 1, sound 1, laotian_monetary_unit 1, decision 1, inclination 1, telephone 1, instruction 1, request 1, part 1, area_unit 1, canine 1, chap 1, purpose 1, legal_document 1__18400740
@@ -1100,13 +1102,14 @@ he | hypernyms: letter 1__35649277
 hay,painting | hypernyms: fodder 1, trade 1, application 1, art 1, graphic_art 1__35649277
 fuck,copy,cat | hypernyms: sexual_intercourse 1, representation 1, text 1, material 1, feline 1, gossip 1__35649277
 give,fake,shit | hypernyms: elasticity 1, imitation 1, defecation 1__35649277
+like | hypernyms: kind 2__35649277
 trip | hypernyms: blunder 1, step 1, journey 1, experience 1, hallucination 1__35649277
 hay | hypernyms: fodder 1__35649277
 do,majority,people,life,call | hypernyms: time_period 3, being 2, visit 2, demand 2, solfa_syllable 1, number 1, relative_quantity 1, age 1, group 1, family 1, living_thing 1, experience 1, motivation 1, person 1, organic_phenomenon 1, decision 1, inclination 1, telephone 1, instruction 1, request 1__35649277
 sunday | hypernyms: evangelist 1, rest_day 1__35649277
 go,china,buffet,walnut,shrimp | hypernyms: board_game 1, shift 1, porcelain 1, asian_country 1, furniture 1, meal 1, edible_nut 1, nut_tree 1, wood 1, decapod_crustacean 1__35649277
 are,going | hypernyms: area_unit 1, accomplishment 1__35649277
-save | hypernyms: prevention 1__35649277
+save,brownie | hypernyms: prevention 1, cookie 1, girl_scout 1__35649277
 yay,worksheet | hypernyms: tai 1, sheet 1, written_record 1__35649277
 house,get,out,then,get,there | hypernyms: return 2, play 1, dwelling 1, building 1, family 1, legislature 1, audience 1, community 1, management 1, failure 1, point 1, location 1__35649277
 wheel,smash,phone,take,poke,at,one | hypernyms: machine 1, helm 1, force 1, collision 1, language_unit 1, filming 1, pokeweed 1, laotian_monetary_unit 1, unit 1, digit 1__16354609
@@ -1138,8 +1141,8 @@ good,luck | hypernyms: phenomenon 2, morality 1, quality 1, advantage 1__3984366
 much,following,stay,tune,more,channel | hypernyms: large_indefinite_quantity 1, multitude 1, act 1, brace 1, strip 1, decree 1, alteration 1, pitch 1, music 1, statesman 1, passage 1, television_station 1, transmission 1, communication 1, body_of_water 1__39843665
 channel | hypernyms: passage 1, television_station 1, transmission 1, communication 1, body_of_water 1__39843665
 let,no,magic | hypernyms: serve 1, negative 1, supernaturalism 1__39843665
-mail,address,secret,get,mail | hypernyms: conveyance 2, communication 2, message 2, collection 2, information 2, stance 1, code 1, direction 1, street_sign 1, manner_of_speaking 1, speech_act 1, geographic_point 1, return 1__39843665
-sister | hypernyms: member 1, nun 1, female_sibling 1__39843665
+mail,mail,address,secret,get,mail | hypernyms: conveyance 3, communication 3, message 3, collection 3, information 2, stance 1, code 1, direction 1, street_sign 1, manner_of_speaking 1, speech_act 1, geographic_point 1, return 1__39843665
+sister,movie | hypernyms: member 1, nun 1, female_sibling 1, show 1__39843665
 are,favorite | hypernyms: area_unit 1, choice 1__39843665
 saturday,over | hypernyms: weekday 1, part 1__39843665
 outfit,at,choice,vote | hypernyms: attire 1, unit 1, laotian_monetary_unit 1, action 1, decision_making 1, group_action 1, choice 1, numerical_quantity 1, body 1__39843665
@@ -1161,7 +1164,7 @@ why,do,hate,people,why,lie,giving,#dadt,#doma | hypernyms: reason 4, solfa_sylla
 rambutan,jew,year,#roshhashana | hypernyms: time_period 3, edible_fruit 2, fruit_tree 2, person 1__63962769
 dutch,art,#newislandfestival | hypernyms: west_germanic 2, nation 2, creation 2, superior_skill 1__63962769
 do,bathroom,customer,wait,minutes | hypernyms: solfa_syllable 1, room 1, consumer 1, inactivity 1, written_record 1__63962769
-movie,angelica,houston,#movies | hypernyms: show 2, herb 2, flavorer 1, city 1, politician 1__63962769
+movie,wit,angelica,houston,#movies | hypernyms: show 2, herb 2, message 1, flavorer 1, city 1, politician 1__63962769
 #tourist,#timessquare,german,scottish,accent | hypernyms: west_germanic 3, european 3, english 1, diacritical_mark 1, pronunciation 1__63962769
 see,two,there,#gaybies,#gay,#doma | hypernyms: seat 3, digit 1, location 1, reason 1__63962769
 are,favorite,housewife,need,drop,friend,stick | hypernyms: descent 2, implement 2, area_unit 1, choice 1, wife 1, necessity 1, condition 1, depository 1, decrease 1, hiding_place 1, small_indefinite_quantity 1, sphere 1, christian 1, person 1, punishment 1, lever 1, sports_equipment 1, butter 1, limb 1__63962769
@@ -1213,10 +1216,10 @@ film,screening,are,undesirable | hypernyms: object 1, photographic_paper 1, shee
 back,rain,left,side,hall | hypernyms: position 3, surface 2, building 2, support 1, cloth_covering 1, body_part 1, football_player 1, sequence 1, precipitation 1, fresh_water 1, turn 1, hand 1, faction 1, area 1, aspect 1, opinion 1, cut 1, lineage 1, unit 1, line 1, region 1, room 1, astronomer 1, explorer 1, chemist 1, psychologist 1, writer 1__22017965
 wind,low,game,#redsox,#angels | hypernyms: rotation 2, exhalation 2, talk 2, influence 2, weather 2, diversion 2, activity 2, contest 2, play 2, occupation 2, animal 2, game_equipment 2, meat 2, score 2, part 2, degree 1, cartoonist 1, air_mass 1__22017965
 well,few | hypernyms: excavation 1, compartment 1, shaft 1, vessel 1, source 1, elite 1__22017965
-mean,unconsciousness,here | hypernyms: average 1, cognitive_state 1, location 1__22017965
+mean,pit,unconsciousness,here | hypernyms: area 2, average 1, excavation 1, trap 1, enclosure 1, hole 1, concave_shape 1, cognitive_state 1, location 1__22017965
 hell,right,there,thought,he,#redsox | hypernyms: imaginary_place 2, mischief 1, trouble 1, region 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, location 1, belief 1, letter 1, diversion 1, activity 1, contest 1, play 1, occupation 1, animal 1, game_equipment 1, meat 1, score 1, part 1__22017965
 know,drop,one,say,good,#redsox | hypernyms: descent 2, knowing 1, depository 1, decrease 1, hiding_place 1, small_indefinite_quantity 1, sphere 1, unit 1, digit 1, opportunity 1, morality 1, quality 1, advantage 1, diversion 1, activity 1, contest 1, play 1, occupation 1, animal 1, game_equipment 1, meat 1, score 1, part 1__22017965
-game,#redsox | hypernyms: diversion 2, activity 2, contest 2, play 2, occupation 2, animal 2, game_equipment 2, meat 2, score 2, part 2__22017965
+game,killing,#redsox | hypernyms: diversion 2, activity 2, contest 2, play 2, occupation 2, animal 2, game_equipment 2, meat 2, score 2, part 2, termination 1, fatality 1, net_income 1__22017965
 #redsox | hypernyms: diversion 1, activity 1, contest 1, play 1, occupation 1, animal 1, game_equipment 1, meat 1, score 1, part 1__22017965
 #angels,#redsox | hypernyms: rotation 1, exhalation 1, talk 1, influence 1, weather 1, diversion 1, activity 1, contest 1, play 1, occupation 1, animal 1, game_equipment 1, meat 1, score 1, part 1__22017965
 worse,night,at,home,game,#redsox | hypernyms: time_period 4, diversion 2, activity 2, contest 2, play 2, occupation 2, animal 2, game_equipment 2, meat 2, score 2, part 2, bad 1, dark 1, time_unit 1, twilight 1, laotian_monetary_unit 1, institution 1, location 1, residence 1, beginning 1, environment 1__22017965
@@ -1239,25 +1242,25 @@ sent,call,#saynow,at,click | hypernyms: estonian_monetary_unit 2, visit 2, deman
 sent,call,#saynow,at,click | hypernyms: estonian_monetary_unit 2, visit 2, demand 2, decision 1, inclination 1, telephone 1, instruction 1, request 1, laotian_monetary_unit 1, depression 1__58938411
 don,sound,good | hypernyms: title 1, river 1, celtic_deity 1, gentleman 1, head 1, sound_property 1, sensation 1, happening 1, body_of_water 1, mechanical_phenomenon 1, morality 1, quality 1, advantage 1__58938411
 are,ass | hypernyms: area_unit 1, equine 1, fool 1__58938411
-maintenance,buffalo,maintenance | hypernyms: wrongdoing 2, support 2, game 1, city 1__73398194
-maintenance,buffalo,maintenance | hypernyms: wrongdoing 2, support 2, game 1, city 1__73398194
+maintenance,industry,buffalo,maintenance | hypernyms: wrongdoing 2, support 2, commercial_enterprise 2, game 1, city 1__73398194
+maintenance,industry,buffalo,maintenance | hypernyms: wrongdoing 2, support 2, commercial_enterprise 2, game 1, city 1__73398194
 business,analyst,syracuse,no,client,syracuse | hypernyms: siege 4, city 4, expert 2, acting 1, business_activity 1, concern 1, aim 1, sector 1, enterprise 1, psychiatrist 1, negative 1, case 1__73398194
 associate,dakota,rochester,top,producer,#1 | hypernyms: accompaniment 1, peer 1, subordinate 1, siouan 1, geographical_area 1, sioux 1, town 1, city 1, woman's_clothing 1, covering 1, plaything 1, platform 1, intensity 1, side 1, region 1, turn 1, cause 1, creator 1, proceeding 1, experiment 1, affliction 1, contest 1__73398194
 project,security,york | hypernyms: plan 1, precaution 1, guarantee 1, fearlessness 1, department 1, assets 1, transferred_property 1, legal_document 1, safety 1, dynasty 1__73398194
-database,albany,maintenance,administration | hypernyms: information 1, town 1, state_capital 1, wrongdoing 1, support 1, justice 1, medication 1, management 1, body 1__73398194
+database,albany,installation,maintenance,administration | hypernyms: information 1, town 1, state_capital 1, beginning 1, wrongdoing 1, support 1, justice 1, medication 1, management 1, body 1__73398194
 business,business,collection,buffalo,local,call,center | hypernyms: acting 2, business_activity 2, concern 2, aim 2, sector 2, enterprise 2, visit 2, demand 2, position 2, lineman 2, grouping 1, publication 1, group 1, game 1, city 1, public_transport 1, decision 1, inclination 1, telephone 1, instruction 1, request 1, building 1, neural_structure 1, object 1, sweet 1, class 1, formation 1, place 1, point 1, area 1, basketball_player 1, hockey_player 1__73398194
 senior,real,estate,york,company,overview,provider | hypernyms: undergraduate 1, coin 1, brazilian_monetary_unit 1, real_property 1, property 1, dynasty 1, institution 1, unit 1, social_gathering 1, organization 1, army_unit 1, friendship 1, summary 1, benefactor 1__73398194
 over,night,cleaner,buffalo,at | hypernyms: time_period 4, part 1, dark 1, time_unit 1, twilight 1, laborer 1, shopkeeper 1, game 1, city 1, laotian_monetary_unit 1__73398194
 director,engineering,buffalo,at | hypernyms: administrator 1, supervisor 1, committee_member 1, technology 1, room 1, discipline 1, game 1, city 1, laotian_monetary_unit 1__73398194
 senior,art,supervisor,york | hypernyms: creation 2, undergraduate 1, superior_skill 1, superior 1, dynasty 1__73398194
 entry,level,software,engineer,aladdin,york | hypernyms: written_record 1, accounting 1, indicator 1, altitude 1, place 1, code 1, person 1, operator 1, fictional_character 1, dynasty 1__73398194
-customer,service,support,rochester,customer,service,representative,will | hypernyms: activity 4, aid 3, consumer 2, accommodation 2, delivery 2, work 2, employment 2, religious_ceremony 2, tableware 2, company 2, writer 2, resource 2, operation 1, device 1, supporting_structure 1, influence 1, town 1, city 1, negotiator 1, purpose 1, legal_document 1__73398194
+customer,service,support,rochester,description,customer,service,representative,will | hypernyms: activity 4, aid 3, consumer 2, accommodation 2, delivery 2, work 2, employment 2, religious_ceremony 2, tableware 2, company 2, writer 2, resource 2, operation 1, device 1, supporting_structure 1, influence 1, town 1, city 1, kind 1, statement 1, speech_act 1, negotiator 1, purpose 1, legal_document 1__73398194
 technician,buffalo,technician,technician,ski | hypernyms: skilled_worker 3, expert 3, game 1, city 1, runner 1__73398194
 technician,buffalo,technician,technician,ski | hypernyms: skilled_worker 3, expert 3, game 1, city 1, runner 1__73398194
 albany,albany,reality,today | hypernyms: town 2, state_capital 2, actuality 2, materiality 1, day 1, present 1__73398194
 reality,today | hypernyms: actuality 2, materiality 1, day 1, present 1__73398194
-selling,home,theater,york,mission,statement | hypernyms: message 2, commerce 1, institution 1, location 1, residence 1, beginning 1, environment 1, building 1, dynasty 1, work 1, assignment 1, operation 1, nongovernmental_organization 1, commercial_document 1, theme 1__73398194
-selling,home,theater,mission,statement | hypernyms: message 2, commerce 1, institution 1, location 1, residence 1, beginning 1, environment 1, building 1, work 1, assignment 1, operation 1, nongovernmental_organization 1, commercial_document 1, theme 1__73398194
+selling,imaging,home,theater,york,mission,statement | hypernyms: message 2, commerce 1, pictorial_representation 1, institution 1, location 1, residence 1, beginning 1, environment 1, building 1, dynasty 1, work 1, assignment 1, operation 1, nongovernmental_organization 1, commercial_document 1, theme 1__73398194
+selling,imaging,home,theater,mission,statement | hypernyms: message 2, commerce 1, pictorial_representation 1, institution 1, location 1, residence 1, beginning 1, environment 1, building 1, work 1, assignment 1, operation 1, nongovernmental_organization 1, commercial_document 1, theme 1__73398194
 consumer,york,work,move,are,hub | hypernyms: user 1, dynasty 1, activity 1, product 1, energy 1, decision 1, turn 1, change 1, area_unit 1, part 1, center 1__73398194
 he,here,skip,out,beach | hypernyms: letter 1, location 1, gait 1, failure 1, geological_formation 1__17823746
 people,watch,park | hypernyms: tract 2, group 1, family 1, surveillance 1, timepiece 1, shift 1, time_period 1, gear 1, explorer 1__17823746
@@ -1292,7 +1295,7 @@ great,facility,do | hypernyms: artifact 2, achiever 1, service 1, effortlessness
 one,hour,sleep,night | hypernyms: time_period 6, time_unit 2, physical_condition 2, unit 1, digit 1, distance 1, clock_time 1, dark 1, twilight 1__29358098
 glass,case,emotion,right,now,god,good | hypernyms: container 3, containerful 2, glassware 1, solid 1, bed_linen 1, receptacle 1, fact 1, grammatical_category 1, argument 1, problem 1, happening 1, person 1, state_of_mind 1, feeling 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1, spiritual_being 1, superior 1, morality 1, quality 1, advantage 1__29358098
 running,third,day,sleep,love,last,one,round,tomorrow | hypernyms: time_period 3, rank 2, physical_condition 2, administration 1, operation 1, interval 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, object 1, sexual_desire 1, emotion 1, score 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, unit 1, digit 1, habitude 1, call 1, ammunition 1, applause 1, partsong 1, cut_of_beef 1, helping 1, path 1, day 1, future 1__29358098
-god,do,hate,adam | hypernyms: spiritual_being 1, superior 1, solfa_syllable 1, emotion 1, methylenedioxymethamphetamine 1, man 1, architect 1__29358098
+god,do,hate,adam,movie | hypernyms: spiritual_being 1, superior 1, solfa_syllable 1, emotion 1, methylenedioxymethamphetamine 1, man 1, architect 1, show 1__29358098
 sleep | hypernyms: physical_condition 2, time_period 1__29358098
 little,firefly,jar,love | hypernyms: small_indefinite_quantity 1, beetle 1, elaterid_beetle 1, vessel 1, containerful 1, object 1, sexual_desire 1, emotion 1, score 1__29358098
 success | hypernyms: attainment 1, happening 1, prosperity 1__29358098
@@ -1318,7 +1321,7 @@ christian,order,week,let,know,need | hypernyms: time_period 2, religious_person 
 beauty | hypernyms: appearance 1, exemplar 1__70809910
 day | hypernyms: time_period 2, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1__24115243
 note,self,time,woman,bulb,brake,light,part,screw,#rip | hypernyms: air 2, written_record 2, personal_letter 2, comment 2, musical_notation 2, tone 2, debt_instrument 2, time_period 2, female 2, restraint 2, consciousness 1, person 1, attribute 1, experience 1, case 1, moment 1, part 1, structure 1, stalk 1, round_shape 1, brush 1, fern 1, source_of_illumination 1, visual_property 1, public_knowledge 1, insight 1, position 1, visual_signal 1, scene 1, friend 1, actinic_radiation 1, illumination 1, condition 1, object 1, line 1, concern 1, concept 1, tune 1, thing 1, relation 1, fastener 1, propeller 1, inclined_plane 1__24115243
-serial,episode,entertainment,tonight | hypernyms: broadcast 2, section 1, happening 1, diversion 1, present 1__24115243
+die,serial,episode,entertainment,tonight | hypernyms: broadcast 2, cube 1, shaping_tool 1, cutter 1, section 1, happening 1, diversion 1, present 1__24115243
 people,attempt,use,circular,lack,experience,basic,knitting | hypernyms: activity 2, group 1, family 1, utility 1, legal_right 1, ad 1, need 1, education 1, content 1, happening 1, commodity 1, handicraft 1__24115243
 infomercial,must,see | hypernyms: commercial 1, grape_juice 1, necessity 1, seat 1__24115243
 tell,congress,pass,respect,marriage,act,equality | hypernyms: legislature 2, permission 2, archer 1, meeting 1, throw 1, flight 1, football_play 1, ticket 1, license 1, cycle 1, juncture 1, location 1, situation 1, leave 1, detail 1, attitude 1, ritual 1, family 1, marital_status 1, union 1, event 1, legal_document 1, performance 1, dramatic_composition 1, expression 1, sameness 1, status 1__24115243
@@ -1380,7 +1383,7 @@ day,fast,prayer,republic,spread,word,let,walk | hypernyms: time_period 2, writer
 do | hypernyms: solfa_syllable 1__15726663
 think,watch,out | hypernyms: deliberation 1, surveillance 1, timepiece 1, shift 1, time_period 1, failure 1__15726663
 here,#acorn,central,share,get | hypernyms: location 2, workplace 1, assets 1, stock_certificate 1, return 1__15726663
-ýslam,prayer,meeting,capitol,hill | hypernyms: government_building 2, monotheism 1, civilization 1, worship 1, sacred_text 1, request 1, religious_person 1, assembly 1, convergence 1, gathering 1, social_gathering 1, natural_elevation 1, comedian 1, businessman 1__15726663
+prayer,meeting,capitol,hill | hypernyms: government_building 2, worship 1, sacred_text 1, request 1, religious_person 1, assembly 1, convergence 1, gathering 1, social_gathering 1, natural_elevation 1, comedian 1, businessman 1__15726663
 evil,give,quarter | hypernyms: transgression 1, immorality 1, bad 1, elasticity 1, clemency 1, piece_of_leather 1, city_district 1, person 1, coin 1, british_capacity_unit 1, avoirdupois_unit 1, orientation 1, time_period 1, school_term 1, time_unit 1, part 1__15726663
 party,at,night,out,drunk | hypernyms: time_period 4, affair 1, social_gathering 1, organization 1, set 1, person 1, laotian_monetary_unit 1, dark 1, time_unit 1, twilight 1, failure 1, drinker 1__15726663
 bad,frank,spell,first,name | hypernyms: quality 1, sausage 1, european 1, speech 1, honours 1, ordinal_number 1, rank 1, sanction 1, language_unit 1, defamation 1, family 1, important_person 1, repute 1__15726663
@@ -1441,9 +1444,9 @@ wire,now,people,karma | hypernyms: ligament 1, conductor 1, finishing_line 1, pr
 over,team,plenty,win,take | hypernyms: part 1, animal_group 1, unit 1, abundance 1, victory 1, filming 1__25163938
 arlington,crime | hypernyms: city 1, offense 1, transgression 1__25163938
 dallas,police,hours,half,price | hypernyms: cost 2, city 1, force 1, time_period 1, work_time 1, part 1, worth 1, value 1, reward 1, soprano 1__25163938
-jewelry,store,one | hypernyms: adornment 1, accumulation 1, unit 1, digit 1__25163938
+jewelry,store,like,one,family | hypernyms: kind 2, unit 2, adornment 1, accumulation 1, digit 1, kin 1, lineage 1, taxonomic_group 1, association 1__25163938
 best,pitch,afternoon,green,afterlife,bone | hypernyms: throw 2, attempt 1, person 1, physiologist 1, all_fours 1, approach 1, sound_property 1, gradient 1, playing_field 1, position 1, bitumen 1, day 1, chromatic_color 1, site 1, river 1, environmentalist 1, labor_leader 1, life 1, white 1, connective_tissue 1, animal_material 1__31455434
-one | hypernyms: unit 1, digit 1__31455434
+pit,one | hypernyms: area 2, excavation 1, trap 1, enclosure 1, hole 1, concave_shape 1, unit 1, digit 1__31455434
 ten,more,can,turn | hypernyms: large_integer 1, statesman 1, container 1, buoy 1, containerful 1, walk 1, change_of_direction 1, change_of_course 1, activity 1, favor 1, development 1, part 1__31455434
 there,five,more | hypernyms: location 1, digit 1, statesman 1__31455434
 two,more,stay,target,stay,target | hypernyms: act 2, brace 2, strip 2, decree 2, sports_equipment 2, reference_point 2, topographic_point 2, digit 1, statesman 1__31455434
@@ -1517,7 +1520,7 @@ birthday,constitution | hypernyms: anniversary 1, date 1, beginning 1, sailing_w
 might,man,much,family | hypernyms: male 3, strength 1, game_equipment 1, island 1, person 1, subordinate 1, large_indefinite_quantity 1, kin 1, lineage 1, unit 1, taxonomic_group 1, association 1__18175015
 better | hypernyms: good 2, superior 1__18175015
 do,go,lunch,tomorrow,person,kind,familiar,face | hypernyms: external_body_part 2, solfa_syllable 1, board_game 1, shift 1, meal 1, day 1, future 1, organism 1, human_body 1, grammatical_category 1, category 1, spirit 1, servant 1, vertical_surface 1, front 1, surface 1, appearance 1, status 1, person 1__18175015
-thought,eating,at | hypernyms: belief 1, consumption 1, laotian_monetary_unit 1__18175015
+thought,eating,at,impromptu | hypernyms: belief 1, consumption 1, laotian_monetary_unit 1, address 1, passage 1__18175015
 know,go,down,are,click,see | hypernyms: knowing 1, board_game 1, shift 1, turn 1, feather 1, hair 1, highland 1, doctor 1, area_unit 1, depression 1, seat 1__18175015
 great,song,great,performance | hypernyms: achiever 2, vocal_music 1, musical_composition 1, sound 1, bargain 1, accomplishment 1, action 1, presentation 1, show 1__57669907
 at,metro,hope,serve,pie | hypernyms: laotian_monetary_unit 1, railway 1, theological_virtue 1, anticipation 1, feeling 1, person 1, comedian 1, tennis_stroke 1, pastry 1__57669907
@@ -1540,33 +1543,34 @@ are,phase,game,crap,field | hypernyms: set 4, region 2, area_unit 1, appearance 
 tell,ron,turner,can,get,running,game,going,down,let,cutler,free,get | hypernyms: return 2, archer 1, west_chadic 1, cooking_utensil 1, person 1, skilled_worker 1, tumbler 1, historian 1, painter 1, endocrinologist 1, slave 1, container 1, buoy 1, containerful 1, administration 1, operation 1, diversion 1, activity 1, contest 1, play 1, occupation 1, animal 1, game_equipment 1, meat 1, score 1, part 1, accomplishment 1, turn 1, feather 1, hair 1, highland 1, doctor 1, serve 1, trader 1, people 1__57669907
 are,middle,game,nothing,going,right | hypernyms: part 2, area_unit 1, area 1, point 1, diversion 1, activity 1, contest 1, play 1, occupation 1, animal 1, game_equipment 1, meat 1, score 1, relative_quantity 1, accomplishment 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1__57669907
 round,round,fight,saturday | hypernyms: habitude 2, call 2, ammunition 2, applause 2, partsong 2, cut_of_beef 2, helping 2, path 2, boxing 1, conflict 1, controversy 1, weekday 1__18872608
-win,at,#usopen,#tenis,#tennis,#argentina,#delpotro | hypernyms: linear_unit 4, victory 2, laotian_monetary_unit 1__18872608
-watch,carolina,collection,hit,#catwalk,#fashionweek,#fashion,#moda,#herrera,#design,#nyfw,#nyc | hypernyms: geographical_area 9, surveillance 1, timepiece 1, shift 1, time_period 1, grouping 1, publication 1, group 1, feat 1, success 1, touch 1, joining 1, murder 1, dose 1__18872608
-la,#passarela,carolina,#herrera,en,la,la,#nyc,#fashion,#design,#nyfw,#fashionweek | hypernyms: geographical_area 7, solfa_syllable 4, linear_unit 1__18872608
-en,#usopen,#tenis,#tennis,#argentina,#delpotro | hypernyms: linear_unit 5, victory 1__18872608
+video,win,at,#usopen,#tenis,#tennis,#argentina,#delpotro | hypernyms: visual_communication 12, victory 1, laotian_monetary_unit 1__18872608
+video,watch,carolina,collection,hit,#catwalk,#fashionweek,#fashion,#moda,#herrera,#design,#nyfw,#nyc | hypernyms: visual_communication 18, surveillance 1, timepiece 1, shift 1, time_period 1, geographical_area 1, grouping 1, publication 1, group 1, feat 1, success 1, touch 1, joining 1, murder 1, dose 1__18872608
+video,la,#passarela,carolina,#herrera,en,la,la,#nyc,#fashion,#design,#nyfw,#fashionweek | hypernyms: visual_communication 16, solfa_syllable 3, geographical_area 1, linear_unit 1__18872608
+video,sin,en,#usopen,#tenis,#tennis,#argentina,#delpotro | hypernyms: visual_communication 12, transgression 1, unrighteousness 1, letter 1, semitic_deity 1, linear_unit 1__18872608
 fact,hate,speech,#hatecrimes,case,#cnn,#dobbs,#immigration,#migra | hypernyms: information 8, concept 4, reality 4, container 2, solfa_syllable 2, emotion 1, auditory_communication 1, speaking 1, utterance 1, bed_linen 1, receptacle 1, fact 1, grammatical_category 1, argument 1, problem 1, happening 1, person 1, containerful 1, state_of_mind 1__18872608
-en,la,#tenis,#tennis,#argentina,#delpotro | hypernyms: linear_unit 5, solfa_syllable 1__18872608
-week,en,la,la,#moda,#nyc,#green,#fashionweek,#design,#nyfw | hypernyms: geographical_area 5, time_period 4, solfa_syllable 2, linear_unit 1__18872608
+en,la,#tenis,#tennis,#argentina,#delpotro,video | hypernyms: visual_communication 10, linear_unit 1, solfa_syllable 1__18872608
+fashion,week,en,la,la,#moda,#nyc,#green,#fashionweek,#design,#nyfw | hypernyms: visual_communication 10, practice 2, consumer_goods 2, vogue 2, time_period 2, solfa_syllable 2, linear_unit 1__18872608
 #latinos,#inmigrantes,han,#dobbs,#cnn,#immigration | hypernyms: information 4, dynasty 3, concept 2, reality 2, solfa_syllable 1__18872608
 la,en,favor,en,contra,la,#immigration,#migra | hypernyms: solfa_syllable 4, linear_unit 2, kindness 1, advantage 1, inclination 1, approval 1, nicaraguan 1__18872608
 contra,en,round,round,en | hypernyms: linear_unit 2, habitude 2, call 2, ammunition 2, applause 2, partsong 2, cut_of_beef 2, helping 2, path 2, nicaraguan 1__18872608
-carolina,collection,#catwalk,at,#fashionweek,#fashion,#moda,#herrera,#design,#nyfw,#nyc | hypernyms: geographical_area 9, grouping 1, publication 1, group 1, laotian_monetary_unit 1__18872608
+video,carolina,collection,#catwalk,at,#fashionweek,#fashion,#moda,#herrera,#design,#nyfw,#nyc | hypernyms: visual_communication 18, geographical_area 1, grouping 1, publication 1, group 1, laotian_monetary_unit 1__18872608
 #yunque,natural,#puertorico,#boricua,#environment | hypernyms: cast 5, musical_notation 5, achiever 5__18872608
 union,#colombia,#venezuela | hypernyms: combination 3, device 3, happening 3, set 3, organization 3, political_unit 3, united_states 3, healing 3, state 3__18872608
 #dobbs,platform,#immigration,#cnn,#inmigracion,#migra,#racism,#activism | hypernyms: horizontal_surface 4, structure 4, computer_system 4, document 4, information 4, concept 2, reality 2, solfa_syllable 2__18872608
 #dobbs,en,#cnn,para,#inmigracion,#politica,#latino,#hispano | hypernyms: linear_unit 4, information 4, concept 2, reality 2, estuary 1, yugoslavian_monetary_unit 1, horizontal_surface 1, structure 1, computer_system 1, document 1__18872608
+#beyoncÃ©,#celebridades,#moda,#espectaculos | hypernyms: visual_communication 2__18872608
 #inmigrantes,son,la,#obama,#immigration,#nava,#migra | hypernyms: hypostasis 3, male_offspring 3, solfa_syllable 3, dynasty 1__18872608
 son,para,#salud,#bebidas,#fruta,#vida,#recetas | hypernyms: hypostasis 6, male_offspring 6, estuary 1, yugoslavian_monetary_unit 1__18872608
-la,en,la,#semana,la,#nyc,#fashionweek,#fwny,#ny,#moda,#delarenta,#fashion | hypernyms: solfa_syllable 7, geographical_area 4, linear_unit 1__18872608
+la,en,la,#semana,la,#nyc,#fashionweek,#fwny,#ny,#moda,#delarenta,#fashion | hypernyms: visual_communication 8, solfa_syllable 7, linear_unit 1__18872608
 no | hypernyms: negative 1__60815677
 dancing,ghost | hypernyms: diversion 1, apparition 1, soul 1__60815677
-patrick,will,classics,like,dancing,ghost,will | hypernyms: purpose 2, legal_document 2, kind 2, apostle 1, literary_study 1, diversion 1, apparition 1, soul 1__60815677
+rip,patrick,will,classics,like,dancing,ghost,will | hypernyms: purpose 2, legal_document 2, kind 2, turbulence 1, opening 1, apostle 1, literary_study 1, diversion 1, apparition 1, soul 1__60815677
 patrick,will,best | hypernyms: apostle 1, purpose 1, legal_document 1, attempt 1, person 1, physiologist 1__60815677
 ghost | hypernyms: apparition 1, soul 1__60815677
 para,cuba | hypernyms: estuary 1, yugoslavian_monetary_unit 1, island 1, country 1__60815677
 angel,para,ti | hypernyms: waterfall 1, spiritual_being 1, patron 1, estuary 1, yugoslavian_monetary_unit 1, solfa_syllable 1, shrub 1__60815677
-con,angel | hypernyms: argument 1, waterfall 1, spiritual_being 1, patron 1__60815677
-mi,solo,la | hypernyms: solfa_syllable 2, flight 1, activity 1, musical_composition 1__60815677
+no,con,angel | hypernyms: negative 1, argument 1, waterfall 1, spiritual_being 1, patron 1__60815677
+mi,solo,no,la | hypernyms: solfa_syllable 2, flight 1, activity 1, musical_composition 1, negative 1__60815677
 para,para,karen,para,ti | hypernyms: estuary 3, yugoslavian_monetary_unit 3, tibeto-burman 1, solfa_syllable 1, shrub 1__60815677
 con | hypernyms: argument 1__60815677
 mi,ti | hypernyms: solfa_syllable 2, shrub 1__60815677
@@ -1575,7 +1579,7 @@ well,last,day,vacation,cuba,here | hypernyms: time_period 2, excavation 1, compa
 mi | hypernyms: solfa_syllable 1__60815677
 yea,feel,he,type,guess,right | hypernyms: affirmative 1, foreplay 1, awareness 1, letter 1, block 1, kind 1, symbol 1, character 1, taxonomic_group 1, estimate 1, opinion 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1__20969792
 yes,mam,jerk,em,at | hypernyms: affirmative 1, maya 1, mayan 1, motion 1, weightlift 1, misfit 1, rate 1, linear_unit 1, area_unit 1, laotian_monetary_unit 1__20969792
-hope,display,hope,down,better | hypernyms: theological_virtue 2, anticipation 2, feeling 2, person 2, comedian 2, good 2, show 1, representation 1, electronic_device 1, demonstration 1, communication 1, disclosure 1, turn 1, feather 1, hair 1, highland 1, doctor 1, superior 1__20969792
+hope,die,display,hope,down,better | hypernyms: theological_virtue 2, anticipation 2, feeling 2, person 2, comedian 2, good 2, cube 1, shaping_tool 1, cutter 1, show 1, representation 1, electronic_device 1, demonstration 1, communication 1, disclosure 1, turn 1, feather 1, hair 1, highland 1, doctor 1, superior 1__20969792
 type,flight,one,favorite,moment | hypernyms: block 1, kind 1, symbol 1, character 1, taxonomic_group 1, trip 1, air_travel 1, stairway 1, creativity 1, air_unit 1, formation 1, flock 1, unit 1, digit 1, choice 1, statistic 1, force 1, point 1, time 1__20969792
 yes,display | hypernyms: affirmative 1, show 1, representation 1, electronic_device 1, demonstration 1, communication 1, disclosure 1__20969792
 death,phone,moment,silence | hypernyms: end 2, killing 1, change 1, imaginary_being 1, organic_phenomenon 1, state 1, language_unit 1, statistic 1, force 1, point 1, time 1, sound_property 1, condition 1__20969792
@@ -1589,93 +1593,3 @@ little,over,hour,left,at,work,think,need,drink | hypernyms: small_indefinite_qua
 time,think,read,one | hypernyms: time_period 2, attribute 1, experience 1, case 1, moment 1, deliberation 1, publication 1, unit 1, digit 1__20969792
 see,real,pirate,while,out,last,night | hypernyms: time_period 4, seat 1, coin 1, brazilian_monetary_unit 1, ship 1, plunderer 1, time 1, failure 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1, dark 1, time_unit 1, twilight 1__20969792
 test,average,grade,three,spencer | hypernyms: attempt 2, mental_measurement 1, covering 1, scale_value 1, statistic 1, ratio 1, cattle 1, gradient 1, elevation 1, ablaut 1, rank 1, digit 1, philosopher 1__20969792
-wake,get,cake,grinding,can,say,product,environment | hypernyms: vigil 1, wave 1, return 1, block 1, baked_goods 1, noise 1, atom 1, friction 1, container 1, buoy 1, containerful 1, opportunity 1, creation 1, quantity 1, consequence 1, chemical 1, geographical_area 1, situation 1__20969792
-brush,shoulder | hypernyms: contact 1, hair_care 1, dental_care 1, fight 1, tail 1, implement 1, electrical_device 1, touch 1, vegetation 1, edge 1, cloth_covering 1, body_part 1, ball-and-socket_joint 1, cut 1__20969792
-grab,leg,tho | hypernyms: limb 2, mechanical_device 1, distance 1, cloth_covering 1, support 1, cut 1, tai 1__20969792
-rival,gang | hypernyms: contestant 1, tool 1, unit 1, association 1__20969792
-city,ship,delaware,north,change,management | hypernyms: municipality 2, algonquian 2, direction 2, cash 2, administrative_district 1, vessel 1, american_state 1, colony 1, river 1, location 1, geographical_area 1, statesman 1, cardinal_compass_point 1, action 1, clothing 1, thing 1, happening 1, consequence 1, coin 1, relation 1, social_control 1, administration 1__20969801
-birthday,party | hypernyms: anniversary 1, date 1, affair 1, social_gathering 1, organization 1, set 1, person 1__20969801
-one,year,anniversary,party,tomorrow,time,party,like,one,year | hypernyms: time_period 8, unit 2, digit 2, day 2, affair 2, social_gathering 2, organization 2, set 2, person 2, kind 2, future 1, attribute 1, experience 1, case 1, moment 1__20969801
-birthday,party,hope,see,there | hypernyms: person 2, anniversary 1, date 1, affair 1, social_gathering 1, organization 1, set 1, theological_virtue 1, anticipation 1, feeling 1, comedian 1, seat 1, location 1__20969801
-thanks,hanging,out,last,night | hypernyms: time_period 4, aid 1, acknowledgment 1, execution 1, decoration 1, failure 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1, dark 1, time_unit 1, twilight 1__20969801
-intern,yay | hypernyms: doctor 1, tai 1__20969801
-labor,day,yay | hypernyms: time_period 2, work 1, class 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, tai 1__20969801
-diaper,bag | hypernyms: container 2, garment 1, fabric 1, baggage 1, unpleasant_woman 1, indefinite_quantity 1, containerful 1__20969801
-diaper,bag,#2 | hypernyms: container 2, garment 1, fabric 1, baggage 1, unpleasant_woman 1, indefinite_quantity 1, containerful 1, excavation 1, compartment 1, shaft 1, vessel 1, source 1__20969801
-diaper,bag,#3 | hypernyms: container 2, garment 1, fabric 1, baggage 1, unpleasant_woman 1, indefinite_quantity 1, containerful 1, psychologist 1, dancer 1, humorist 1__20969801
-coke,flashing,smile | hypernyms: cocaine 1, fuel 1, sheet_metal 1, facial_expression 1__20969801
-one,diaper,today,mention,are | hypernyms: unit 1, digit 1, garment 1, fabric 1, day 1, present 1, award 1, remark 1, area_unit 1__20969801
-finger | hypernyms: covering 1, digit 1, linear_unit 1__20969801
-duck,rabbit | hypernyms: anseriform_bird 1, fabric 1, poultry 1, score 1, leporid 1, game 1__20969801
-vote,fox,best,boutique | hypernyms: algonquian 2, group_action 1, choice 1, numerical_quantity 1, body 1, canine 1, religious_person 1, statesman 1, fur 1, attempt 1, person 1, physiologist 1, shop 1__20969801
-thanks | hypernyms: aid 1, acknowledgment 1__20969801
-place,thanks | hypernyms: cognition 1, passage 1, item 1, geographical_area 1, vicinity 1, situation 1, social_station 1, condition 1, aid 1, acknowledgment 1__20969801
-thanks,place | hypernyms: aid 1, acknowledgment 1, cognition 1, passage 1, item 1, geographical_area 1, vicinity 1, situation 1, social_station 1, condition 1__20969801
-button,are,back,stock,get | hypernyms: plant_part 2, position 2, handle 2, fastener 1, artifact 1, badge 1, area_unit 1, support 1, cloth_covering 1, body_part 1, football_player 1, merchandise 1, lumber 1, flower 1, stalk 1, capital 1, repute 1, return 1__20969801
-smile,bite | hypernyms: facial_expression 1, subtraction 1, eating 1, success 1, meal 1, wound 1__34601337
-love,get,stowe,go,let,know,plan | hypernyms: object 1, sexual_desire 1, emotion 1, score 1, return 1, writer 1, board_game 1, shift 1, serve 1, knowing 1, drawing 1, idea 1__34601337
-planning,trip,way,see,best,girl,know,small,world | hypernyms: journey 2, experience 2, woman 2, design 1, preparation 1, thinking 1, blunder 1, step 1, hallucination 1, course 1, artifact 1, distance 1, choice 1, category 1, share 1, condition 1, seat 1, attempt 1, person 1, physiologist 1, knowing 1, size 1, body_part 1, homo 1, class 1, part 1__34601337
-nice,going,organic,launch,skin,care,collection,due | hypernyms: city 1, accomplishment 1, fertilizer 1, motorboat 1, surface 1, bag 1, connective_tissue 1, animation 1, repair 1, work 1, protection 1, predicament 1, grouping 1, publication 1, group 1, right 1, fixed_charge 1__34601337
-looking,forward,exhibit,9/11,#arthop | hypernyms: search 2, position 1, basketball_player 1, evidence 1, terrorist_attack 1__34601337
-pie | hypernyms: pastry 1__34601337
-wish,pie,night,visit | hypernyms: time_period 4, meeting 4, preference 1, request 1, desire 1, pastry 1, dark 1, time_unit 1, twilight 1__34601337
-love,obama | hypernyms: object 1, sexual_desire 1, emotion 1, score 1, president_of_the_united_states 1__34601337
-lust,worthy | hypernyms: mortal_sin 1, important_person 1__34601337
-night,teething,baby,side,good,sleeper | hypernyms: time_period 4, surface 2, dark 1, time_unit 1, twilight 1, growth 1, undertaking 1, young_mammal 1, offspring 1, child 1, fetus 1, area 1, aspect 1, opinion 1, cut 1, lineage 1, unit 1, line 1, region 1, morality 1, quality 1, advantage 1, hit 1, percoid_fish 1, furniture 1, pajama 1, rester 1, achiever 1, spy 1__34601337
-album,track,way,go | hypernyms: artifact 2, book 1, medium 1, track_and_field 1, road 1, bar 1, groove 1, path 1, belt 1, journey 1, course 1, distance 1, choice 1, category 1, share 1, condition 1, board_game 1, shift 1__34601337
-boo,much | hypernyms: cry 1, large_indefinite_quantity 1__34601337
-one,way,logo,making,logo | hypernyms: trademark 2, unit 1, digit 1, journey 1, course 1, artifact 1, distance 1, choice 1, category 1, share 1, condition 1, component 1__34601337
-love | hypernyms: object 1, sexual_desire 1, emotion 1, score 1__34601337
-wake,last | hypernyms: vigil 1, wave 1, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1__34601337
-coffee,helping,get,day,will | hypernyms: time_period 2, beverage 1, tree 1, small_indefinite_quantity 1, return 1, writer 1, opportunity 1, time 1, work_time 1, time_unit 1, calendar_day 1, era 1, purpose 1, legal_document 1__34601337
-will,end | hypernyms: lineman 2, purpose 1, legal_document 1, contribution 1, piece_of_cloth 1, part 1, ending 1, boundary 1, extremity 1, surface 1, topographic_point 1, state 1, point 1__34601337
-great,lunch,at,hood,coffee,top,notch | hypernyms: covering 4, indentation 2, achiever 1, meal 1, laotian_monetary_unit 1, external_body_part 1, protective_covering 1, headdress 1, roof 1, attachment 1, neighborhood 1, criminal 1, beverage 1, tree 1, woman's_clothing 1, plaything 1, platform 1, intensity 1, side 1, region 1, turn 1, cut 1__34601337
-take,win,gift,card | hypernyms: filming 1, victory 1, acquisition 1, paper 1, positive_identification 1, record 1, correspondence 1, cardboard 1__34601337
-no,back,phone | hypernyms: position 2, negative 1, support 1, cloth_covering 1, body_part 1, football_player 1, language_unit 1__24546007
-good,way,keep,mind,wonder,yesterday | hypernyms: morality 1, quality 1, advantage 1, journey 1, course 1, artifact 1, distance 1, choice 1, category 1, share 1, condition 1, stronghold 1, cognition 1, intelligence 1, notice 1, recall 1, purpose 1, happening 1, astonishment 1, day 1, past 1__24546007
-name,girl | hypernyms: woman 2, sanction 1, language_unit 1, defamation 1, family 1, important_person 1, repute 1__24546007
-wrong,at,half,name,why | hypernyms: injury 1, injustice 1, laotian_monetary_unit 1, part 1, sanction 1, language_unit 1, defamation 1, family 1, important_person 1, repute 1, reason 1__24546007
-painting,guess,nice,out,no,money,house,can,like | hypernyms: kind 2, trade 1, application 1, art 1, graphic_art 1, estimate 1, opinion 1, city 1, failure 1, negative 1, wealth 1, medium_of_exchange 1, currency 1, play 1, dwelling 1, building 1, family 1, legislature 1, audience 1, community 1, management 1, container 1, buoy 1, containerful 1__24546007
-america,now,chicago | hypernyms: land 1, present 1, city 1__24546007
-well | hypernyms: excavation 1, compartment 1, shaft 1, vessel 1, source 1__24546007
-channel | hypernyms: passage 1, television_station 1, transmission 1, communication 1, body_of_water 1__24546007
-thanks,red,carpet,mean,show | hypernyms: aid 1, acknowledgment 1, chromatic_color 1, river 1, natural_object 1, average 1, entertainment 1, social_event 1__24546007
-face,breast | hypernyms: external_body_part 4, vertical_surface 1, front 1, surface 1, appearance 1, status 1, person 1, mammary_gland 1, helping 1__24546007
-are,fool | hypernyms: area_unit 1, simpleton 1__24546007
-wings | hypernyms: means 1, insignia 1__24546007
-marriage,out,know | hypernyms: ritual 1, family 1, marital_status 1, union 1, failure 1, knowing 1__24546007
-saw,today,go,wei,wei,wei,wei | hypernyms: dynasty 4, hand_tool 1, day 1, present 1, board_game 1, shift 1__24546007
-here,dress,get | hypernyms: location 1, woman's_clothing 1, return 1__24546007
-wei,wei | hypernyms: dynasty 2__24546007
-sewing,painting,watch | hypernyms: handicraft 1, needlework 1, trade 1, application 1, art 1, graphic_art 1, surveillance 1, timepiece 1, shift 1, time_period 1__24546007
-know,right | hypernyms: knowing 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1__24546007
-no | hypernyms: negative 1__46135750
-avatar,giving,people | hypernyms: hindu_deity 1, disposal 1, sharing 1, conveyance 1, group 1, family 1__46135750
-hell,no,fix,problem,quick | hypernyms: imaginary_place 2, difficulty 2, mischief 1, trouble 1, region 1, negative 1, exemption 1, intravenous_injection 1, question 1, area 1__46135750
-know,mean | hypernyms: knowing 1, average 1__46135750
-#wheniruletheworld,cheat,get,man,cut | hypernyms: male 3, deception 2, division 2, return 1, game_equipment 1, island 1, person 1, subordinate 1, absence 1, decrease 1, shortening 1, opening 1, stroke 1, furrow 1, canal 1, fashion 1, excerpt 1, transition 1, meat 1, share 1, wound 1, gradation 1__46135750
-good,luck,girl | hypernyms: phenomenon 2, woman 2, morality 1, quality 1, advantage 1__46135750
-damn,he | hypernyms: worthlessness 1, letter 1__46135750
-red,velvet,good | hypernyms: chromatic_color 1, river 1, fabric 1, morality 1, quality 1, advantage 1__46135750
-at,work | hypernyms: laotian_monetary_unit 1, activity 1, product 1, energy 1__46135750
-damn,crazy | hypernyms: worthlessness 1, lunatic 1__46135750
-feel,like,old,lady,need,start,more,sleep | hypernyms: kind 2, physical_condition 2, foreplay 1, awareness 1, past 1, female_aristocrat 1, woman 1, necessity 1, condition 1, turn 1, advantage 1, beginning 1, line 1, statesman 1, time_period 1__46135750
-fall,wake | hypernyms: sin 1, change_of_location 1, weakening 1, victory 1, event 1, season 1, vigil 1, wave 1__46135750
-damn,bird,back | hypernyms: position 2, worthlessness 1, vertebrate 1, meat 1, support 1, cloth_covering 1, body_part 1, football_player 1__46135750
-go,get,phone | hypernyms: board_game 1, shift 1, return 1, language_unit 1__46135750
-there,nothing,special,bout | hypernyms: location 1, relative_quantity 1, television_program 1, offer 1, dish 1, contest 1, time_period 1__46135750
-#ff,chi | hypernyms: letter 1, aid 1, acknowledgment 1__46135750
-colorado,right,now,nothing,do | hypernyms: river 2, american_state 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1, relative_quantity 1, solfa_syllable 1__20446969
-last,time,need,entertainment | hypernyms: time_period 2, activity 1, holding_device 1, volume_unit 1, weight_unit 1, rank 1, attribute 1, experience 1, case 1, moment 1, necessity 1, condition 1, diversion 1__20446969
-right,now | hypernyms: turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1__20446969
-eating,yogurt,like,apple,pie,right,now | hypernyms: kind 2, consumption 1, dairy_product 1, edible_fruit 1, apple_tree 1, pastry 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1__20446969
-halloween,why,do,like,scare,shit,out | hypernyms: kind 2, day 1, reason 1, solfa_syllable 1, fear 1, defecation 1, failure 1__20446969
-fuck,michael | hypernyms: sexual_intercourse 1, archangel 1__20446969
-halloween,at | hypernyms: day 1, laotian_monetary_unit 1__20446969
-listening | hypernyms: sensing 1__20446969
-guess,go,sleep,now,night,night,love | hypernyms: time_period 9, physical_condition 2, dark 2, time_unit 2, twilight 2, estimate 1, opinion 1, board_game 1, shift 1, present 1, object 1, sexual_desire 1, emotion 1, score 1__20446969
-will,tell,story,tomorrow | hypernyms: purpose 1, legal_document 1, archer 1, fiction 1, day 1, future 1__20446969
-going,sleep,right,now,world | hypernyms: physical_condition 2, accomplishment 1, time_period 1, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1, homo 1, experience 1, class 1, part 1__20446969
-sleep | hypernyms: physical_condition 2, time_period 1__20446969
-right,here,back | hypernyms: position 3, turn 1, justice 1, abstraction 1, hand 1, faction 1, interest 1, location 1, support 1, cloth_covering 1, body_part 1, football_player 1__20446969
-right,now,get,aim,can,talk,aim | hypernyms: steering 2, goal 2, turn 1, justice 1, abstraction 1, hand 1, faction 1, position 1, interest 1, present 1, return 1, container 1, buoy 1, containerful 1, lecture 1, conversation 1, discussion 1, gossip 1__20446969

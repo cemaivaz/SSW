@@ -50,7 +50,7 @@ public class Main {
 			List<String> li = new ArrayList<String>();
 			while ((line = br2.readLine()) != null) {
 				
-				line = line.toLowerCase();
+				line = line.toLowerCase().replaceAll("ı", "i");
 				li.add(line);
 			}
 			br2.close();
@@ -68,7 +68,7 @@ public class Main {
 			li = new ArrayList<String>();
 			while ((line = br2.readLine()) != null) {
 				
-				line = line.toLowerCase();
+				line = line.toLowerCase().replaceAll("ı", "i");;
 				li.add(line);
 			}
 			br2.close();
@@ -77,21 +77,7 @@ public class Main {
 			for (int i = 0; i < li.size(); i++)
 				fw.write(li.get(i) + "\n");
 			fw.close();
-			
-//			
-//			BufferedReader br3 = new BufferedReader(new FileReader(new File("twitterWords.txt")));
-//			
-//			int cntt = 0;
-//			while ((line = br3.readLine()) != null) {
-//				if (line.contains("time_period"))
-//					cntt++;
-//			}
-//			System.out.println("cntaaa: " + cntt);
-//			br3.close();
-			
-			String ss = "hh xx cc";
-			System.out.println(ss.split("\\s")[0]);
-			System.out.println(ss.split("\\s")[0]);
+		
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
