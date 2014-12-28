@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -107,26 +106,6 @@ public class UserProfileMain {
 		// TODO Auto-generated method stub
 
 
-		//		try {
-		//			BufferedReader br__ = new BufferedReader(new FileReader("training_set_users.txt"));
-		//			String sl = "";
-		//			List<String> al_ = new ArrayList<String>();
-		//			while ((sl = br__.readLine()) != null)
-		//				al_.add(sl);
-		//
-		//			br__.close();
-		//			FileWriter fw_ = new FileWriter("training_set_users2.txt");
-		//			for (int i = 0; i < al_.size(); i++) {
-		//				fw_.write(al_.get(i).split("\\s+")[0] + " " + al_.get(i).split("\\s+")[0] + "\n");
-		//			}
-		//			fw_.close();
-		//		} catch (FileNotFoundException e1) {
-		//			// TODO Auto-generated catch block
-		//			e1.printStackTrace();
-		//		} catch (IOException e1) {
-		//			// TODO Auto-generated catch block
-		//			e1.printStackTrace();
-		//		}
 
 		WordNet wn = new WordNet();
 
@@ -153,7 +132,6 @@ public class UserProfileMain {
 		Map<String, ArrayList<String>> userIdTw = new LinkedHashMap<String, ArrayList<String>>();
 
 		try {
-			//			BufferedReader br = new BufferedReader(new FileReader(new File("C:\\Users\\asus\\Documents\\training_set_tweets.txt")));
 			BufferedReader br = new BufferedReader(new FileReader(new File(traFile)));
 
 			String line = "";
@@ -187,8 +165,6 @@ public class UserProfileMain {
 
 				ArrayList<String> tmp =
 						new ArrayList<String>();
-
-				//				System.out.println(wholeTw);
 				tmp.add(userId);
 
 
@@ -277,12 +253,7 @@ public class UserProfileMain {
 					}
 				}
 
-				//				System.out.println(tmp.toString());
-				//				System.out.println(line);
-
-
 			}
-			//			System.out.println(twWords.size());
 			br.close();
 
 
@@ -319,19 +290,6 @@ public class UserProfileMain {
 						return 0;
 					}
 				});
-				//				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();
-
-
-				//				ArrayList<String> alNew = new ArrayList<String>();
-
-				//				for (Entry e: lst) {
-				//					System.out.print("words: " + hashKeys.get(i) + ", key: " + e.getKey() + ", val: "
-				//							+ e.getValue());
-				//					alNew.add((String) e.getKey());
-				//					//					newHm.put((String) e.getKey(), (Integer) e.getValue());
-				//				}
-				//				System.out.println();
-				//				allHashes.put(hashKeys.get(i), alNew);
 
 
 				hashMostCm.put(hashKeys.get(i), lst.get(0).getKey());
@@ -342,25 +300,13 @@ public class UserProfileMain {
 
 			}
 
-			//			System.out.println("FACE: " + hashMostCm.get("#fb"));
-
 			FileWriter fw = 
 					new FileWriter("twitterWords.txt");
-			//			
-			//			
-			//			String[] twWordsArr = twWords.toArray(new String[twWords.size()]);
-			//			for (int i = 0; i < twWordsArr.length; i++)
-			//				fw.write(twWordsArr[i] + "\n");
 
 
 			List<List<String>> hypTw = new ArrayList<List<String>>();
 
 			List<String> hypAll = new ArrayList<String>();
-
-
-			//			System.out.println("TWEETS SIZE: " + tweets.size());
-
-
 
 			int twNo = 0;
 
@@ -374,9 +320,6 @@ public class UserProfileMain {
 				twAl.remove(0);
 				String resHyp = "";
 
-				if(twAl.size() == 0) {
-					//					System.out.println("NOPE!!: " + twAl);
-				}
 
 
 				List<String> hypTwSub = new ArrayList<String>();
@@ -410,7 +353,6 @@ public class UserProfileMain {
 						continue;
 
 					}
-					//					System.out.println(hashAft + " size: " + hashAft.get(0));
 					resHyp = wn.simpleHypSum(hashAft);
 				}
 				else if (cntHasht == 0)
@@ -418,7 +360,6 @@ public class UserProfileMain {
 				else {
 
 					nonHashAft.addAll(hashAft);
-					//					System.out.println(nonHashAft);
 					resHyp = wn.simpleHypSum(nonHashAft);
 				}
 
@@ -449,9 +390,6 @@ public class UserProfileMain {
 
 
 				twHypNo.put("tw" + String.valueOf(i), resHyp);
-
-				//				System.out.println(twAl.toString() + "//////" + res);
-
 
 				fw.write(" | hypernyms: " + resHyp + "__" + userId);
 
@@ -495,13 +433,6 @@ public class UserProfileMain {
 
 
 
-
-
-
-
-			//			System.out.println("hypAll: " + hypAll.size());
-			//			System.out.println();
-
 			FileWriter fwHyp = new FileWriter(new File("hypernames.txt"));
 
 			Map<String, Double> preTfidf = new LinkedHashMap<String, Double>();
@@ -521,10 +452,10 @@ public class UserProfileMain {
 
 			List<String> aftMatr = new ArrayList<String>();
 
-//			FileWriter fw2 = new FileWriter(new File("matr.txt"));
+			//			FileWriter fw2 = new FileWriter(new File("matr.txt"));
 			for (int y = 0; y < hypTw.size(); y++) {
 				List<String> sub = hypTw.get(y);
-//				fw2.write("tw" + y +":");
+				//				fw2.write("tw" + y +":");
 				StringBuilder line2 = new StringBuilder("");
 
 				//				List<String> subSpl = new ArrayList<String>();
@@ -545,8 +476,8 @@ public class UserProfileMain {
 						line2.append("0,");
 				}
 
-//				fw2.write(line2.substring(0, line2.length() - 1));
-//				fw2.write("\n");
+				//				fw2.write(line2.substring(0, line2.length() - 1));
+				//				fw2.write("\n");
 				aftMatr.add(line2.substring(0, line2.length() - 1));
 			}
 
@@ -583,16 +514,10 @@ public class UserProfileMain {
 
 
 
-//			fw2.close();
-
-
-			//			System.out.println("time_period: " + preTfidf.get("time_period"));
-
-//			FileWriter fwN = new FileWriter(new File("matr.txt"));
+			//			fw2.close();
 
 			Map<String, Double> postTfidf = new LinkedHashMap<String, Double>();
 
-			//			System.out.println("hypAll: " + hypAll.size());
 
 
 			for (int i = 0; i < aftMatr.size(); i++) {
@@ -606,21 +531,14 @@ public class UserProfileMain {
 						else
 							newV = preTfidf.get(hypAll.get(j));
 
-
-					//					System.out.println("++++: " + (Double.valueOf(strSpl[j]) * Math.log(twWHL.size() / preTfidf.get(hypAll.get(j)))));
-
 					val.append(String.valueOf(newV));
 					val.append(",");
 					postTfidf.put(hypAll.get(j), newV);
-					//					System.out.println("log: " +Math.log(twWHL.size() / preTfidf.get(hypAll.get(j))));
 				}
 				val = val.deleteCharAt(val.length() - 1);
-				//				fwN.write(val + "\n");
 			}
-//			fwN.close();
 
 
-			//			System.out.println("For loop started..");
 			for (int i = 0; i < twWHL.size(); i++) {
 				String[] strSpl = twWHL.get(i).split("hypernyms: ")[1].split("__")[0].split(", ");
 				String newVals = twWHL.get(i).split("nyms: ")[0] + "nyms: ";
@@ -646,96 +564,6 @@ public class UserProfileMain {
 			twRowNo = twRowNoUpd;
 
 
-			/* CLUSTERING PART TO BE UNCOMMENTED IF TO BE PERFORMED
-
-			//Below is clustering operation being performed(input produced by MATLAB)
-			Map<Integer, List<Map.Entry<String, Integer>>> clusters = new LinkedHashMap<Integer, List<Map.Entry<String, Integer>>>();
-			BufferedReader br3 = new BufferedReader(new FileReader(new File("clusterTrain.txt")));
-
-			String lineCl = "";
-
-
-
-			//			System.out.println("tw74: " + twHypNo.get("tw74"));
-
-			while ((lineCl = br3.readLine()) != null) {
-
-				//All the tweet numbers contained in clusters
-				List<String> clList = Arrays.asList(lineCl.substring(lineCl.indexOf(']') + 1).split(","));
-
-
-				//Below is the map containing the hypernyms of tweets that are in a
-				//specific cluster
-				Map<String, Integer> subHypCl = new LinkedHashMap<String, Integer>();
-
-				for (int i = 0; i < clList.size(); i++) {
-
-
-					//					System.out.println("clList: " + clList.get(i));
-					//The hypernyms representing a tweet
-					String[] hyps = twHypNo.get(clList.get(i)).split(", ");
-					//All cluster hypernyms are getting collected, and get assigned to
-					//the LinkedHashMap
-					for (int j = 0; j < hyps.length; j++) {
-						String hypWord = hyps[j].split(" ")[0];
-						int valSm = Integer.parseInt(hyps[j].split(" ")[1]);
-						int valNew = subHypCl.containsKey(hypWord) ?
-								subHypCl.get(hypWord) + valSm: valSm;
-						subHypCl.put(hypWord, valNew);
-					}
-
-				}
-
-				//Clusters are represented through numbers, starting from 0
-				List<Map.Entry<String, Integer>> ls =
-						new LinkedList<Map.Entry<String, Integer>>(subHypCl.entrySet());
-				Collections.sort(ls, new Comparator<Map.Entry<String, Integer>>() {
-					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
-						if (m1.getValue() < m2.getValue())
-							return 1;
-						else if (m1.getValue() > m2.getValue())
-							return -1;
-						return 0;
-					}
-
-				});
-
-
-
-				clusters.put(Integer.parseInt(lineCl.substring(1, lineCl.indexOf(']'))), ls);
-			}
-			br3.close();
-
-
-			//Below do we write the hypernyms, through which clusters are represented,
-			//to a file
-			FileWriter fw3 = new FileWriter(new File("clusterHypsFreq.txt"));
-
-			//			List<Integer> l = new ArrayList<Integer>(clusters.keySet());
-			for (int i = 0; i < clusters.size(); i++) {
-				List<Map.Entry<String, Integer>> lSub = clusters.get(i);
-
-				Map<String, Integer> hm = new LinkedHashMap<String, Integer>();
-
-				for (Map.Entry<String, Integer> me: lSub) {
-					hm.put(me.getKey(), me.getValue());
-				}
-
-				String line2 = "";
-				for (int u = 0; u < hypAll.size(); u++) {
-					if (hm.containsKey(hypAll.get(u)))
-						line2 += hm.get(hypAll.get(u)) + ",";
-					else
-						line2 += "0,";
-				}
-
-				fw3.write(line2.substring(0, line2.length() - 1));
-				fw3.write("\n");
-			}
-			fw3.close();
-
-			 */
-
 
 			//Loc - UserId mapping
 			Map<String, String> UIdLoc = new LinkedHashMap<String, String>();
@@ -743,14 +571,13 @@ public class UserProfileMain {
 			BufferedReader br2 = new BufferedReader(new FileReader(new File("training_set_users2.txt")));
 			line = "";
 
-			System.out.println("UserId - Location mapping is being performed..");
+			System.out.println("Tweets of users are being processed..");
 
 			Map<String, LinkedHashSet<String>> locUIds = new LinkedHashMap<String, LinkedHashSet<String>>();
 
 			int cnta = 0;
 			while ((line = br2.readLine()) != null) {
 
-				//				line = line.toLowerCase(Locale.ENGLISH);
 				String[] arrSpl = line.split("[\\s]+");
 				String uId = arrSpl[0];
 
@@ -806,10 +633,6 @@ public class UserProfileMain {
 				String id = twWHL.get(i).split("__")[1];
 				String loc = UIdLoc.get(id);
 
-				//				System.out.println("id: " + id + ", loc: " + loc);
-				//				System.out.println(" ///: " + id + " - " + loc);
-
-
 				Map<String, Double> hm2 = (locHyp.containsKey(loc)) ? locHyp.get(loc): 
 					new LinkedHashMap<String, Double>();
 				List<String> hm2L = new ArrayList<String>(hm2.keySet());
@@ -836,9 +659,6 @@ public class UserProfileMain {
 				for (int u = 0; u < spl.length; u++) {
 					String word = spl[u].split(" ")[0];
 					String freq = spl[u].split(" ")[1];
-
-
-					//					System.out.println("line: " + twWHL.get(i));
 					if (lHm.contains(word)) {
 						hm2.put(word, (hm2.get(word) +
 								Double.parseDouble(freq)));
@@ -847,21 +667,14 @@ public class UserProfileMain {
 						hm2.put(word, Double.parseDouble(freq));
 					}
 
-					//					System.out.println("freq: " + freq);
-
 				}
 				locHyp.put(loc, hm2);
 
 
 			}
-
-			//			System.out.println("SIZE: " + locHyp.size());
 			List<String> lox = new ArrayList<String>(locHyp.keySet());
 
 			for (int j = 0; j < locHyp.size(); j++) {
-
-				//				System.out.println("1: " + lox.get(j));
-				//				System.out.println("2: " + locHyp.get(lox.get(j)).size());
 				List<Map.Entry<String, Double>> ls =
 						new LinkedList<Map.Entry<String, Double>>(locHyp.get(lox.get(j)).entrySet());
 				Collections.sort(ls, new Comparator<Map.Entry<String, Double>>() {
@@ -875,32 +688,6 @@ public class UserProfileMain {
 
 				});
 
-				//				if (lox.get(j).substring(0, 3).equals("new")) {
-				System.out.print(lox.get(j) + " --> \n");
-				System.out.print("\tTOPICS: ");
-				for (int i = 0; i < ls.size() && i < 10; i++)
-					if (ls.get(i).getValue() != 0.)
-						if (i < ls.size() - 1 && i < 9) {
-							System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue() + ", ");
-						}
-						else
-						{
-							System.out.print(ls.get(i).getKey() + " " + ls.get(i).getValue());
-						}
-				System.out.println();
-
-				ArrayList<String> locUsers = new ArrayList<String>(locUIds.get(lox.get(j)));
-				for (int q = 0; q < locUsers.size(); q++) {
-					List<String> twits = userIdTw.get(locUsers.get(q));
-
-					for (int c = 0; c < twits.size(); c++) {
-						System.out.println("\t\t\t\tId: " + locUsers.get(q) + ", tweet: " + twits.get(c));
-					}
-				}
-
-				System.out.println("");
-
-				//				}
 
 			}
 
@@ -928,11 +715,11 @@ public class UserProfileMain {
 
 			List<String> times = new ArrayList<String>(locHyp.keySet());
 
-			
-			
-			
-			
-			
+
+
+
+
+
 			//Clustering operations . .
 			Map<Integer, LinkedHashMap<String, Double>> clHyp = new
 					LinkedHashMap<Integer,LinkedHashMap<String, Double>>();
@@ -947,9 +734,6 @@ public class UserProfileMain {
 				for (int i = 0; i < strArr.length; i++) {
 					Map<String, Double> tmpHyp = locHyp.get(strArr[i]);
 
-
-//					List<Map.Entry<String, Double>> tmpHypList = new ArrayList<Map.Entry<String,Double>>(tmpHyp.entrySet());
-
 					for (Map.Entry<String, Double> e: tmpHyp.entrySet()) {
 						double val = tmp.containsKey((String)e.getKey()) ? (double) tmp.get((String)e.getKey())
 								: 0.;
@@ -957,7 +741,7 @@ public class UserProfileMain {
 						tmp.put((String) e.getKey(), (double) val);
 					}
 				}
-				
+
 
 				List<Map.Entry<String, Double>> ls =
 						new LinkedList<Map.Entry<String, Double>>(tmp.entrySet());
@@ -984,27 +768,21 @@ public class UserProfileMain {
 				String[] spl = lStr.split(":");
 				String id = spl[0];
 				int cl = Integer.valueOf(spl[1]);
-				System.out.println("id: " + id);
-				
+
 				List<String> l_ = userIdTw.get(id);
-				for (int i = 0; i < l_.size(); i++) {
-					System.out.println("\t" + "tweet(" + i + "): " + l_.get(i));
-				}
-				System.out.print("\t\tCluster hypernyms: ");
 				String str = "";
 				for (Map.Entry<String, Double> e: clHyp.get(cl).entrySet()) {
 					str += e.getKey() + " " + e.getValue() + ",";
 				}
 				str = str.substring(0, str.length() - 1);
-				System.out.print(str + "\n");
 				testCl.put(id, clHyp.get(cl));
 			}
 			bre.close();
 			//Clustering operations ended here . .
-			
-			
-			
-			
+
+
+
+
 			FileWriter htm = new FileWriter(new File("C:\\Users\\asus\\Desktop\\users2.htm"));
 			htm.write("<html>"
 					+ "<body background=\"twitter-pic2.jpg\">");
@@ -1070,7 +848,8 @@ public class UserProfileMain {
 
 
 			htm.write("<center><div style = \"width:922px;\"><div id = \"header\">" +
-					"<h1>Concept Extraction from Tweets</h1>" +
+					"<h1>Inferring Semantic User Profile in Twitter "
+					+ "through Concept Mining</h1>" +
 					"<br><br></div>" +
 					"<br><br><br>");
 			htm.write("<div id = \"navSec\"><div id = \"nav\">");
@@ -1079,15 +858,22 @@ public class UserProfileMain {
 			//			htm.write("<input type=\"text\" id = \"txt\" onfocus=\"func()\" width = \"6\"/>");
 			htm.write("</div>");
 			htm.write("<div id = \"section\">" +
-					"<h2>Concepts extracted from the tweets on a time-basis</h2>" +
+					"<h2>Extracting concepts from tweets for inferring user profile</h2>" +
 					"<p>" +
-					"Below are the concepts extracted from the tweets concerned with"
-					+ " the US elections (2012). These tweets grouped in accordance " +
+					"In this page, the first 117 tables represent "
+					+ "the concepts extracted from each Twitter user "
+					+ "based on their tweets."
+					+ "</p><p>"
+					+ "The last 49 tables represent the test data, which are "
+					+ "the remaining Twitter users' tweets, as well as the concepts extracted "
+					+ "from them. The clustering concept section on the right of "
+					+ "each of these tables are those extracted through clustering "
+					+ "the training data that are listed atop the page." +
 					"</p>" +
 					"</div>");
 
 			htm.write("<div id = \"footer\">");
-			htm.write("An Approach for Developing Concept Mining Methods in "
+			htm.write("An Approach for Inferring User Profiles in "
 					+ "Twitter");
 
 			htm.write("</div></div></center>");
@@ -1098,11 +884,11 @@ public class UserProfileMain {
 
 			List<String> setTw = new ArrayList<String>(locHyp.keySet());
 			int setCnt = 0;
-			
-			
-			
+
+
+
 			//matr.txt
-			
+
 			//end
 
 			int tableNo = 1;
@@ -1140,54 +926,36 @@ public class UserProfileMain {
 					if (j >= trSize)
 						htm.write("<td colspan = \"3\" style = \"clear:both; width:300px;\"><center>");
 					else
-						htm.write("<td colspan = \"4\" style = \"clear:both; width:300px;\"><center>");
-					
-					
+						htm.write("<td colspan = \"2\" style = \"clear:both; width:300px;\"><center>");
+
+
 
 					if (setCnt != 0)
 						htm.write("<a href = \"#table" + (tableNo - 1) +"\">&laquo;previous</a>");
 
 					if (j >= trSize)
-						htm.write("<b><i>&nbsp;&nbsp;&nbsp; Test table " + tableNo + "&nbsp;&nbsp;&nbsp;"
+						htm.write("<b><i>&nbsp;&nbsp;&nbsp; Test table " + (tableNo - trSize) + "&nbsp;&nbsp;&nbsp;"
 								+ "</i></b>");
 					else
 						htm.write("<b><i>&nbsp;&nbsp;&nbsp; Training table " + tableNo + "&nbsp;&nbsp;&nbsp;"
 								+ "</i></b>"); 
-					
+
 					if (tableNo != locHyp.size() - 1)
 						htm.write("<a href = \"#table" + (tableNo + 1) +"\">next&raquo;</a>");
 
 					tableNo++;
-
 					htm.write("<div id = \"blackDiv\">");
-					htm.write("<bold><h1>" + times.get(j)+ "</h1></bold>");
+					htm.write("<bold><h1>User ID: " + times.get(j)+ "</h1></bold>");
 					htm.write("</div>");
 
-
-					htm.write("<div  style = \"background-color: rgba(88, 88, 88, 0.41);\">");
-
-					htm.write("<br><b><u>TOP CONCEPTS</u></b><br><br><br>");
-
-					List<Map.Entry<String, Double>> sortedTop = sortedParts.get(sortedPartsKeys.get(setCnt));
-					int cntSort = 0;
-
-					for (Map.Entry<String, Double> e: sortedTop) {
-						htm.write((String) e.getKey() + "\t" + (Double) e.getValue() + "<br>");
-						concList.add((String) e.getKey());
-						if (cntSort++ == 15)
-							break;
-					}
-
-					htm.write("<br></div></center></td></tr>");
+					htm.write("</tr>");
 
 
 				}
 				setCnt++;
 
 				htm.write("<tr>");
-				htm.write("<td>");
-				htm.write("<b><i>" + times.get(j) + "</i></b>");
-				htm.write("</td>");
+				
 				htm.write("<td style = \"background-color: rgba(255, 255, 255, 0.72);\">");
 				//Below, the concepts extracted are written into the file
 				htm.write("<center><b><i><h4><u>CONCEPTS</u></h4></i></b></center><br>");
@@ -1252,11 +1020,10 @@ public class UserProfileMain {
 
 				htm.write("</td>");
 				if (j >= trSize) {
-					System.out.println("|||| | | |  " + times.get(j));
-					htm.write("<td>");
+					htm.write("<td style = \"background-color: rgba(122, 122, 122, 0.72);\">");
 					htm.write("<center><b><i><h4><u>CLUSTER CONCEPTS</u></h4></i></b></center><br>");
 					LinkedHashMap<String, Double> hm_ = testCl.get(times.get(j));
-//					List<Map.Entry<String, Double>> ll_ = new ArrayList<Map.Entry<String,Double>>(hm_.entrySet());
+					//					List<Map.Entry<String, Double>> ll_ = new ArrayList<Map.Entry<String,Double>>(hm_.entrySet());
 					htm.write("<center>");
 					for (Map.Entry<String, Double> e: hm_.entrySet())
 						htm.write(e.getKey() + " " + e.getValue() + "<br>");
@@ -1277,8 +1044,7 @@ public class UserProfileMain {
 			htm.write("</html>");
 			htm.close();
 
-			System.out.println("\n________________\n");
-			
+
 			FileWriter fw__ = new FileWriter("usersId.txt");
 
 			for (int i = 0; i < times.size(); i++)
@@ -1301,7 +1067,7 @@ public class UserProfileMain {
 				//						return -Double.compare(m1.getValue(), m2.getValue());
 				//					}
 				//
-				
+
 				//				});
 
 				List<Map.Entry<String, Double>> sortedTop = sortedParts.get(sortedPartsKeys.get(setCnt));
@@ -1338,18 +1104,6 @@ public class UserProfileMain {
 
 
 
-			
-
-
-			//			System.out.println("_____");
-			//			System.out.println("t.p.: " + postTfidf.get("time_period"));
-			//			System.out.println("corn: " + postTfidf.get("corn"));
-
-
-			//			System.out.println("======== -> " + twRowNo.size());
-
-
-			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -1359,11 +1113,4 @@ public class UserProfileMain {
 		}
 	}
 
-}//sheffield'i goster
-//en frequent 10'unu ele
-
-
-//4.1 times
-//t.p.: 1.817672338223656
-//corn: 7.427144133408616
-//======== -> 1681
+}
