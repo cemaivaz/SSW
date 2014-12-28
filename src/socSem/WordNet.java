@@ -1,6 +1,7 @@
 package socSem;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,6 +25,8 @@ public class WordNet {
 	static Map<String, String> hypernymy = new LinkedHashMap<String, String>();
 
 
+
+	static Map<String, Integer> nounFreqs = new LinkedHashMap<String, Integer>();
 
 	static List<String> nouns = new ArrayList<String>();
 	public static int lev = 4;
@@ -71,6 +74,16 @@ public class WordNet {
 				hypernymy.put(l.get(i), hyp);
 			}
 
+			BufferedReader freq = new BufferedReader(new FileReader(new File("noun_freq.txt")));
+
+			String freqLin = "";
+			while ((freqLin = freq.readLine()) != null) {
+				freqLin = freqLin.trim();
+				nounFreqs.put(freqLin.split("\\s+")[0], Integer.parseInt(freqLin.split("\\s+")[1]));
+			}
+			freq.close();
+
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -81,7 +94,25 @@ public class WordNet {
 	}
 
 	public static String hypernym(String s) {
-		return hypernymy.get(s);
+		String [] arr = hypernymy.get(s).split(" ");
+		String word = arr[0];
+
+		int maxNo = -1;
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].length() >= 10)
+				if (arr[i].substring(0, 10).equals("president_")) {
+					word = arr[i];
+					break;
+				}
+			if (nounFreqs.containsKey(arr[i])) {
+				if (nounFreqs.get(arr[i]) > maxNo) {
+					maxNo = nounFreqs.get(arr[i]);
+					word = arr[i];
+				}
+			}
+		}
+		return word;
 	}
 	public static Map<Integer, String> hypernymMultiLevel(String s, int i) {
 		Map<Integer, String> m =
@@ -254,7 +285,7 @@ public class WordNet {
 		for(Map.Entry<String, Integer> me: lst)
 			result += me.getKey() + " " + me.getValue() + ", ";
 		result = result.substring(0, result.length() - 2);
-//		System.out.println("Simple SUM: " + result);
+		//		System.out.println("Simple SUM: " + result);
 		return result;
 	}
 
@@ -316,13 +347,18 @@ public class WordNet {
 		commHyperAll(Arrays.asList("electricity", "lamp", "light", "photon"));
 
 		//System.out.println("***");
-		
+
 		commHyperAll(Arrays.asList("europe"));
 
 
 		System.out.println("///");
-//		simpleHypSum(Arrays.asList("europe"));
-//		simpleHypSum(Arrays.asList("europe", "asia", "france", "brazil"));
+		System.out.println(simpleHypSum(Arrays.asList("europe")));
+
+		System.out.println(hypernym("europe") + " ___");
+
+		System.out.println("jklhjl".split(" ")[0]);
+		//		simpleHypSum(Arrays.asList("europe"));
+		//		simpleHypSum(Arrays.asList("europe", "asia", "france", "brazil"));
 		//System.out.println("||||");
 		//System.out.println(hypernym("europe"));
 
