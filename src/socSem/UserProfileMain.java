@@ -11,12 +11,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Pattern;
 
@@ -105,8 +107,48 @@ public class UserProfileMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		System.out.println("Do you want the program to take account of the"
+				+ " tf-idf score?\n"
+				+ "If yes, press y\n"
+				+ "If no, press n\n");
+
+		Scanner sc = new Scanner(System.in);
+		String tfIdfDec = sc.nextLine().trim();
+		if (!(tfIdfDec.equals("y") || tfIdfDec.equals("n"))) {
+			System.err.println("Wrong input format! Try again..");
+			System.exit(1);
+		}
+
+		System.out.println("Enter the full path name of the file"
+				+ " where do you want to "
+				+ "see the output (Its extension should be htm or html): ");
+
+		sc = new Scanner(System.in);
+
+		String fileName = sc.nextLine().trim();
+		if (fileName.equals("")) {
+			System.out.println("You should have specified the name of the file!");
+			System.exit(1);
+		}
+		else if(fileName.length() <= 4) {
+			System.out.println("Invalid file name! (File name should "
+					+ "have had at least five characters)");
+			System.exit(1);
+		}
+		else if (!(fileName.substring(fileName.length()- 3, fileName.length()).equals("htm") ||
+				fileName.substring(fileName.length()- 4, fileName.length()).equals("html"))) {
+			System.err.println("File extension should "
+					+ "have been htm or html!");
+			System.exit(1);
+		}
 
 
+
+
+		if (tfIdfDec.equals("n"))
+			ignoreIdf = true;
+		else
+			ignoreIdf = false;
 		WordNet wn = new WordNet();
 
 		//		txtForm();
@@ -132,10 +174,62 @@ public class UserProfileMain {
 		Map<String, ArrayList<String>> userIdTw = new LinkedHashMap<String, ArrayList<String>>();
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File(traFile)));
-
 			String line = "";
-			int cnt = 0;
+			//			Map<String, ArrayList<String>> norm = new HashMap<String, ArrayList<String>>();
+			//			
+			//			BufferedReader brNorm = new BufferedReader(new FileReader(traFile.substring(0, traFile.indexOf(".txt")) + "_norm.txt"));
+			//			
+			//			Map<String, Map<String, ArrayList<Boolean>>> liNorm = new 
+			//					HashMap<String, Map<String, ArrayList<Boolean>>>();
+			//			while ((line = brNorm.readLine()) != null) {
+			//				String tmpLine = line.split("\\s+")[1];
+			//				String normLineId = tmpLine.substring(0, tmpLine.indexOf("_"));
+			//				String normLineTmp = line.substring(line.indexOf(" ") + 1);
+			//				String normLine = normLineTmp.substring(normLineTmp.indexOf(" ") + 1);
+			//				String [] spl = normLine.split(" ");
+			//								
+			//				Map<String, ArrayList<Boolean>> boolCh = new 
+			//						HashMap<String, ArrayList<Boolean>>();
+			//				for (int i = 0; i < spl.length; i++){
+			//					ArrayList<Boolean> bools = (boolCh.containsKey(spl[i])) ? boolCh.get(spl[i]): 
+			//						new ArrayList<Boolean>();
+			////					if (!boolCh.containsKey(spl[i])) {
+			////						boolCh.put(spl[i], false);
+			////					}
+			//					String word = "";
+			//					if (spl[i].indexOf("_") > -1) {
+			//						word = spl[i].substring(0, spl[i].lastIndexOf("_"));
+			//						
+			//					} else
+			//						continue;
+			//						
+			//					boolean fnd = false;
+			//					if (spl[i].indexOf("_NN") > -1) {
+			//						fnd = true;
+			//					} 
+			//					bools.add(fnd);
+			//					boolCh.put(word, bools);
+			//				}
+			//
+			//				Map<String, ArrayList<Boolean>> boolChNew = new 
+			//						HashMap<String, ArrayList<Boolean>>();
+			//				for (Map.Entry<String, ArrayList<Boolean>> e: boolCh.entrySet()) {
+			//					if (e.getValue().contains(true)) {
+			//						boolChNew.put(e.getKey(), e.getValue());
+			//						System.out.println(e.getKey());
+			//					}
+			//				}
+			//				System.out.println("\n\n");
+			//				liNorm.put(normLineId, boolChNew);
+			//			}
+			//			brNorm.close();
+			//			System.exit(1);
+
+
+			BufferedReader br = new BufferedReader(new FileReader(new File(traFile.substring(0, traFile.indexOf(".txt")) + "_norm.txt")));
+
+
+			//			int cnt = 0;
 
 
 
@@ -144,23 +238,25 @@ public class UserProfileMain {
 
 			String wholeTw = "";
 			int rowNo = 0;
+			System.out.println("Tweets are being processed..");
 
-			while ((line = br.readLine()) != null && cnt++ < tweetLimNo) {
+			while ((line = br.readLine()) != null /*&& cnt++ < tweetLimNo*/) {
 
-				wholeTw = line;
+				wholeTw = line.replaceAll("([^ ]+)_[^ _]+[\\s]*", "$1 ").replaceAll("([^ ]+)_[[^ ] && [^_]]+", "$1 ");;
 				String rawTweet = "";
 				//				System.out.println(line);
 				line = line.toLowerCase(Locale.ENGLISH);
 				//				Pattern p = Pattern.compile("([0-9]*[ ]*[0-9]*[ ]*)()([ ]*[0-9\\-]*)[ ]*[0-9:]*)( )?");
-				line = line.replaceAll("([0-9]*\\s*[0-9]*\\s*)(.*)(\\s*[0-9\\-]*\\s*[0-9:]*)( )?", "$2");
+				line = line.replaceAll("([0-9]*_cd\\s*[0-9]*_cd\\s*)(.*)(\\s*[0-9\\-]*_cd\\s*[0-9:]*_cd)( )?", "$2");
 				line = line.replaceAll("([0-9:\\-\\s]*)$", "");
 
-				rawTweet = line;
+				rawTweet = line.replaceAll("([^ ]+)_[^ _]+ ", "$1 ").replaceAll("([^ ]+)_[[^ ] && [^_]]+", "$1 ");;
+
 				String userId = wholeTw.split("\\s+")[0];
 
 
-				line = line.replaceAll(" http(s)?:([^ ])+", " ");
-				line = line.replaceAll("([\\.\\,\\!\\?:;\\-\\_]{1,})", " $1 ");
+				line = line.replaceAll(" http(s)?:([^ ])+[\\s]*", " ");
+				//				line = line.replaceAll("([\\.\\,\\!\\?:;\\-]{1,})", " $1 ");
 				String[] strArr = line.split(" ");
 
 				ArrayList<String> tmp =
@@ -178,42 +274,53 @@ public class UserProfileMain {
 
 				boolean twNorm = false;
 				for (int i = 0; i < strArr.length; i++) {
-					if (strArr[i].length() > 1) {
+
+					String strWord = strArr[i];
+					boolean isNoun = false;
+					if (strWord.contains("_nn") || strWord.contains("_NN"))
+						isNoun = true;
+					if (strWord.indexOf("_") > -1)
+						strWord = strWord.substring(0, strWord.lastIndexOf("_"));
+					
+					if (strWord.length() <= 1)
+						continue;
+					if (strWord.length() > 1) {
 						boolean isPl = false;
-						if (wn.nouns.contains(strArr[i])) {
-							tmp.add(strArr[i]);
-							twWords.add(strArr[i]);
+						if (wn.nouns.contains(strWord) && isNoun) {
+							tmp.add(strWord);
+							twWords.add(strWord);
 
+							
 							twNorm = true;
-							if (!nonHashes.contains(strArr[i]))
-								nonHashes.add(strArr[i]);
+							if (!nonHashes.contains(strWord))
+								nonHashes.add(strWord);
 
 							isPl = true;
 
 						}
-						else if (strArr[i].charAt(0) == '#') {
-							tmp.add(strArr[i]);
+						else if (strWord.charAt(0) == '#') {
+							tmp.add(strWord);
 							//							twRowNo.put(rowNo++, wholeTw);
-							hashes.add(strArr[i]);
+							hashes.add(strWord);
 							twNorm = true;
 
 							isPl = true;
 						}
-						int strLen = strArr[i].length();
-						int indS = strArr[i].indexOf("s");
-						int indMen = strArr[i].indexOf("men");
+						int strLen = strWord.length();
+						int indS = strWord.indexOf("s");
+						int indMen = strWord.indexOf("men");
 						if (isPl == false && 
 								(indS == strLen - 1 || indMen == strLen - 3)){
 
 							String wordStem = "";
 
-							//							strArr[i].charAt(strArr[i].length() - 1)
+							//							strWord.charAt(strWord.length() - 1)
 
-							wordStem = stem(strArr[i]);
+							wordStem = stem(strWord);
 							if (wordStem.length() == 0)
 								continue;
 
-							if (wn.nouns.contains(wordStem)) {
+							if (wn.nouns.contains(wordStem) && isNoun) {
 								tmp.add(wordStem);
 								twWords.add(wordStem);
 
@@ -226,17 +333,15 @@ public class UserProfileMain {
 					}
 
 				}
+				ArrayList<String> userIdLine = (userIdTw.containsKey(userId)) ? userIdTw.get(userId):
+					new ArrayList<String>();
 
+				userIdLine.add(rawTweet);
+				userIdTw.put(userId, userIdLine);
 				if (twNorm == true) {
 					twRowNo.put(rowNo++, wholeTw);
 
-					ArrayList<String> userIdLine = (userIdTw.containsKey(userId)) ? userIdTw.get(userId):
-						new ArrayList<String>();
 
-					userIdLine.add(rawTweet);
-
-
-					userIdTw.put(userId, userIdLine);
 				}
 				if (tmp.size() > 1) //degisti: if (tmp.size() > 0)
 					tweets.add(tmp);
@@ -317,8 +422,14 @@ public class UserProfileMain {
 			for (int i = 0; i < tweets.size(); i++) {
 				ArrayList<String> twAl = tweets.get(i);
 				String userId = twAl.get(0);
+				//				if (userId.equals("15724930")) {
+				//					System.out.println("found 1 ! " + twAl);
+				//				}
+				//				if (userId.equalsIgnoreCase("10483052"))
+				//					System.out.println("found this as well ! ! ! " + twAl);
 				twAl.remove(0);
 				String resHyp = "";
+				
 
 
 
@@ -397,6 +508,7 @@ public class UserProfileMain {
 				allLine.append(" | hypernyms: ").append(resHyp).append("__").append(userId);
 				twWHL.add(allLine.toString());
 				fw.write("\n");
+				
 			}
 
 
@@ -433,22 +545,19 @@ public class UserProfileMain {
 
 
 
-			FileWriter fwHyp = new FileWriter(new File("hypernames.txt"));
 
 			Map<String, Double> preTfidf = new LinkedHashMap<String, Double>();
 
 			line = "";
 			for (int i = 0; i < hypAll.size(); i++) {
-				if (ignoreIdf)
-					preTfidf.put(hypAll.get(i), 1.);
-				else 
-					preTfidf.put(hypAll.get(i), 0.);
-				line += hypAll.get(i) + ",";
-				line = line.substring(0, line.length() - 1);
-				fwHyp.write(line);
+				//				if (ignoreIdf)
+				//					preTfidf.put(hypAll.get(i), 1.);
+				//				else 
+				preTfidf.put(hypAll.get(i), 0.);
+				//				line += hypAll.get(i) + ",";
+				//				line = line.substring(0, line.length() - 1);
 			}
 
-			fwHyp.close();
 
 			List<String> aftMatr = new ArrayList<String>();
 
@@ -467,8 +576,8 @@ public class UserProfileMain {
 
 				for (int u = 0; u < hypAll.size(); u++) {
 					if (hm.containsKey(hypAll.get(u))) {
-						if (!ignoreIdf)
-							preTfidf.put(hypAll.get(u), (preTfidf.get(hypAll.get(u)) + 1));
+						//						if (!ignoreIdf)
+						preTfidf.put(hypAll.get(u), (preTfidf.get(hypAll.get(u)) + 1));
 						line2.append(hm.get(hypAll.get(u)));
 						line2.append(",");
 					}
@@ -500,9 +609,19 @@ public class UserProfileMain {
 			FileWriter fwSt = new FileWriter(new File("stopWords.txt"));
 
 			StringBuilder sbStop = new StringBuilder("");
+			Map<String, Double> tmpPretf = new LinkedHashMap<String, Double>();
+			
 			for (Map.Entry ent: ls_) {
 
-				if (elimMaxCnt++ < ls_.size() / 100 * 3) {
+				if (elimMaxCnt++ > ls_.size() / 100 * 3) {
+
+
+					tmpPretf.put((String) ent.getKey(), 1.);
+				}
+				else {
+//					if (elMult >= 1)
+//						elMult = 1;
+					tmpPretf.put((String) ent.getKey(), 0.);
 					preTfidf.put((String) ent.getKey(), 0.);
 					sbStop.append((String) ent.getKey()).append(" ");
 				}
@@ -512,12 +631,22 @@ public class UserProfileMain {
 			fwSt.write(sbStop.toString());
 			fwSt.close();
 
+			if (ignoreIdf == true) {
+				preTfidf = tmpPretf;
+			}
+
 
 
 			//			fw2.close();
 
 			Map<String, Double> postTfidf = new LinkedHashMap<String, Double>();
 
+			//			word: aid, postt: 0.0
+			//			word: relative_quantity, postt: 0.0
+			//			word: state, postt: 0.0
+			//			0 thanks,nothing,order | hypernyms:
+
+			System.out.println();
 
 
 			for (int i = 0; i < aftMatr.size(); i++) {
@@ -525,6 +654,7 @@ public class UserProfileMain {
 				StringBuilder val = new StringBuilder("");
 				for (int j = 0; j < strSpl.length; j++) {
 					double newV = 0.;
+					
 					if (preTfidf.get(hypAll.get(j)) != 0)
 						if (!ignoreIdf)
 							newV = /*Double.valueOf(strSpl[j]) * */Math.log10(twWHL.size() / preTfidf.get(hypAll.get(j)));
@@ -538,21 +668,37 @@ public class UserProfileMain {
 				val = val.deleteCharAt(val.length() - 1);
 			}
 
+			//			System.out.println("////// " + twWHL.get(0));
+			//			System.out.println("////// " + twWHL.get(1));
+
 
 			for (int i = 0; i < twWHL.size(); i++) {
 				String[] strSpl = twWHL.get(i).split("hypernyms: ")[1].split("__")[0].split(", ");
 				String newVals = twWHL.get(i).split("nyms: ")[0] + "nyms: ";
 				String last = twWHL.get(i).split("__")[1];
+				
+				
 				last = "__" + last;
+				
 				for (int j = 0; j < strSpl.length; j++) {
+					
+					
 					String word = strSpl[j].split(" ")[0];
-					//					String freq = strSpl[j].split(" ")[1];
 					double freq = Double.valueOf(strSpl[j].split(" ")[1]) * postTfidf.get(word);
+					//					if (i < 5)
+					//						System.out.println("word: " + word + ", postt: " + postTfidf.get(word));
 					newVals += word + " " + freq + ", ";
 				}
+
 				newVals = newVals.substring(0, newVals.length());
 				newVals += last;
 				twWHL.set(i, newVals);
+//				if (newVals.contains("30405521"))
+//					System.out.println("30405521: " + newVals);
+//				if (newVals.contains("75493854"))
+//					System.out.println("75493854: " + newVals);
+				//				if (i < 55)
+				//					System.out.println(i + " " + newVals);
 			}
 
 
@@ -571,7 +717,7 @@ public class UserProfileMain {
 			BufferedReader br2 = new BufferedReader(new FileReader(new File("training_set_users2.txt")));
 			line = "";
 
-			System.out.println("Tweets of users are being processed..");
+			//			System.out.println("Tweets of users are being processed..");
 
 			Map<String, LinkedHashSet<String>> locUIds = new LinkedHashMap<String, LinkedHashSet<String>>();
 
@@ -589,22 +735,6 @@ public class UserProfileMain {
 				conc = new StringBuilder(new String(conc).trim());
 
 				String concStr = conc.toString();
-
-
-				//				List<String> li = new ArrayList<String>(UIdLoc.keySet());
-				//				
-				//				String tmpLoc = "";
-				//				for (int i = 0; i < li.size(); i++) {
-				//					String presLoc = li.get(i);
-				//					if (presLoc.contains(conc) && presLoc.length() > conc.length()) {
-				//						tmpLoc = presLoc;
-				//						break;
-				//					}
-				//					
-				//				}
-				//				if (tmpLoc.length() > 0)
-				//					UIdLoc.put(arrSpl[0], tmpLoc);
-				//				else
 
 				UIdLoc.put(arrSpl[0], concStr.toString());
 
@@ -780,10 +910,12 @@ public class UserProfileMain {
 			bre.close();
 			//Clustering operations ended here . .
 
+			int trSize = (int) Math.ceil((double) locHyp.size() / 10 * 7);
 
 
+			FileWriter htm = new FileWriter(fileName);
 
-			FileWriter htm = new FileWriter(new File("C:\\Users\\asus\\Desktop\\users2.htm"));
+
 			htm.write("<html>"
 					+ "<body background=\"twitter-pic2.jpg\">");
 			htm.write("<head>");
@@ -848,17 +980,19 @@ public class UserProfileMain {
 
 
 			htm.write("<center><div style = \"width:922px;\"><div id = \"header\">" +
-					"<h1>Inferring Semantic User Profile in Twitter "
+					"<h1>Generating Semantic User Profile in Twitter "
 					+ "through Concept Mining</h1>" +
 					"<br><br></div>" +
 					"<br><br><br>");
 			htm.write("<div id = \"navSec\"><div id = \"nav\">");
 
+			htm.write("<a href = \"#table" + (trSize + 1) +"\">Test tables</a><br>");
+
 			//			htm.write("Enter Table No:<br>");
 			//			htm.write("<input type=\"text\" id = \"txt\" onfocus=\"func()\" width = \"6\"/>");
 			htm.write("</div>");
 			htm.write("<div id = \"section\">" +
-					"<h2>Extracting concepts from tweets for inferring user profile</h2>" +
+					"<h2>Extracting concepts from tweets for generating user profile</h2>" +
 					"<p>" +
 					"In this page, the first 117 tables represent "
 					+ "the concepts extracted from each Twitter user "
@@ -873,7 +1007,7 @@ public class UserProfileMain {
 					"</div>");
 
 			htm.write("<div id = \"footer\">");
-			htm.write("An Approach for Inferring User Profiles in "
+			htm.write("An Approach for Extracting User Profiles in "
 					+ "Twitter");
 
 			htm.write("</div></div></center>");
@@ -896,7 +1030,6 @@ public class UserProfileMain {
 			Set<String> concList = new LinkedHashSet<String>();
 
 			List<String> timeCollList = new ArrayList<String>();
-			int trSize = (int) Math.ceil((double) locHyp.size() / 10 * 7);
 			for (int j = 0; j < locHyp.size(); j++) {
 
 				List<Map.Entry<String, Double>> ls =
@@ -955,7 +1088,7 @@ public class UserProfileMain {
 				setCnt++;
 
 				htm.write("<tr>");
-				
+
 				htm.write("<td style = \"background-color: rgba(255, 255, 255, 0.72);\">");
 				//Below, the concepts extracted are written into the file
 				htm.write("<center><b><i><h4><u>CONCEPTS</u></h4></i></b></center><br>");
@@ -968,8 +1101,8 @@ public class UserProfileMain {
 					if (ls.get(i).getValue() != 0.) {
 						hypsHighl.add(ls.get(i).getKey());
 						if (i < ls.size() - 1 && i < 9) {
-							//							if (!concList.contains(ls.get(i).getKey()))
-							//								concList.add(ls.get(i).getKey());
+							if (!concList.contains(ls.get(i).getKey()))
+								concList.add(ls.get(i).getKey());
 							htm.write("<span style=\"background-color: " + colours[i] + "\">" + ls.get(i).getKey() + "</span> " + ls.get(i).getValue() + "<br>");
 						}
 						else
@@ -991,6 +1124,7 @@ public class UserProfileMain {
 				for (int b = 0; b < userTweets.size(); b++) {
 					htm.write("<i>Tweet</i> (" +b + "): ");
 					String tokLine = userTweets.get(b).replaceAll("([\\.\\,\\!\\?:;\\-\\_]{1,})", " $1 ");
+					//					htm.write("<br>" + userTweets.get(b) + "<br>");
 					String[] spl = tokLine.split(" ");
 
 					String htmlLine = "";
@@ -1006,16 +1140,22 @@ public class UserProfileMain {
 									rem = word.substring(wordStem.length());
 									word = wordStem;
 								}
-						if (Pattern.compile("[a-zA-Z]+").matcher(word).matches() && wn.nouns.contains(word)) {
+						if (word.length() == 1)
+							htmlLine += word + " ";
+						else if (Pattern.compile("[a-zA-Z]+").matcher(word).matches() && wn.nouns.contains(word)) {
+
 							if (hypsHighl.contains(wn.hypernym(word))) {
+
 								htmlLine += "<span style=\"background-color: " + colours[hypsHighl.indexOf(wn.hypernym(word))] + "\">" + word + "</span>" + rem + " ";
-							}
+							} 
+							else
+								htmlLine += word + rem + " ";
 						}
 						else {
 							htmlLine += word + " ";
 						}
 					}
-					htm.write(htmlLine.replaceAll(" ([\\.\\,\\!\\?:;\\-\\_]{1,}) ", "$1 ") + "<br>");
+					htm.write(htmlLine.replaceAll("[ ]+([\\.\\,\\!\\?:;\\-\\_]{1,})[ ]+", "$1 ") + "<br>");
 				}
 
 				htm.write("</td>");
@@ -1073,7 +1213,7 @@ public class UserProfileMain {
 				List<Map.Entry<String, Double>> sortedTop = sortedParts.get(sortedPartsKeys.get(setCnt));
 				//				int cntSort = 0;
 				String sb = times.get(j) + ",";
-				//				fw_.write(times.get(j) + ",");
+				fw_.write(times.get(j) + ",");
 				for (int r = 0; r < concList_.size(); r++) {
 
 					String conc = concList_.get(r);

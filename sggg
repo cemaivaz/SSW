@@ -1,0 +1,667 @@
+[1mdiff --git a/.project b/.project[m
+[1mindex 8ab6145..7100505 100644[m
+[1m--- a/.project[m
+[1m+++ b/.project[m
+[36m@@ -1,6 +1,6 @@[m
+ <?xml version="1.0" encoding="UTF-8"?>[m
+ <projectDescription>[m
+[31m-	<name>SocSemWeb</name>[m
+[32m+[m	[32m<name>User_Profile</name>[m
+ 	<comment></comment>[m
+ 	<projects>[m
+ 	</projects>[m
+[1mdiff --git a/.settings/org.eclipse.core.resources.prefs b/.settings/org.eclipse.core.resources.prefs[m
+[1mindex 0567b52..30bda1d 100644[m
+[1m--- a/.settings/org.eclipse.core.resources.prefs[m
+[1m+++ b/.settings/org.eclipse.core.resources.prefs[m
+[36m@@ -1,3 +1,2 @@[m
+ eclipse.preferences.version=1[m
+[31m-encoding//src/socSem/Main.java=UTF-8[m
+[31m-encoding/lim_tra_set.txt=UTF-8[m
+[32m+[m[32mencoding//src/lim_tra_set.txt=UTF-8[m
+[1mdiff --git a/bin/.gitignore b/bin/.gitignore[m
+[1mindex a9b54e7..9864fe8 100644[m
+[1m--- a/bin/.gitignore[m
+[1m+++ b/bin/.gitignore[m
+[36m@@ -1 +1,15 @@[m
+[32m+[m[32m/clusterTest.txt[m
+[32m+[m[32m/clusterTrain.txt[m
+[32m+[m[32m/data.noun[m
+[32m+[m[32m/lim_tra_set.txt[m
+[32m+[m[32m/lim_tra_set_norm.txt[m
+[32m+[m[32m/matr.txt[m
+[32m+[m[32m/noun_freq.txt[m
+[32m+[m[32m/stopWords.txt[m
+[32m+[m[32m/training_set_users2.txt[m
+[32m+[m[32m/tweetsNo.txt[m
+[32m+[m[32m/twitter-pic2.jpg[m
+[32m+[m[32m/twitterWords.txt[m
+[32m+[m[32m/weka-dev-3.7.6-sources.jar[m
+[32m+[m[32m/weka.jar[m
+ /socSem/[m
+[1mdiff --git a/bin/socSem/Main.class b/bin/socSem/Main.class[m
+[1mdeleted file mode 100644[m
+[1mindex 5c714b0..0000000[m
+Binary files a/bin/socSem/Main.class and /dev/null differ
+[1mdiff --git a/bin/socSem/ParseTweets$1.class b/bin/socSem/ParseTweets$1.class[m
+[1mdeleted file mode 100644[m
+[1mindex 1ca289b..0000000[m
+Binary files a/bin/socSem/ParseTweets$1.class and /dev/null differ
+[1mdiff --git a/bin/socSem/ParseTweets$2.class b/bin/socSem/ParseTweets$2.class[m
+[1mdeleted file mode 100644[m
+[1mindex 0804a0d..0000000[m
+Binary files a/bin/socSem/ParseTweets$2.class and /dev/null differ
+[1mdiff --git a/bin/socSem/ParseTweets$3.class b/bin/socSem/ParseTweets$3.class[m
+[1mdeleted file mode 100644[m
+[1mindex 0b9d789..0000000[m
+Binary files a/bin/socSem/ParseTweets$3.class and /dev/null differ
+[1mdiff --git a/bin/socSem/ParseTweets$4.class b/bin/socSem/ParseTweets$4.class[m
+[1mdeleted file mode 100644[m
+[1mindex 10e1b39..0000000[m
+Binary files a/bin/socSem/ParseTweets$4.class and /dev/null differ
+[1mdiff --git a/bin/socSem/ParseTweets.class b/bin/socSem/ParseTweets.class[m
+[1mdeleted file mode 100644[m
+[1mindex 787ccbb..0000000[m
+Binary files a/bin/socSem/ParseTweets.class and /dev/null differ
+[1mdiff --git a/bin/socSem/Post.class b/bin/socSem/Post.class[m
+[1mdeleted file mode 100644[m
+[1mindex 15e71f7..0000000[m
+Binary files a/bin/socSem/Post.class and /dev/null differ
+[1mdiff --git a/bin/socSem/TopicsClient.class b/bin/socSem/TopicsClient.class[m
+[1mdeleted file mode 100644[m
+[1mindex f3c5b59..0000000[m
+Binary files a/bin/socSem/TopicsClient.class and /dev/null differ
+[1mdiff --git a/breakPoint.txt b/breakPoint.txt[m
+[1mdeleted file mode 100644[m
+[1mindex e144678..0000000[m
+[1m--- a/breakPoint.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,682 +0,0 @@[m
+[31m-package socSem;[m
+[31m-[m
+[31m-import java.io.BufferedReader;[m
+[31m-import java.io.File;[m
+[31m-import java.io.FileNotFoundException;[m
+[31m-import java.io.FileReader;[m
+[31m-import java.io.FileWriter;[m
+[31m-import java.io.IOException;[m
+[31m-import java.util.ArrayList;[m
+[31m-import java.util.Arrays;[m
+[31m-import java.util.Collections;[m
+[31m-import java.util.Comparator;[m
+[31m-import java.util.HashMap;[m
+[31m-import java.util.HashSet;[m
+[31m-import java.util.LinkedHashMap;[m
+[31m-import java.util.LinkedList;[m
+[31m-import java.util.List;[m
+[31m-import java.util.Map;[m
+[31m-import java.util.Set;[m
+[31m-[m
+[31m-public class ParseTweets {[m
+[31m-[m
+[31m-	/**[m
+[31m-	 * @param args[m
+[31m-	 */[m
+[31m-	public static void main(String[] args) {[m
+[31m-		// TODO Auto-generated method stub[m
+[31m-[m
+[31m-		WordNet wn = new WordNet();[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-		List<ArrayList<String>> tweets = new[m
+[31m-				ArrayList<ArrayList<String>>();[m
+[31m-[m
+[31m-		Set<String> twWords = new[m
+[31m-				HashSet<String>();[m
+[31m-[m
+[31m-		Map<String, ArrayList<String>> allHashes = new[m
+[31m-				HashMap<String, ArrayList<String>>();[m
+[31m-[m
+[31m-		Map<String, String> hashHyp = new HashMap<String, String>();[m
+[31m-[m
+[31m-[m
+[31m-		Map<String, String> hashMostCm = new HashMap<String, String>();[m
+[31m-[m
+[31m-[m
+[31m-		List<String> twWHL = new ArrayList<String>();[m
+[31m-[m
+[31m-		try {[m
+[31m-			//			BufferedReader br = new BufferedReader(new FileReader(new File("C:\\Users\\asus\\Documents\\training_set_tweets.txt")));[m
+[31m-			BufferedReader br = new BufferedReader(new FileReader(new File("lim_tra_set.txt")));[m
+[31m-[m
+[31m-			String line = "";[m
+[31m-			int cnt = 0;[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			//Tweet No + the whole tweet[m
+[31m-			Map<Integer, String> twRowNo = new LinkedHashMap<Integer, String>();[m
+[31m-[m
+[31m-			String wholeTw = "";[m
+[31m-			int rowNo = 0;[m
+[31m-[m
+[31m-			while ((line = br.readLine()) != null && cnt++ < 1800) {[m
+[31m-[m
+[31m-				wholeTw = line;[m
+[31m-				//				System.out.println(line);[m
+[31m-				line = line.toLowerCase();[m
+[31m-				//				Pattern p = Pattern.compile("([0-9]*[ ]*[0-9]*[ ]*)()([ ]*[0-9\\-]*)[ ]*[0-9:]*)( )?");[m
+[31m-				line = line.replaceAll("([0-9]*\\s*[0-9]*\\s*)(.*)(\\s*[0-9\\-]*\\s*[0-9:]*)( )?", "$2");[m
+[31m-				line = line.replaceAll("([0-9:\\-\\s]*)$", "");[m
+[31m-				line = line.replaceAll(" http(s)?:([^ ])+", " ");[m
+[31m-				line = line.replaceAll("([\\.\\,\\!\\?:;\\-\\_]{1,})", " $1 ");[m
+[31m-				String[] strArr = line.split(" ");[m
+[31m-[m
+[31m-				ArrayList<String> tmp =[m
+[31m-						new ArrayList<String>();[m
+[31m-[m
+[31m-				//				System.out.println(wholeTw);[m
+[31m-				tmp.add(wholeTw.split("\\s+")[0]);[m
+[31m-[m
+[31m-				ArrayList<String> nonHashes = new[m
+[31m-						ArrayList<String>();[m
+[31m-[m
+[31m-				ArrayList<String> hashes = new[m
+[31m-						ArrayList<String>();[m
+[31m-[m
+[31m-[m
+[31m-				boolean twNorm = false;[m
+[31m-				for (int i = 0; i < strArr.length; i++) {[m
+[31m-					if (strArr[i].length() > 1) {[m
+[31m-						if (wn.nouns.contains(strArr[i])) {[m
+[31m-							tmp.add(strArr[i]);[m
+[31m-							twWords.add(strArr[i]);[m
+[31m-[m
+[31m-							twNorm = true;[m
+[31m-							if (!nonHashes.contains(strArr[i]))[m
+[31m-								nonHashes.add(strArr[i]);[m
+[31m-						}[m
+[31m-						else if (strArr[i].charAt(0) == '#') {[m
+[31m-							tmp.add(strArr[i]);[m
+[31m-							//							twRowNo.put(rowNo++, wholeTw);[m
+[31m-							hashes.add(strArr[i]);[m
+[31m-							twNorm = true;[m
+[31m-						}[m
+[31m-					}[m
+[31m-[m
+[31m-				}[m
+[31m-[m
+[31m-				if (twNorm == true)[m
+[31m-					twRowNo.put(rowNo++, wholeTw);[m
+[31m-[m
+[31m-				if (tmp.size() > 1) //degisti: if (tmp.size() > 0)[m
+[31m-					tweets.add(tmp);[m
+[31m-[m
+[31m-				if (hashes.size() > 0 && nonHashes.size() > 0) {[m
+[31m-					for (int i = 0; i < hashes.size(); i++) {[m
+[31m-						for (int j = 0; j < nonHashes.size(); j++) {[m
+[31m-							ArrayList<String> tmpHsh = (allHashes.containsKey(hashes.get(i))) ? [m
+[31m-									allHashes.get(hashes.get(i)): new ArrayList<String>();[m
+[31m-									tmpHsh.add(nonHashes.get(j));[m
+[31m-									allHashes.put(hashes.get(i), tmpHsh);[m
+[31m-						}[m
+[31m-[m
+[31m-					}[m
+[31m-				}[m
+[31m-[m
+[31m-				//				System.out.println(tmp.toString());[m
+[31m-				//				System.out.println(line);[m
+[31m-[m
+[31m-[m
+[31m-			}[m
+[31m-			//			System.out.println(twWords.size());[m
+[31m-			br.close();[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			ArrayList<String> hashKeys = new ArrayList<String>(allHashes.keySet());[m
+[31m-			for (int i = 0; i < hashKeys.size(); i++) {[m
+[31m-				ArrayList<String> tmp = allHashes.get(hashKeys.get(i));[m
+[31m-[m
+[31m-[m
+[31m-				hashHyp.put(hashKeys.get(i), wn.simpleHypSum(tmp).split(", ")[0]);[m
+[31m-[m
+[31m-				Map<String, Integer> m = new LinkedHashMap<String, Integer>();[m
+[31m-				for (int j = 0; j < tmp.size(); j++) {[m
+[31m-					int cntHm = (m.containsKey(tmp.get(j))) ?[m
+[31m-							m.get(tmp.get(j)) + 1: 1;[m
+[31m-					m.put(tmp.get(j), cntHm);[m
+[31m-[m
+[31m-				}[m
+[31m-[m
+[31m-				List<Map.Entry<String, Integer>> lst =[m
+[31m-						new LinkedList<Map.Entry<String, Integer>>(m.entrySet());[m
+[31m-				Collections.sort(lst, new Comparator<Map.Entry<String, Integer>>() {[m
+[31m-					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {[m
+[31m-						if (m1.getValue() < m2.getValue())[m
+[31m-							return 1;[m
+[31m-						else if (m1.getValue() > m2.getValue())[m
+[31m-							return -1;[m
+[31m-						return 0;[m
+[31m-					}[m
+[31m-				});[m
+[31m-				//				Map<String, Integer> newHm = new LinkedHashMap<String, Integer>();[m
+[31m-[m
+[31m-[m
+[31m-				//				ArrayList<String> alNew = new ArrayList<String>();[m
+[31m-[m
+[31m-				//				for (Entry e: lst) {[m
+[31m-				//					System.out.print("words: " + hashKeys.get(i) + ", key: " + e.getKey() + ", val: "[m
+[31m-				//							+ e.getValue());[m
+[31m-				//					alNew.add((String) e.getKey());[m
+[31m-				//					//					newHm.put((String) e.getKey(), (Integer) e.getValue());[m
+[31m-				//				}[m
+[31m-				//				System.out.println();[m
+[31m-				//				allHashes.put(hashKeys.get(i), alNew);[m
+[31m-[m
+[31m-[m
+[31m-				hashMostCm.put(hashKeys.get(i), lst.get(0).getKey());[m
+[31m-[m
+[31m-[m
+[31m-				hashHyp.put(hashKeys.get(i), wn.simpleHypSum(tmp).split(", ")[0]);[m
+[31m-[m
+[31m-[m
+[31m-			}[m
+[31m-[m
+[31m-			//			System.out.println("FACE: " + hashMostCm.get("#fb"));[m
+[31m-[m
+[31m-			FileWriter fw = [m
+[31m-					new FileWriter("twitterWords.txt");[m
+[31m-			//			[m
+[31m-			//			[m
+[31m-			//			String[] twWordsArr = twWords.toArray(new String[twWords.size()]);[m
+[31m-			//			for (int i = 0; i < twWordsArr.length; i++)[m
+[31m-			//				fw.write(twWordsArr[i] + "\n");[m
+[31m-[m
+[31m-[m
+[31m-			List<List<String>> hypTw = new ArrayList<List<String>>();[m
+[31m-[m
+[31m-			List<String> hypAll = new ArrayList<String>();[m
+[31m-[m
+[31m-[m
+[31m-			//			System.out.println("TWEETS SIZE: " + tweets.size());[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			int twNo = 0;[m
+[31m-[m
+[31m-[m
+[31m-			//tweet - hypernyms (w/ # of occur.)[m
+[31m-			Map<String, String> twHypNo = new LinkedHashMap<String, String>();[m
+[31m-[m
+[31m-			for (int i = 0; i < tweets.size(); i++) {[m
+[31m-				ArrayList<String> twAl = tweets.get(i);[m
+[31m-				String userId = twAl.get(0);[m
+[31m-				twAl.remove(0);[m
+[31m-				String resHyp = "";[m
+[31m-[m
+[31m-				if(twAl.size() == 0) {[m
+[31m-					//					System.out.println("NOPE!!: " + twAl);[m
+[31m-				}[m
+[31m-[m
+[31m-[m
+[31m-				List<String> hypTwSub = new ArrayList<String>();[m
+[31m-[m
+[31m-				int cntHasht = 0;[m
+[31m-[m
+[31m-				ArrayList<String> hashAft = new ArrayList<String>();[m
+[31m-				ArrayList<String> nonHashAft = new ArrayList<String>();[m
+[31m-				for (int j = 0; j < twAl.size(); j++) {[m
+[31m-					if (twAl.get(j).charAt(0) == '#') {[m
+[31m-						hashAft.add(hashMostCm.get(twAl.get(j)));[m
+[31m-						cntHasht++;[m
+[31m-					}[m
+[31m-					else[m
+[31m-						nonHashAft.add(twAl.get(j));[m
+[31m-				}[m
+[31m-[m
+[31m-				String line2 = "";[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-				if (cntHasht == twAl.size()) {[m
+[31m-					if (hashAft.size() == 0 || hashAft.get(0) == null){[m
+[31m-						twRowNo.remove(i);[m
+[31m-						continue;[m
+[31m-[m
+[31m-					}[m
+[31m-					//					System.out.println(hashAft + " size: " + hashAft.get(0));[m
+[31m-					resHyp = wn.simpleHypSum(hashAft);[m
+[31m-				}[m
+[31m-				else if (cntHasht == 0)[m
+[31m-					resHyp = wn.simpleHypSum(twAl);[m
+[31m-				else {[m
+[31m-[m
+[31m-					nonHashAft.addAll(hashAft);[m
+[31m-					//					System.out.println(nonHashAft);[m
+[31m-					resHyp = wn.simpleHypSum(nonHashAft);[m
+[31m-				}[m
+[31m-[m
+[31m-				twNo++;[m
+[31m-[m
+[31m-[m
+[31m-				hypTwSub = Arrays.asList(resHyp.split(", "));[m
+[31m-				hypTw.add(hypTwSub);[m
+[31m-[m
+[31m-				for (int k = 0; k < hypTwSub.size(); k++) {[m
+[31m-					if (!hypAll.contains(hypTwSub.get(k).split(" ")[0]))[m
+[31m-						hypAll.add(hypTwSub.get(k).split(" ")[0]);[m
+[31m-				}[m
+[31m-[m
+[31m-				StringBuilder allLine = new StringBuilder("");[m
+[31m-				for (int j = 0; j < twAl.size(); j++) {[m
+[31m-					if ( j == twAl.size() - 1) {[m
+[31m-						fw.write(twAl.get(j));[m
+[31m-						allLine.append(twAl.get(j));[m
+[31m-						[m
+[31m-					}[m
+[31m-					else {[m
+[31m-						fw.write(twAl.get(j) + ",");[m
+[31m-						allLine.append(twAl.get(j));[m
+[31m-						allLine.append(",");[m
+[31m-					}[m
+[31m-				}[m
+[31m-[m
+[31m-[m
+[31m-				twHypNo.put("tw" + String.valueOf(i), resHyp);[m
+[31m-[m
+[31m-				//				System.out.println(twAl.toString() + "//////" + res);[m
+[31m-[m
+[31m-[m
+[31m-				fw.write(" | hypernyms: " + resHyp + "__" + userId);[m
+[31m-[m
+[31m-[m
+[31m-				allLine.append(" | hypernyms: ").append(resHyp).append("__").append(userId);[m
+[31m-				twWHL.add(allLine.toString());[m
+[31m-				fw.write("\n");[m
+[31m-			}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			fw.close();[m
+[31m-[m
+[31m-[m
+[31m-			//Some of the line numbers for the strings including the hypernyms are [m
+[31m-			//removed, if these return NULL[m
+[31m-			Map<String, String> tmpTwHypNo = new HashMap<String, String>();[m
+[31m-			List<String> tmpList = new ArrayList<String>(twHypNo.values());[m
+[31m-			for (int i = 0; i < twHypNo.size(); i++) {[m
+[31m-				tmpTwHypNo.put("tw" + new Integer(i).toString(), tmpList.get(i));[m
+[31m-			}[m
+[31m-[m
+[31m-			twHypNo = tmpTwHypNo;[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			FileWriter fwTw = new FileWriter(new File("tweetsNo.txt"));[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			for (int i = 0; i < twNo; i++) {[m
+[31m-				if (i != twNo - 1)[m
+[31m-					fwTw.write("tw" + String.valueOf(i) + ",");[m
+[31m-				else[m
+[31m-					fwTw.write("tw" + String.valueOf(i));[m
+[31m-			}[m
+[31m-[m
+[31m-			fwTw.close();[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			//			System.out.println("hypAll: " + hypAll.size());[m
+[31m-			//			System.out.println();[m
+[31m-[m
+[31m-			FileWriter fwHyp = new FileWriter(new File("hypernames.txt"));[m
+[31m-[m
+[31m-			Map<String, Double> preTfidf = new HashMap<String, Double>();[m
+[31m-[m
+[31m-			line = "";[m
+[31m-			for (int i = 0; i < hypAll.size(); i++) {[m
+[31m-				preTfidf.put(hypAll.get(i), 0.);[m
+[31m-				line += hypAll.get(i) + ",";[m
+[31m-				line = line.substring(0, line.length() - 1);[m
+[31m-				fwHyp.write(line);[m
+[31m-			}[m
+[31m-[m
+[31m-			fwHyp.close();[m
+[31m-[m
+[31m-			List<String> aftMatr = new ArrayList<String>();[m
+[31m-[m
+[31m-			FileWriter fw2 = new FileWriter(new File("matr.txt"));[m
+[31m-			for (int y = 0; y < hypTw.size(); y++) {[m
+[31m-				List<String> sub = hypTw.get(y);[m
+[31m-				fw2.write("tw" + y +":");[m
+[31m-				StringBuilder line2 = new StringBuilder("");[m
+[31m-[m
+[31m-				//				List<String> subSpl = new ArrayList<String>();[m
+[31m-				Map<String, String> hm = new HashMap<String, String>(); [m
+[31m-				for (int w = 0; w < sub.size(); w++) {[m
+[31m-					//					subSpl.add(sub.get(w).split(" ")[0]);[m
+[31m-					hm.put(sub.get(w).split(" ")[0], sub.get(w).split(" ")[1]);[m
+[31m-				}[m
+[31m-[m
+[31m-				for (int u = 0; u < hypAll.size(); u++) {[m
+[31m-					if (hm.containsKey(hypAll.get(u))) {[m
+[31m-						preTfidf.put(hypAll.get(u), (preTfidf.get(hypAll.get(u)) + 1));[m
+[31m-						line2.append(hm.get(hypAll.get(u)));[m
+[31m-						line2.append(",");[m
+[31m-					}[m
+[31m-					else[m
+[31m-						line2.append("0,");[m
+[31m-				}[m
+[31m-[m
+[31m-				fw2.write(line2.substring(0, line2.length() - 1));[m
+[31m-				fw2.write("\n");[m
+[31m-				aftMatr.add(line2.substring(0, line2.length() - 1));[m
+[31m-			}[m
+[31m-[m
+[31m-			fw2.close();[m
+[31m-[m
+[31m-			[m
+[31m-			System.out.println("time_period: " + preTfidf.get("time_period"));[m
+[31m-[m
+[31m-			FileWriter fwN = new FileWriter(new File("matr.txt"));[m
+[31m-[m
+[31m-			Map<String, Double> postTfidf = new HashMap<String, Double>();[m
+[31m-[m
+[31m-			System.out.println("hypAll: " + hypAll.size());[m
+[31m-			[m
+[31m-[m
+[31m-			for (int i = 0; i < aftMatr.size(); i++) {[m
+[31m-				String[] strSpl = aftMatr.get(i).split(",");[m
+[31m-				StringBuilder val = new StringBuilder("");[m
+[31m-				for (int j = 0; j < strSpl.length; j++) {[m
+[31m-					double newV = /*Double.valueOf(strSpl[j]) * */Math.log10(twWHL.size() / preTfidf.get(hypAll.get(j)));[m
+[31m-[m
+[31m-					//					System.out.println("++++: " + (Double.valueOf(strSpl[j]) * Math.log(twWHL.size() / preTfidf.get(hypAll.get(j)))));[m
+[31m-[m
+[31m-					val.append(String.valueOf(newV));[m
+[31m-					val.append(",");[m
+[31m-					postTfidf.put(hypAll.get(j), newV);[m
+[31m-//					System.out.println("log: " +Math.log(twWHL.size() / preTfidf.get(hypAll.get(j))));[m
+[31m-				}[m
+[31m-				val = val.deleteCharAt(val.length() - 1);[m
+[31m-				fwN.write(val + "\n");[m
+[31m-			}[m
+[31m-			fwN.close();[m
+[31m-[m
+[31m-[m
+[31m-			System.out.println("For loop started..");[m
+[31m-			for (int i = 0; i < twWHL.size(); i++) {[m
+[31m-				String[] strSpl = twWHL.get(i).split("hypernyms: ")[1].split("__")[0].split(", ");[m
+[31m-				String newVals = twWHL.get(i).split("nyms: ")[0] + "nyms: ";[m
+[31m-				String last = twWHL.get(i).split("__")[1];[m
+[31m-				last = "__" + last;[m
+[31m-				for (int j = 0; j < strSpl.length; j++) {[m
+[31m-					String word = strSpl[j].split(" ")[0];[m
+[31m-					//					String freq = strSpl[j].split(" ")[1];[m
+[31m-					double freq = Double.valueOf(strSpl[j].split(" ")[1]) * postTfidf.get(word);[m
+[31m-					newVals += word + " " + freq + ", ";[m
+[31m-				}[m
+[31m-				newVals = newVals.substring(0, newVals.length());[m
+[31m-				newVals += last;[m
+[31m-				twWHL.set(i, newVals);[m
+[31m-			}[m
+[31m-			System.out.println("First loop finished..");[m
+[31m-[m
+[31m-[m
+[31m-			ArrayList<String> al = new ArrayList<String>(twRowNo.values());[m
+[31m-			Map<Integer, String> twRowNoUpd = new LinkedHashMap<Integer, String>();[m
+[31m-			for (int i = 0; i < al.size(); i++) {[m
+[31m-				twRowNoUpd.put(i, al.get(i));[m
+[31m-			}[m
+[31m-			twRowNo = twRowNoUpd;[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			//Below is clustering operation being performed(input produced by MATLAB)[m
+[31m-			Map<Integer, List<Map.Entry<String, Integer>>> clusters = new LinkedHashMap<Integer, List<Map.Entry<String, Integer>>>();[m
+[31m-			BufferedReader br3 = new BufferedReader(new FileReader(new File("clusterNos.txt")));[m
+[31m-[m
+[31m-			String lineCl = "";[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-			//			System.out.println("tw74: " + twHypNo.get("tw74"));[m
+[31m-[m
+[31m-			while ((lineCl = br3.readLine()) != null) {[m
+[31m-[m
+[31m-				//All the tweet numbers contained in clusters[m
+[31m-				List<String> clList = Arrays.asList(lineCl.substring(lineCl.indexOf(']') + 1).split(","));[m
+[31m-[m
+[31m-[m
+[31m-				//Below is the map containing the hypernyms of tweets that are in a[m
+[31m-				//specific cluster[m
+[31m-				Map<String, Integer> subHypCl = new HashMap<String, Integer>();[m
+[31m-[m
+[31m-				for (int i = 0; i < clList.size(); i++) {[m
+[31m-[m
+[31m-[m
+[31m-					//					System.out.println("clList: " + clList.get(i));[m
+[31m-					//The hypernyms representing a tweet[m
+[31m-					String[] hyps = twHypNo.get(clList.get(i)).split(", ");[m
+[31m-					//All cluster hypernyms are getting collected, and get assigned to[m
+[31m-					//the hashMap[m
+[31m-					for (int j = 0; j < hyps.length; j++) {[m
+[31m-						String hypWord = hyps[j].split(" ")[0];[m
+[31m-						int valSm = Integer.parseInt(hyps[j].split(" ")[1]);[m
+[31m-						int valNew = subHypCl.containsKey(hypWord) ?[m
+[31m-								subHypCl.get(hypWord) + valSm: valSm;[m
+[31m-						subHypCl.put(hypWord, valNew);[m
+[31m-					}[m
+[31m-[m
+[31m-				}[m
+[31m-[m
+[31m-				//Clusters are represented through numbers, starting from 0[m
+[31m-				List<Map.Entry<String, Integer>> ls =[m
+[31m-						new LinkedList<Map.Entry<String, Integer>>(subHypCl.entrySet());[m
+[31m-				Collections.sort(ls, new Comparator<Map.Entry<String, Integer>>() {[m
+[31m-					public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {[m
+[31m-						if (m1.getValue() < m2.getValue())[m
+[31m-							return 1;[m
+[31m-						else if (m1.getValue() > m2.getValue())[m
+[31m-							return -1;[m
+[31m-						return 0;[m
+[31m-					}[m
+[31m-[m
+[31m-				});[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-				clusters.put(Integer.parseInt(lineCl.substring(1, lineCl.indexOf(']'))), ls);[m
+[31m-			}[m
+[31m-			br3.close();[m
+[31m-[m
+[31m-[m
+[31m-			//Below do we write the hypernyms, through which clusters are represented,[m
+[31m-			//to a file[m
+[31m-			FileWriter fw3 = new FileWriter(new File("clusterHypsFreq.txt"));[m
+[31m-[m
+[31m-			//			List<Integer> l = new ArrayList<Integer>(clusters.keySet());[m
+[31m-			for (int i = 0; i < clusters.size(); i++) {[m
+[31m-				List<Map.Entry<String, Integer>> lSub = clusters.get(i);[m
+[31m-[m
+[31m-				Map<String, Integer> hm = new LinkedHashMap<String, Integer>();[m
+[31m-[m
+[31m-				for (Map.Entry<String, Integer> me: lSub) {[m
+[31m-					hm.put(me.getKey(), me.getValue());[m
+[31m-				}[m
+[31m-[m
+[31m-				String line2 = "";[m
+[31m-				for (int u = 0; u < hypAll.size(); u++) {[m
+[31m-					if (hm.containsKey(hypAll.get(u)))[m
+[31m-						line2 += hm.get(hypAll.get(u)) + ",";[m
+[31m-					else[m
+[31m-						line2 += "0,";[m
+[31m-				}[m
+[31m-[m
+[31m-				fw3.write(line2.substring(0, line2.length() - 1));[m
+[31m-				fw3.write("\n");[m
+[31m-			}[m
+[31m-			fw3.close();[m
+[31m-[m
+[31m-[m
+[31m-			//Loc - UserId mapping[m
+[31m-			Map<String, String> locUId = new HashMap<String, String>();[m
+[31m-[m
+[31m-			BufferedReader br2 = new BufferedReader(new FileReader(new File("training_set_users.txt")));[m
+[31m-			line = "";[m
+[31m-[m
+[31m-			System.out.println("UserId - Location mapping is being performed..");[m
+[31m-[m
+[31m-[m
+[31m-			int cnta = 0;[m
+[31m-			while ((line = br2.readLine()) != null) {[m
+[31m-[m
+[31m-				//				line = line.toLowerCase();[m
+[31m-				String[] arrSpl = line.split("[\\s]+");[m
+[31m-				String conc = "";[m
+[31m-				for (int q = 1; q < arrSpl.length; q++) {[m
+[31m-					conc += " " + arrSpl[q];[m
+[31m-				}[m
+[31m-				conc = conc.trim();[m
+[31m-[m
+[31m-				//				List<String> li = new ArrayList<String>(locUId.keySet());[m
+[31m-				//				[m
+[31m-				//				String tmpLoc = "";[m
+[31m-				//				for (int i = 0; i < li.size(); i++) {[m
+[31m-				//					String presLoc = li.get(i);[m
+[31m-				//					if (presLoc.contains(conc) && presLoc.length() > conc.length()) {[m
+[31m-				//						tmpLoc = presLoc;[m
+[31m-				//						break;[m
+[31m-				//					}[m
+[31m-				//					[m
+[31m-				//				}[m
+[31m-				//				if (tmpLoc.length() > 0)[m
+[31m-				//					locUId.put(arrSpl[0], tmpLoc);[m
+[31m-				//				else[m
+[31m-				locUId.put(arrSpl[0], conc);[m
+[31m-[m
+[31m-			}[m
+[31m-[m
+[31m-			br2.close();[m
+[31m-[m
+[31m-			Map<String, Map<String, Double>> locHyp = new [m
+[31m-					HashMap<String, Map<String, Double>>();[m
+[31m-[m
+[31m-[m
+[31m-			for (int i = 0; i < twWHL.size(); i++) {[m
+[31m-				String id = twWHL.get(i).split("__")[1];[m
+[31m-				String loc = locUId.get(id);[m
+[31m-[m
+[31m-				//				System.out.println("id: " + id + ", loc: " + loc);[m
+[31m-[m
+[31m-				Map<String, Double> hm2 = (locHyp.containsKey(loc)) ? locHyp.get(loc): [m
+[31m-					new HashMap<String, Double>();[m
+[31m-				List<String> hm2L = new ArrayLi

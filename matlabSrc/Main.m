@@ -1,6 +1,6 @@
 clc
 clear
-X = dlmread('C:\\Users\\asus\\workspace\\SemSocWeb\\matr.txt', ',', 0, 1);
+X = dlmread('C:\\Users\\asus\\workspace\\SocSemWeb\\src\\matr.txt', ',', 0, 2);
 sizeB = size(X, 1);
 size__ = ceil(size(X, 1) / 10 * 7);
 
@@ -13,7 +13,7 @@ c = cluster(Z,'maxclust',25);
 
 
 
-word = textread('C:\\Users\\asus\\workspace\\SemSocWeb\\usersId.txt', '%s', 'delimiter', ',');
+word = textread('C:\\Users\\asus\\workspace\\SocSemWeb\\src\\usersId.txt', '%s', 'delimiter', ',');
 
 
 for i=1:size(unique(c))
